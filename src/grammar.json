@@ -18,9 +18,588 @@
           {
             "type": "SYMBOL",
             "name": "css_keyword_transparent"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "css_function_rgb"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "css_function_rgba"
           }
         ]
       }
+    },
+    "_css_number": {
+      "type": "PATTERN",
+      "value": "[-+]?(?:\\d+\\.\\d+|\\d+|\\.\\d+)(?:[eE][-+]?\\d+)?"
+    },
+    "css_number": {
+      "type": "SYMBOL",
+      "name": "_css_number"
+    },
+    "_css_percentage": {
+      "type": "PATTERN",
+      "value": "[-+]?(?:\\d+\\.\\d+|\\d+|\\.\\d+)(?:[eE][-+]?\\d+)?%"
+    },
+    "css_percentage": {
+      "type": "SYMBOL",
+      "name": "_css_percentage"
+    },
+    "css_alpha_value": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_css_number"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_css_percentage"
+        }
+      ]
+    },
+    "css_function_rgb": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "css_function_rgb_legacy"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_rgb_modern"
+        }
+      ]
+    },
+    "css_function_rgba": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "css_function_rgba_legacy"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_rgba_modern"
+        }
+      ]
+    },
+    "css_function_rgb_legacy": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "rgb"
+            },
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "FIELD",
+              "name": "r",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "g",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "b",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "FIELD",
+                      "name": "a",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "css_alpha_value"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "rgb"
+            },
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "FIELD",
+              "name": "r",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_number"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "g",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_number"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "b",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_number"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "FIELD",
+                      "name": "a",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "css_alpha_value"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    },
+    "css_function_rgba_legacy": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "rgba"
+            },
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "FIELD",
+              "name": "r",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "g",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "b",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "FIELD",
+                      "name": "a",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "css_alpha_value"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "rgba"
+            },
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "FIELD",
+              "name": "r",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_number"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "g",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_number"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ","
+            },
+            {
+              "type": "FIELD",
+              "name": "b",
+              "content": {
+                "type": "SYMBOL",
+                "name": "css_number"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "FIELD",
+                      "name": "a",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "css_alpha_value"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    },
+    "css_function_rgb_modern": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "rgb"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "r",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "g",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "b",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "a",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "css_alpha_value"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "css_function_rgba_modern": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "rgba"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "r",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "g",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "b",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "a",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "css_alpha_value"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
     },
     "css_hex_color": {
       "type": "CHOICE",
@@ -811,6 +1390,11 @@
     "css_keyword_transparent": {
       "type": "PATTERN",
       "value": "transparent",
+      "flags": "i"
+    },
+    "css_keyword_none": {
+      "type": "PATTERN",
+      "value": "none",
       "flags": "i"
     }
   },

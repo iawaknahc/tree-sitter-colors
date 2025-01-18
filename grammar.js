@@ -6,14 +6,81 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
+function rgb_legacy_percentage($, functionName) {
+  return seq(
+    functionName,
+    "(",
+    field("r", $.css_percentage),
+    ",",
+    field("g", $.css_percentage),
+    ",",
+    field("b", $.css_percentage),
+    optional(seq(",", field("a", $.css_alpha_value))),
+    ")",
+  );
+}
+
+function rgb_legacy_number($, functionName) {
+  return seq(
+    functionName,
+    "(",
+    field("r", $.css_number),
+    ",",
+    field("g", $.css_number),
+    ",",
+    field("b", $.css_number),
+    optional(seq(",", field("a", $.css_alpha_value))),
+    ")",
+  );
+}
+
+function rgb_modern($, functionName) {
+  return seq(
+    functionName,
+    "(",
+    field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+    field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+    field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+    optional(seq("/", field("a", $.css_alpha_value))),
+    ")",
+  );
+}
+
+const regexp_number = /[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?/;
+
+function concat_regexp(a, b) {
+  return new RegExp(a.source + b.source);
+}
+
 module.exports = grammar({
   name: "colors",
 
   rules: {
     source_file: ($) =>
       repeat(
-        choice($.css_hex_color, $.css_named_color, $.css_keyword_transparent),
+        choice(
+          $.css_hex_color,
+          $.css_named_color,
+          $.css_keyword_transparent,
+          $.css_function_rgb,
+          $.css_function_rgba,
+        ),
       ),
+    _css_number: (_) => regexp_number,
+    css_number: ($) => $._css_number,
+    _css_percentage: (_) => concat_regexp(regexp_number, /%/),
+    css_percentage: ($) => $._css_percentage,
+    css_alpha_value: ($) => choice($._css_number, $._css_percentage),
+    css_function_rgb: ($) =>
+      choice($.css_function_rgb_legacy, $.css_function_rgb_modern),
+    css_function_rgba: ($) =>
+      choice($.css_function_rgba_legacy, $.css_function_rgba_modern),
+    css_function_rgb_legacy: ($) =>
+      choice(rgb_legacy_percentage($, "rgb"), rgb_legacy_number($, "rgb")),
+    css_function_rgba_legacy: ($) =>
+      choice(rgb_legacy_percentage($, "rgba"), rgb_legacy_number($, "rgba")),
+    css_function_rgb_modern: ($) => rgb_modern($, "rgb"),
+    css_function_rgba_modern: ($) => rgb_modern($, "rgba"),
     css_hex_color: ($) =>
       choice(
         $.css_hex_color_6_digits,
@@ -177,5 +244,6 @@ module.exports = grammar({
         /yellowgreen/i,
       ),
     css_keyword_transparent: (_) => /transparent/i,
+    css_keyword_none: (_) => /none/i,
   },
 });

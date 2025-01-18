@@ -1,5 +1,304 @@
 [
   {
+    "type": "css_alpha_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "css_function_rgb",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "css_function_rgb_legacy",
+          "named": true
+        },
+        {
+          "type": "css_function_rgb_modern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "css_function_rgb_legacy",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          }
+        ]
+      },
+      "b": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "g": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "r": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_rgb_modern",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          }
+        ]
+      },
+      "b": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "g": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "r": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_rgba",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "css_function_rgba_legacy",
+          "named": true
+        },
+        {
+          "type": "css_function_rgba_modern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "css_function_rgba_legacy",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          }
+        ]
+      },
+      "b": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "g": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "r": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_rgba_modern",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          }
+        ]
+      },
+      "b": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "g": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "r": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "css_hex_color",
     "named": true,
     "fields": {},
@@ -32,6 +331,16 @@
     "fields": {}
   },
   {
+    "type": "css_number",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "css_percentage",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "root": true,
@@ -40,6 +349,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "css_function_rgb",
+          "named": true
+        },
+        {
+          "type": "css_function_rgba",
+          "named": true
+        },
         {
           "type": "css_hex_color",
           "named": true
@@ -54,6 +371,22 @@
         }
       ]
     }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
   },
   {
     "type": "css_hex_color_3_digits",
@@ -72,7 +405,19 @@
     "named": true
   },
   {
+    "type": "css_keyword_none",
+    "named": true
+  },
+  {
     "type": "css_keyword_transparent",
     "named": true
+  },
+  {
+    "type": "rgb",
+    "named": false
+  },
+  {
+    "type": "rgba",
+    "named": false
   }
 ]
