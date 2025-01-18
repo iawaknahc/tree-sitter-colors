@@ -1,0 +1,11 @@
+====================================
+css_named_color is case-insensitive
+====================================
+
+AliceBlue AntiqueWhite
+
+---
+
+(source_file
+  (css_named_color)
+  (css_named_color))

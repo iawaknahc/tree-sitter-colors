@@ -3,8 +3,761 @@
   "name": "colors",
   "rules": {
     "source_file": {
-      "type": "STRING",
-      "value": "hello"
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "css_named_color"
+          }
+        ]
+      }
+    },
+    "css_named_color": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "aliceblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "antiquewhite",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "aqua",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "aquamarine",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "azure",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "beige",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "bisque",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "black",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "blanchedalmond",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "blue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "blueviolet",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "brown",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "burlywood",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "cadetblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "chartreuse",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "chocolate",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "coral",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "cornflowerblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "cornsilk",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "crimson",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "cyan",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkcyan",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkgoldenrod",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkgray",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkgreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkgrey",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkkhaki",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkmagenta",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkolivegreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkorange",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkorchid",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkred",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darksalmon",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkseagreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkslateblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkslategray",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkslategrey",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkturquoise",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "darkviolet",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "deeppink",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "deepskyblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "dimgray",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "dimgrey",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "dodgerblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "firebrick",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "floralwhite",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "forestgreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "fuchsia",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "gainsboro",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "ghostwhite",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "gold",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "goldenrod",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "gray",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "green",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "greenyellow",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "grey",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "honeydew",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "hotpink",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "indianred",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "indigo",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "ivory",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "khaki",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lavender",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lavenderblush",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lawngreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lemonchiffon",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightcoral",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightcyan",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightgoldenrodyellow",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightgray",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightgreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightgrey",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightpink",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightsalmon",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightseagreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightskyblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightslategray",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightslategrey",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightsteelblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lightyellow",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "lime",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "limegreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "linen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "magenta",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "maroon",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumaquamarine",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumorchid",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumpurple",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumseagreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumslateblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumspringgreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumturquoise",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mediumvioletred",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "midnightblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mintcream",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mistyrose",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "moccasin",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "navajowhite",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "navy",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "oldlace",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "olive",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "olivedrab",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "orange",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "orangered",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "orchid",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "palegoldenrod",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "palegreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "paleturquoise",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "palevioletred",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "papayawhip",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "peachpuff",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "peru",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "pink",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "plum",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "powderblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "purple",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "rebeccapurple",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "red",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "rosybrown",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "royalblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "saddlebrown",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "salmon",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "sandybrown",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "seagreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "seashell",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "sienna",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "silver",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "skyblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "slateblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "slategray",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "slategrey",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "snow",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "springgreen",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "steelblue",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "tan",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "teal",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "thistle",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "tomato",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "turquoise",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "violet",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "wheat",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "white",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "whitesmoke",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "yellow",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "yellowgreen",
+          "flags": "i"
+        }
+      ]
     }
   },
   "extras": [
