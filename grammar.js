@@ -10,7 +10,10 @@ module.exports = grammar({
   name: "colors",
 
   rules: {
-    source_file: ($) => repeat(choice($.css_hex_color, $.css_named_color)),
+    source_file: ($) =>
+      repeat(
+        choice($.css_hex_color, $.css_named_color, $.css_keyword_transparent),
+      ),
     css_hex_color: ($) =>
       choice(
         $.css_hex_color_6_digits,
@@ -173,5 +176,6 @@ module.exports = grammar({
         /yellow/i,
         /yellowgreen/i,
       ),
+    css_keyword_transparent: (_) => /transparent/i,
   },
 });

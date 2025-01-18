@@ -14,6 +14,10 @@
           {
             "type": "SYMBOL",
             "name": "css_named_color"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "css_keyword_transparent"
           }
         ]
       }
@@ -803,6 +807,11 @@
           "flags": "i"
         }
       ]
+    },
+    "css_keyword_transparent": {
+      "type": "PATTERN",
+      "value": "transparent",
+      "flags": "i"
     }
   },
   "extras": [
