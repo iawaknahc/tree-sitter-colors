@@ -1,0 +1,29 @@
+{
+  "grammars": [
+    {
+      "name": "colors",
+      "camelcase": "Colors",
+      "scope": "source.colors",
+      "file-types": [
+        ".colors"
+      ],
+      "injection-regex": "^colors$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Colors grammar for tree-sitter",
+    "links": {
+      "repository": "https://github.com/iawaknahc/tree-sitter-colors"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
