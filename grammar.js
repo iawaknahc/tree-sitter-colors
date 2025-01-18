@@ -70,13 +70,13 @@ function hsl_legacy($, functionName) {
   );
 }
 
-function hsl_modern($, functionName) {
+function h_modern($, functionName, fieldA, fieldB) {
   return seq(
     css_keyword(functionName),
     "(",
     field("h", choice($.css_hue, $.css_keyword_none)),
-    field("s", choice($.css_percentage, $.css_number, $.css_keyword_none)),
-    field("l", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    field(fieldA, choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    field(fieldB, choice($.css_percentage, $.css_number, $.css_keyword_none)),
     optional(
       seq("/", field("a", choice($.css_alpha_value, $.css_keyword_none))),
     ),
@@ -110,6 +110,7 @@ module.exports = grammar({
           $.css_function_rgba,
           $.css_function_hsl,
           $.css_function_hsla,
+          $.css_function_hwb,
         ),
       ),
 
@@ -136,12 +137,14 @@ module.exports = grammar({
     css_function_hsl: ($) =>
       choice($.css_function_hsl_legacy, $.css_function_hsl_modern),
     css_function_hsl_legacy: ($) => hsl_legacy($, "hsl"),
-    css_function_hsl_modern: ($) => hsl_modern($, "hsl"),
+    css_function_hsl_modern: ($) => h_modern($, "hsl", "s", "l"),
 
     css_function_hsla: ($) =>
       choice($.css_function_hsla_legacy, $.css_function_hsla_modern),
     css_function_hsla_legacy: ($) => hsl_legacy($, "hsla"),
-    css_function_hsla_modern: ($) => hsl_modern($, "hsla"),
+    css_function_hsla_modern: ($) => h_modern($, "hsla", "s", "l"),
+
+    css_function_hwb: ($) => h_modern($, "hwb", "w", "b"),
 
     css_hex_color: ($) =>
       choice(

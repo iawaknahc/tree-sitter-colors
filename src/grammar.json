@@ -34,6 +34,10 @@
           {
             "type": "SYMBOL",
             "name": "css_function_hsla"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "css_function_hwb"
           }
         ]
       }
@@ -995,6 +999,117 @@
         {
           "type": "FIELD",
           "name": "l",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "a",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "css_alpha_value"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "css_keyword_none"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "css_function_hwb": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "hwb",
+          "flags": "i"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "h",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_hue"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "w",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "b",
           "content": {
             "type": "CHOICE",
             "members": [

@@ -275,6 +275,76 @@
     }
   },
   {
+    "type": "css_function_hwb",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "b": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "h": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_hue",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "w": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "css_function_rgb",
     "named": true,
     "fields": {},
@@ -638,6 +708,10 @@
         },
         {
           "type": "css_function_hsla",
+          "named": true
+        },
+        {
+          "type": "css_function_hwb",
           "named": true
         },
         {
