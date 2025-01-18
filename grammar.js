@@ -131,6 +131,7 @@ module.exports = grammar({
     source_file: ($) =>
       repeat(
         choice(
+          // https://drafts.csswg.org/css-color/#color-syntax
           $.css_hex_color,
           $.css_named_color,
           $.css_keyword_transparent,
@@ -146,15 +147,25 @@ module.exports = grammar({
         ),
       ),
 
+    // https://drafts.csswg.org/css-syntax-3/#number-token-diagram
     _css_number: (_) => regexp_number,
     css_number: ($) => $._css_number,
+
+    // https://drafts.csswg.org/css-syntax-3/#percentage-token-diagram
     _css_percentage: (_) => concat_regexp(regexp_number, /%/),
     css_percentage: ($) => $._css_percentage,
+
+    // https://drafts.csswg.org/css-color/#alpha-syntax
     css_alpha_value: ($) => choice($._css_number, $._css_percentage),
+
+    // https://drafts.csswg.org/css-values-4/#angle-value
     _css_angle: (_) => concat_regexp(regexp_number, /deg|grad|rad|turn/, "i"),
     css_angle: ($) => $._css_angle,
+
+    // https://drafts.csswg.org/css-color/#typedef-hue
     css_hue: ($) => choice($._css_number, $._css_angle),
 
+    // https://drafts.csswg.org/css-color/#funcdef-rgb
     css_function_rgb: ($) =>
       choice($.css_function_rgb_legacy, $.css_function_rgb_modern),
     css_function_rgba: ($) =>
@@ -166,24 +177,30 @@ module.exports = grammar({
     css_function_rgb_modern: ($) => rgb_modern($, "rgb"),
     css_function_rgba_modern: ($) => rgb_modern($, "rgba"),
 
+    // https://drafts.csswg.org/css-color/#funcdef-hsl
     css_function_hsl: ($) =>
       choice($.css_function_hsl_legacy, $.css_function_hsl_modern),
     css_function_hsl_legacy: ($) => hsl_legacy($, "hsl"),
     css_function_hsl_modern: ($) => h_modern($, "hsl", "s", "l"),
-
     css_function_hsla: ($) =>
       choice($.css_function_hsla_legacy, $.css_function_hsla_modern),
     css_function_hsla_legacy: ($) => hsl_legacy($, "hsla"),
     css_function_hsla_modern: ($) => h_modern($, "hsla", "s", "l"),
 
+    // https://drafts.csswg.org/css-color/#funcdef-hwb
     css_function_hwb: ($) => h_modern($, "hwb", "w", "b"),
 
+    // https://drafts.csswg.org/css-color/#funcdef-lab
     css_function_lab: ($) => lab($, "lab"),
+    // https://drafts.csswg.org/css-color/#funcdef-oklab
     css_function_oklab: ($) => lab($, "oklab"),
 
+    // https://drafts.csswg.org/css-color/#funcdef-lch
     css_function_lch: ($) => lch($, "lch"),
+    // https://drafts.csswg.org/css-color/#funcdef-oklch
     css_function_oklch: ($) => lch($, "oklch"),
 
+    // https://drafts.csswg.org/css-color/#typedef-hex-color
     css_hex_color: ($) =>
       choice(
         $.css_hex_color_6_digits,
@@ -196,6 +213,7 @@ module.exports = grammar({
     css_hex_color_3_digits: (_) => /#[0-9a-f]{3}/i,
     css_hex_color_4_digits: (_) => /#[0-9a-f]{4}/i,
 
+    // https://drafts.csswg.org/css-color/#typedef-named-color
     css_named_color: (_) =>
       choice(
         css_keyword("aliceblue"),
@@ -347,7 +365,11 @@ module.exports = grammar({
         css_keyword("yellow"),
         css_keyword("yellowgreen"),
       ),
+
+    // https://drafts.csswg.org/css-color/#transparent-color
     css_keyword_transparent: (_) => css_keyword("transparent"),
+
+    // https://drafts.csswg.org/css-color/#valdef-color-none
     css_keyword_none: (_) => css_keyword("none"),
   },
 });
