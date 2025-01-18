@@ -1913,38 +1913,38 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "css_hex_color_6_digits"
+          "name": "_css_hex_color_6_digits"
         },
         {
           "type": "SYMBOL",
-          "name": "css_hex_color_8_digits"
+          "name": "_css_hex_color_8_digits"
         },
         {
           "type": "SYMBOL",
-          "name": "css_hex_color_3_digits"
+          "name": "_css_hex_color_3_digits"
         },
         {
           "type": "SYMBOL",
-          "name": "css_hex_color_4_digits"
+          "name": "_css_hex_color_4_digits"
         }
       ]
     },
-    "css_hex_color_6_digits": {
+    "_css_hex_color_6_digits": {
       "type": "PATTERN",
       "value": "#[0-9a-f]{6}",
       "flags": "i"
     },
-    "css_hex_color_8_digits": {
+    "_css_hex_color_8_digits": {
       "type": "PATTERN",
       "value": "#[0-9a-f]{8}",
       "flags": "i"
     },
-    "css_hex_color_3_digits": {
+    "_css_hex_color_3_digits": {
       "type": "PATTERN",
       "value": "#[0-9a-f]{3}",
       "flags": "i"
     },
-    "css_hex_color_4_digits": {
+    "_css_hex_color_4_digits": {
       "type": "PATTERN",
       "value": "#[0-9a-f]{4}",
       "flags": "i"

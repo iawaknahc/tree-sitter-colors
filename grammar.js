@@ -250,15 +250,15 @@ module.exports = grammar({
     // https://drafts.csswg.org/css-color/#typedef-hex-color
     css_hex_color: ($) =>
       choice(
-        $.css_hex_color_6_digits,
-        $.css_hex_color_8_digits,
-        $.css_hex_color_3_digits,
-        $.css_hex_color_4_digits,
+        $._css_hex_color_6_digits,
+        $._css_hex_color_8_digits,
+        $._css_hex_color_3_digits,
+        $._css_hex_color_4_digits,
       ),
-    css_hex_color_6_digits: (_) => /#[0-9a-f]{6}/i,
-    css_hex_color_8_digits: (_) => /#[0-9a-f]{8}/i,
-    css_hex_color_3_digits: (_) => /#[0-9a-f]{3}/i,
-    css_hex_color_4_digits: (_) => /#[0-9a-f]{4}/i,
+    _css_hex_color_6_digits: (_) => /#[0-9a-f]{6}/i,
+    _css_hex_color_8_digits: (_) => /#[0-9a-f]{8}/i,
+    _css_hex_color_3_digits: (_) => /#[0-9a-f]{3}/i,
+    _css_hex_color_4_digits: (_) => /#[0-9a-f]{4}/i,
 
     // https://drafts.csswg.org/css-color/#typedef-named-color
     css_named_color: (_) =>
