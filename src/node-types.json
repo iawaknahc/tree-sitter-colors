@@ -419,6 +419,76 @@
     }
   },
   {
+    "type": "css_function_lch",
+    "named": true,
+    "fields": {
+      "C": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "L": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "alpha": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "h": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_hue",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "css_function_oklab",
     "named": true,
     "fields": {
@@ -486,6 +556,76 @@
           },
           {
             "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_oklch",
+    "named": true,
+    "fields": {
+      "C": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "L": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "alpha": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "h": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_hue",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
             "named": true
           }
         ]
@@ -867,7 +1007,15 @@
           "named": true
         },
         {
+          "type": "css_function_lch",
+          "named": true
+        },
+        {
           "type": "css_function_oklab",
+          "named": true
+        },
+        {
+          "type": "css_function_oklch",
           "named": true
         },
         {

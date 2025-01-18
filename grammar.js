@@ -98,6 +98,20 @@ function lab($, functionName) {
   );
 }
 
+function lch($, functionName) {
+  return seq(
+    css_keyword(functionName),
+    "(",
+    field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    field("C", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    field("h", choice($.css_hue, $.css_keyword_none)),
+    optional(
+      seq("/", field("alpha", choice($.css_alpha_value, $.css_keyword_none))),
+    ),
+    ")",
+  );
+}
+
 const regexp_number = /[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?/;
 
 /**
@@ -127,6 +141,8 @@ module.exports = grammar({
           $.css_function_hwb,
           $.css_function_lab,
           $.css_function_oklab,
+          $.css_function_lch,
+          $.css_function_oklch,
         ),
       ),
 
@@ -164,6 +180,9 @@ module.exports = grammar({
 
     css_function_lab: ($) => lab($, "lab"),
     css_function_oklab: ($) => lab($, "oklab"),
+
+    css_function_lch: ($) => lch($, "lch"),
+    css_function_oklch: ($) => lch($, "oklch"),
 
     css_hex_color: ($) =>
       choice(
