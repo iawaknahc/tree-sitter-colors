@@ -144,6 +144,7 @@ module.exports = grammar({
           $.css_function_oklab,
           $.css_function_lch,
           $.css_function_oklch,
+          $.css_function_color,
         ),
       ),
 
@@ -199,6 +200,52 @@ module.exports = grammar({
     css_function_lch: ($) => lch($, "lch"),
     // https://drafts.csswg.org/css-color/#funcdef-oklch
     css_function_oklch: ($) => lch($, "oklch"),
+
+    // https://drafts.csswg.org/css-color/#funcdef-color
+    css_function_color: ($) =>
+      seq(
+        css_keyword("color"),
+        "(",
+        $._css_colorspace_params,
+        optional(
+          seq(
+            "/",
+            field("alpha", choice($.css_alpha_value, $.css_keyword_none)),
+          ),
+        ),
+        ")",
+      ),
+    _css_colorspace_params: ($) =>
+      choice($._css_predefined_rgb_params, $._css_xyz_params),
+    _css_predefined_rgb_params: ($) =>
+      seq(
+        $.css_predefined_rgb,
+        field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+        field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+        field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+      ),
+    css_predefined_rgb: (_) =>
+      choice(
+        css_keyword("srgb"),
+        css_keyword("srgb-linear"),
+        css_keyword("display-p3"),
+        css_keyword("a98-rgb"),
+        css_keyword("prophoto-rgb"),
+        css_keyword("rec2020"),
+      ),
+    _css_xyz_params: ($) =>
+      seq(
+        $.css_xyz_space,
+        field("x", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+        field("y", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+        field("z", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+      ),
+    css_xyz_space: (_) =>
+      choice(
+        css_keyword("xyz"),
+        css_keyword("xyz-d50"),
+        css_keyword("xyz-d65"),
+      ),
 
     // https://drafts.csswg.org/css-color/#typedef-hex-color
     css_hex_color: ($) =>
