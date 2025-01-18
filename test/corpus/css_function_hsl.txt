@@ -22,7 +22,7 @@ hsl(0turn 0% 0%)
 
 
 hsl(none None NONE)
-hsl(none None NONE / none)
+HsL(none None NONE / none)
 
 ---
 

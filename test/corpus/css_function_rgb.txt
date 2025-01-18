@@ -11,8 +11,8 @@ rgb(-.0 -0.0 -0.0e-0 / 0%)
 
 rgb(0 1% 3% / 0.3)
 
-rgb(none None NONE)
-rgb(none None NONE / none)
+Rgb(none None NONE)
+rGb(none None NONE / none)
 
 ---
 

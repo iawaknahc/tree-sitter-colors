@@ -702,21 +702,5 @@
   {
     "type": "css_keyword_transparent",
     "named": true
-  },
-  {
-    "type": "hsl",
-    "named": false
-  },
-  {
-    "type": "hsla",
-    "named": false
-  },
-  {
-    "type": "rgb",
-    "named": false
-  },
-  {
-    "type": "rgba",
-    "named": false
   }
 ]
