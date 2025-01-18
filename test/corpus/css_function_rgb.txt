@@ -11,6 +11,9 @@ rgb(-.0 -0.0 -0.0e-0 / 0%)
 
 rgb(0 1% 3% / 0.3)
 
+rgb(none None NONE)
+rgb(none None NONE / none)
+
 ---
 
 (source_file
@@ -41,4 +44,15 @@ rgb(0 1% 3% / 0.3)
       r: (css_number)
       g: (css_percentage)
       b: (css_percentage)
-      a: (css_alpha_value))))
+      a: (css_alpha_value)))
+  (css_function_rgb
+    (css_function_rgb_modern
+      r: (css_keyword_none)
+      g: (css_keyword_none)
+      b: (css_keyword_none)))
+  (css_function_rgb
+    (css_function_rgb_modern
+      r: (css_keyword_none)
+      g: (css_keyword_none)
+      b: (css_keyword_none)
+      a: (css_keyword_none))))

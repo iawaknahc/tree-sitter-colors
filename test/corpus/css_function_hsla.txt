@@ -1,0 +1,112 @@
+================
+css_function_hsla
+================
+
+hsla(0, 0%, 0%)
+hsla(0, 0%, 0%, 0%)
+
+hsla(0deg, 0%, 0%)
+hsla(0grad, 0%, 0%)
+hsla(0grad, 0%, 0%)
+hsla(0rad, 0%, 0%)
+hsla(0turn, 0%, 0%)
+
+hsla(0 0% 0%)
+hsla(0 0% 0% / 0%)
+
+hsla(0deg 0% 0%)
+hsla(0grad 0% 0%)
+hsla(0grad 0% 0%)
+hsla(0rad 0% 0%)
+hsla(0turn 0% 0%)
+
+
+hsla(none None NONE)
+hsla(none None NONE / none)
+
+---
+
+(source_file
+  (css_function_hsla
+    (css_function_hsla_legacy
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_legacy
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)
+      a: (css_alpha_value)))
+  (css_function_hsla
+    (css_function_hsla_legacy
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_legacy
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_legacy
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_legacy
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_legacy
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)
+      a: (css_alpha_value)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_hue)
+      s: (css_percentage)
+      l: (css_percentage)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_keyword_none)
+      s: (css_keyword_none)
+      l: (css_keyword_none)))
+  (css_function_hsla
+    (css_function_hsla_modern
+      h: (css_keyword_none)
+      s: (css_keyword_none)
+      l: (css_keyword_none)
+      a: (css_keyword_none))))

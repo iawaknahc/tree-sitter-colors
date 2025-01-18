@@ -41,15 +41,51 @@ function rgb_modern($, functionName) {
     field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
-    optional(seq("/", field("a", $.css_alpha_value))),
+    optional(
+      seq("/", field("a", choice($.css_alpha_value, $.css_keyword_none))),
+    ),
+    ")",
+  );
+}
+
+function hsl_legacy($, functionName) {
+  return seq(
+    functionName,
+    "(",
+    field("h", $.css_hue),
+    ",",
+    field("s", $.css_percentage),
+    ",",
+    field("l", $.css_percentage),
+    optional(seq(",", field("a", $.css_alpha_value))),
+    ")",
+  );
+}
+
+function hsl_modern($, functionName) {
+  return seq(
+    functionName,
+    "(",
+    field("h", choice($.css_hue, $.css_keyword_none)),
+    field("s", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    field("l", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    optional(
+      seq("/", field("a", choice($.css_alpha_value, $.css_keyword_none))),
+    ),
     ")",
   );
 }
 
 const regexp_number = /[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?/;
 
-function concat_regexp(a, b) {
-  return new RegExp(a.source + b.source);
+/**
+ * @param a {RegExp}
+ * @param b {RegExp}
+ * @param [flags] {"i"}
+ * @returns {RegExp}
+ */
+function concat_regexp(a, b, flags) {
+  return new RegExp("(?:" + a.source + ")" + "(?:" + b.source + ")", flags);
 }
 
 module.exports = grammar({
@@ -64,13 +100,20 @@ module.exports = grammar({
           $.css_keyword_transparent,
           $.css_function_rgb,
           $.css_function_rgba,
+          $.css_function_hsl,
+          $.css_function_hsla,
         ),
       ),
+
     _css_number: (_) => regexp_number,
     css_number: ($) => $._css_number,
     _css_percentage: (_) => concat_regexp(regexp_number, /%/),
     css_percentage: ($) => $._css_percentage,
     css_alpha_value: ($) => choice($._css_number, $._css_percentage),
+    _css_angle: (_) => concat_regexp(regexp_number, /deg|grad|rad|turn/, "i"),
+    css_angle: ($) => $._css_angle,
+    css_hue: ($) => choice($._css_number, $._css_angle),
+
     css_function_rgb: ($) =>
       choice($.css_function_rgb_legacy, $.css_function_rgb_modern),
     css_function_rgba: ($) =>
@@ -81,6 +124,17 @@ module.exports = grammar({
       choice(rgb_legacy_percentage($, "rgba"), rgb_legacy_number($, "rgba")),
     css_function_rgb_modern: ($) => rgb_modern($, "rgb"),
     css_function_rgba_modern: ($) => rgb_modern($, "rgba"),
+
+    css_function_hsl: ($) =>
+      choice($.css_function_hsl_legacy, $.css_function_hsl_modern),
+    css_function_hsl_legacy: ($) => hsl_legacy($, "hsl"),
+    css_function_hsl_modern: ($) => hsl_modern($, "hsl"),
+
+    css_function_hsla: ($) =>
+      choice($.css_function_hsla_legacy, $.css_function_hsla_modern),
+    css_function_hsla_legacy: ($) => hsl_legacy($, "hsla"),
+    css_function_hsla_modern: ($) => hsl_modern($, "hsla"),
+
     css_hex_color: ($) =>
       choice(
         $.css_hex_color_6_digits,
@@ -92,6 +146,7 @@ module.exports = grammar({
     css_hex_color_8_digits: (_) => /#[0-9a-f]{8}/i,
     css_hex_color_3_digits: (_) => /#[0-9a-f]{3}/i,
     css_hex_color_4_digits: (_) => /#[0-9a-f]{4}/i,
+
     css_named_color: (_) =>
       choice(
         /aliceblue/i,

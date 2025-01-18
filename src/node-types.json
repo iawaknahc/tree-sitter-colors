@@ -5,6 +5,276 @@
     "fields": {}
   },
   {
+    "type": "css_function_hsl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "css_function_hsl_legacy",
+          "named": true
+        },
+        {
+          "type": "css_function_hsl_modern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "css_function_hsl_legacy",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          }
+        ]
+      },
+      "h": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_hue",
+            "named": true
+          }
+        ]
+      },
+      "l": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "s": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_hsl_modern",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "h": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_hue",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "l": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "s": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_hsla",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "css_function_hsla_legacy",
+          "named": true
+        },
+        {
+          "type": "css_function_hsla_modern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "css_function_hsla_legacy",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          }
+        ]
+      },
+      "h": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_hue",
+            "named": true
+          }
+        ]
+      },
+      "l": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "s": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_hsla_modern",
+    "named": true,
+    "fields": {
+      "a": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "h": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_hue",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "l": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "s": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "css_function_rgb",
     "named": true,
     "fields": {},
@@ -91,6 +361,10 @@
         "types": [
           {
             "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
             "named": true
           }
         ]
@@ -239,6 +513,10 @@
           {
             "type": "css_alpha_value",
             "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
           }
         ]
       },
@@ -326,6 +604,11 @@
     }
   },
   {
+    "type": "css_hue",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "css_named_color",
     "named": true,
     "fields": {}
@@ -349,6 +632,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "css_function_hsl",
+          "named": true
+        },
+        {
+          "type": "css_function_hsla",
+          "named": true
+        },
         {
           "type": "css_function_rgb",
           "named": true
@@ -411,6 +702,14 @@
   {
     "type": "css_keyword_transparent",
     "named": true
+  },
+  {
+    "type": "hsl",
+    "named": false
+  },
+  {
+    "type": "hsla",
+    "named": false
   },
   {
     "type": "rgb",
