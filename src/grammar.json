@@ -118,11 +118,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "css_function_rgb_legacy"
+          "name": "_css_function_rgb_legacy"
         },
         {
           "type": "SYMBOL",
-          "name": "css_function_rgb_modern"
+          "name": "_css_function_rgb_modern"
         }
       ]
     },
@@ -131,15 +131,15 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "css_function_rgba_legacy"
+          "name": "_css_function_rgba_legacy"
         },
         {
           "type": "SYMBOL",
-          "name": "css_function_rgba_modern"
+          "name": "_css_function_rgba_modern"
         }
       ]
     },
-    "css_function_rgb_legacy": {
+    "_css_function_rgb_legacy": {
       "type": "CHOICE",
       "members": [
         {
@@ -294,7 +294,7 @@
         }
       ]
     },
-    "css_function_rgba_legacy": {
+    "_css_function_rgba_legacy": {
       "type": "CHOICE",
       "members": [
         {
@@ -449,7 +449,7 @@
         }
       ]
     },
-    "css_function_rgb_modern": {
+    "_css_function_rgb_modern": {
       "type": "SEQ",
       "members": [
         {
@@ -564,7 +564,7 @@
         }
       ]
     },
-    "css_function_rgba_modern": {
+    "_css_function_rgba_modern": {
       "type": "SEQ",
       "members": [
         {
@@ -684,15 +684,15 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "css_function_hsl_legacy"
+          "name": "_css_function_hsl_legacy"
         },
         {
           "type": "SYMBOL",
-          "name": "css_function_hsl_modern"
+          "name": "_css_function_hsl_modern"
         }
       ]
     },
-    "css_function_hsl_legacy": {
+    "_css_function_hsl_legacy": {
       "type": "SEQ",
       "members": [
         {
@@ -767,7 +767,7 @@
         }
       ]
     },
-    "css_function_hsl_modern": {
+    "_css_function_hsl_modern": {
       "type": "SEQ",
       "members": [
         {
@@ -883,15 +883,15 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "css_function_hsla_legacy"
+          "name": "_css_function_hsla_legacy"
         },
         {
           "type": "SYMBOL",
-          "name": "css_function_hsla_modern"
+          "name": "_css_function_hsla_modern"
         }
       ]
     },
-    "css_function_hsla_legacy": {
+    "_css_function_hsla_legacy": {
       "type": "SEQ",
       "members": [
         {
@@ -966,7 +966,7 @@
         }
       ]
     },
-    "css_function_hsla_modern": {
+    "_css_function_hsla_modern": {
       "type": "SEQ",
       "members": [
         {

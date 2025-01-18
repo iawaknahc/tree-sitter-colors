@@ -168,25 +168,25 @@ module.exports = grammar({
 
     // https://drafts.csswg.org/css-color/#funcdef-rgb
     css_function_rgb: ($) =>
-      choice($.css_function_rgb_legacy, $.css_function_rgb_modern),
+      choice($._css_function_rgb_legacy, $._css_function_rgb_modern),
     css_function_rgba: ($) =>
-      choice($.css_function_rgba_legacy, $.css_function_rgba_modern),
-    css_function_rgb_legacy: ($) =>
+      choice($._css_function_rgba_legacy, $._css_function_rgba_modern),
+    _css_function_rgb_legacy: ($) =>
       choice(rgb_legacy_percentage($, "rgb"), rgb_legacy_number($, "rgb")),
-    css_function_rgba_legacy: ($) =>
+    _css_function_rgba_legacy: ($) =>
       choice(rgb_legacy_percentage($, "rgba"), rgb_legacy_number($, "rgba")),
-    css_function_rgb_modern: ($) => rgb_modern($, "rgb"),
-    css_function_rgba_modern: ($) => rgb_modern($, "rgba"),
+    _css_function_rgb_modern: ($) => rgb_modern($, "rgb"),
+    _css_function_rgba_modern: ($) => rgb_modern($, "rgba"),
 
     // https://drafts.csswg.org/css-color/#funcdef-hsl
     css_function_hsl: ($) =>
-      choice($.css_function_hsl_legacy, $.css_function_hsl_modern),
-    css_function_hsl_legacy: ($) => hsl_legacy($, "hsl"),
-    css_function_hsl_modern: ($) => h_modern($, "hsl", "s", "l"),
+      choice($._css_function_hsl_legacy, $._css_function_hsl_modern),
+    _css_function_hsl_legacy: ($) => hsl_legacy($, "hsl"),
+    _css_function_hsl_modern: ($) => h_modern($, "hsl", "s", "l"),
     css_function_hsla: ($) =>
-      choice($.css_function_hsla_legacy, $.css_function_hsla_modern),
-    css_function_hsla_legacy: ($) => hsl_legacy($, "hsla"),
-    css_function_hsla_modern: ($) => h_modern($, "hsla", "s", "l"),
+      choice($._css_function_hsla_legacy, $._css_function_hsla_modern),
+    _css_function_hsla_legacy: ($) => hsl_legacy($, "hsla"),
+    _css_function_hsla_modern: ($) => h_modern($, "hsla", "s", "l"),
 
     // https://drafts.csswg.org/css-color/#funcdef-hwb
     css_function_hwb: ($) => h_modern($, "hwb", "w", "b"),
