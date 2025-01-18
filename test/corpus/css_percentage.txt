@@ -14,12 +14,12 @@ rgb(0 0 0 / 100 %)
       r: (css_number)
       g: (css_number)
       b: (css_number)
-      a: (css_alpha_value)))
+      alpha: (css_alpha_value)))
   (css_function_rgb
     (css_function_rgb_modern
       r: (css_number)
       g: (css_number)
       b: (css_number)
-      a: (css_alpha_value)
+      alpha: (css_alpha_value)
       (ERROR
         (UNEXPECTED '%')))))

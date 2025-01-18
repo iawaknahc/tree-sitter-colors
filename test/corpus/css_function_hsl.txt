@@ -37,7 +37,7 @@ HsL(none None NONE / none)
       h: (css_hue)
       s: (css_percentage)
       l: (css_percentage)
-      a: (css_alpha_value)))
+      alpha: (css_alpha_value)))
   (css_function_hsl
     (css_function_hsl_legacy
       h: (css_hue)
@@ -73,7 +73,7 @@ HsL(none None NONE / none)
       h: (css_hue)
       s: (css_percentage)
       l: (css_percentage)
-      a: (css_alpha_value)))
+      alpha: (css_alpha_value)))
   (css_function_hsl
     (css_function_hsl_modern
       h: (css_hue)
@@ -109,4 +109,4 @@ HsL(none None NONE / none)
       h: (css_keyword_none)
       s: (css_keyword_none)
       l: (css_keyword_none)
-      a: (css_keyword_none))))
+      alpha: (css_keyword_none))))

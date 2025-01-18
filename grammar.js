@@ -23,7 +23,7 @@ function rgb_legacy_percentage($, functionName) {
     field("g", $.css_percentage),
     ",",
     field("b", $.css_percentage),
-    optional(seq(",", field("a", $.css_alpha_value))),
+    optional(seq(",", field("alpha", $.css_alpha_value))),
     ")",
   );
 }
@@ -37,7 +37,7 @@ function rgb_legacy_number($, functionName) {
     field("g", $.css_number),
     ",",
     field("b", $.css_number),
-    optional(seq(",", field("a", $.css_alpha_value))),
+    optional(seq(",", field("alpha", $.css_alpha_value))),
     ")",
   );
 }
@@ -50,7 +50,7 @@ function rgb_modern($, functionName) {
     field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     optional(
-      seq("/", field("a", choice($.css_alpha_value, $.css_keyword_none))),
+      seq("/", field("alpha", choice($.css_alpha_value, $.css_keyword_none))),
     ),
     ")",
   );
@@ -65,7 +65,7 @@ function hsl_legacy($, functionName) {
     field("s", $.css_percentage),
     ",",
     field("l", $.css_percentage),
-    optional(seq(",", field("a", $.css_alpha_value))),
+    optional(seq(",", field("alpha", $.css_alpha_value))),
     ")",
   );
 }
@@ -78,7 +78,21 @@ function h_modern($, functionName, fieldA, fieldB) {
     field(fieldA, choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field(fieldB, choice($.css_percentage, $.css_number, $.css_keyword_none)),
     optional(
-      seq("/", field("a", choice($.css_alpha_value, $.css_keyword_none))),
+      seq("/", field("alpha", choice($.css_alpha_value, $.css_keyword_none))),
+    ),
+    ")",
+  );
+}
+
+function lab($, functionName) {
+  return seq(
+    css_keyword(functionName),
+    "(",
+    field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    field("a", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    field("b", choice($.css_percentage, $.css_number, $.css_keyword_none)),
+    optional(
+      seq("/", field("alpha", choice($.css_alpha_value, $.css_keyword_none))),
     ),
     ")",
   );
@@ -111,6 +125,8 @@ module.exports = grammar({
           $.css_function_hsl,
           $.css_function_hsla,
           $.css_function_hwb,
+          $.css_function_lab,
+          $.css_function_oklab,
         ),
       ),
 
@@ -145,6 +161,9 @@ module.exports = grammar({
     css_function_hsla_modern: ($) => h_modern($, "hsla", "s", "l"),
 
     css_function_hwb: ($) => h_modern($, "hwb", "w", "b"),
+
+    css_function_lab: ($) => lab($, "lab"),
+    css_function_oklab: ($) => lab($, "oklab"),
 
     css_hex_color: ($) =>
       choice(

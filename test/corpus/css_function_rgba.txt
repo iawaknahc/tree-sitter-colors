@@ -27,7 +27,7 @@ rgBa(none None NONE / none)
       r: (css_number)
       g: (css_number)
       b: (css_number)
-      a: (css_alpha_value)))
+      alpha: (css_alpha_value)))
   (css_function_rgba
     (css_function_rgba_modern
       r: (css_number)
@@ -38,13 +38,13 @@ rgBa(none None NONE / none)
       r: (css_number)
       g: (css_number)
       b: (css_number)
-      a: (css_alpha_value)))
+      alpha: (css_alpha_value)))
   (css_function_rgba
     (css_function_rgba_modern
       r: (css_number)
       g: (css_percentage)
       b: (css_percentage)
-      a: (css_alpha_value)))
+      alpha: (css_alpha_value)))
   (css_function_rgba
     (css_function_rgba_modern
       r: (css_keyword_none)
@@ -55,4 +55,4 @@ rgBa(none None NONE / none)
       r: (css_keyword_none)
       g: (css_keyword_none)
       b: (css_keyword_none)
-      a: (css_keyword_none))))
+      alpha: (css_keyword_none))))

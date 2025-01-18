@@ -27,7 +27,7 @@
     "type": "css_function_hsl_legacy",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -73,7 +73,7 @@
     "type": "css_function_hsl_modern",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -162,7 +162,7 @@
     "type": "css_function_hsla_legacy",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -208,7 +208,7 @@
     "type": "css_function_hsla_modern",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -278,7 +278,7 @@
     "type": "css_function_hwb",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -345,6 +345,154 @@
     }
   },
   {
+    "type": "css_function_lab",
+    "named": true,
+    "fields": {
+      "L": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "a": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "alpha": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "b": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "css_function_oklab",
+    "named": true,
+    "fields": {
+      "L": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "a": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      },
+      "alpha": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "css_alpha_value",
+            "named": true
+          },
+          {
+            "type": "css_keyword_none",
+            "named": true
+          }
+        ]
+      },
+      "b": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "css_keyword_none",
+            "named": true
+          },
+          {
+            "type": "css_number",
+            "named": true
+          },
+          {
+            "type": "css_percentage",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "css_function_rgb",
     "named": true,
     "fields": {},
@@ -367,7 +515,7 @@
     "type": "css_function_rgb_legacy",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -425,7 +573,7 @@
     "type": "css_function_rgb_modern",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -518,7 +666,7 @@
     "type": "css_function_rgba_legacy",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -576,7 +724,7 @@
     "type": "css_function_rgba_modern",
     "named": true,
     "fields": {
-      "a": {
+      "alpha": {
         "multiple": false,
         "required": false,
         "types": [
@@ -712,6 +860,14 @@
         },
         {
           "type": "css_function_hwb",
+          "named": true
+        },
+        {
+          "type": "css_function_lab",
+          "named": true
+        },
+        {
+          "type": "css_function_oklab",
           "named": true
         },
         {

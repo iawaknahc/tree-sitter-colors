@@ -38,6 +38,14 @@
           {
             "type": "SYMBOL",
             "name": "css_function_hwb"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "css_function_lab"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "css_function_oklab"
           }
         ]
       }
@@ -178,7 +186,7 @@
                     },
                     {
                       "type": "FIELD",
-                      "name": "a",
+                      "name": "alpha",
                       "content": {
                         "type": "SYMBOL",
                         "name": "css_alpha_value"
@@ -253,7 +261,7 @@
                     },
                     {
                       "type": "FIELD",
-                      "name": "a",
+                      "name": "alpha",
                       "content": {
                         "type": "SYMBOL",
                         "name": "css_alpha_value"
@@ -333,7 +341,7 @@
                     },
                     {
                       "type": "FIELD",
-                      "name": "a",
+                      "name": "alpha",
                       "content": {
                         "type": "SYMBOL",
                         "name": "css_alpha_value"
@@ -408,7 +416,7 @@
                     },
                     {
                       "type": "FIELD",
-                      "name": "a",
+                      "name": "alpha",
                       "content": {
                         "type": "SYMBOL",
                         "name": "css_alpha_value"
@@ -516,7 +524,7 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "a",
+                  "name": "alpha",
                   "content": {
                     "type": "CHOICE",
                     "members": [
@@ -631,7 +639,7 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "a",
+                  "name": "alpha",
                   "content": {
                     "type": "CHOICE",
                     "members": [
@@ -728,7 +736,7 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "a",
+                  "name": "alpha",
                   "content": {
                     "type": "SYMBOL",
                     "name": "css_alpha_value"
@@ -830,7 +838,7 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "a",
+                  "name": "alpha",
                   "content": {
                     "type": "CHOICE",
                     "members": [
@@ -927,7 +935,7 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "a",
+                  "name": "alpha",
                   "content": {
                     "type": "SYMBOL",
                     "name": "css_alpha_value"
@@ -1029,7 +1037,7 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "a",
+                  "name": "alpha",
                   "content": {
                     "type": "CHOICE",
                     "members": [
@@ -1140,7 +1148,237 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "a",
+                  "name": "alpha",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "css_alpha_value"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "css_keyword_none"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "css_function_lab": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "lab",
+          "flags": "i"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "L",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "a",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "b",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "alpha",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "css_alpha_value"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "css_keyword_none"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "css_function_oklab": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "oklab",
+          "flags": "i"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "L",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "a",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "b",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_keyword_none"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "alpha",
                   "content": {
                     "type": "CHOICE",
                     "members": [
