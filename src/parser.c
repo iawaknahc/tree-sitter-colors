@@ -13,172 +13,181 @@
 #endif
 
 #define LANGUAGE_VERSION 14
-#define STATE_COUNT 6
-#define LARGE_STATE_COUNT 5
-#define SYMBOL_COUNT 152
+#define STATE_COUNT 7
+#define LARGE_STATE_COUNT 6
+#define SYMBOL_COUNT 157
 #define ALIAS_COUNT 0
-#define TOKEN_COUNT 149
+#define TOKEN_COUNT 153
 #define EXTERNAL_TOKEN_COUNT 0
 #define FIELD_COUNT 0
 #define MAX_ALIAS_SEQUENCE_LENGTH 2
 #define PRODUCTION_ID_COUNT 1
 
 enum ts_symbol_identifiers {
-  aux_sym_css_named_color_token1 = 1,
-  aux_sym_css_named_color_token2 = 2,
-  aux_sym_css_named_color_token3 = 3,
-  aux_sym_css_named_color_token4 = 4,
-  aux_sym_css_named_color_token5 = 5,
-  aux_sym_css_named_color_token6 = 6,
-  aux_sym_css_named_color_token7 = 7,
-  aux_sym_css_named_color_token8 = 8,
-  aux_sym_css_named_color_token9 = 9,
-  aux_sym_css_named_color_token10 = 10,
-  aux_sym_css_named_color_token11 = 11,
-  aux_sym_css_named_color_token12 = 12,
-  aux_sym_css_named_color_token13 = 13,
-  aux_sym_css_named_color_token14 = 14,
-  aux_sym_css_named_color_token15 = 15,
-  aux_sym_css_named_color_token16 = 16,
-  aux_sym_css_named_color_token17 = 17,
-  aux_sym_css_named_color_token18 = 18,
-  aux_sym_css_named_color_token19 = 19,
-  aux_sym_css_named_color_token20 = 20,
-  aux_sym_css_named_color_token21 = 21,
-  aux_sym_css_named_color_token22 = 22,
-  aux_sym_css_named_color_token23 = 23,
-  aux_sym_css_named_color_token24 = 24,
-  aux_sym_css_named_color_token25 = 25,
-  aux_sym_css_named_color_token26 = 26,
-  aux_sym_css_named_color_token27 = 27,
-  aux_sym_css_named_color_token28 = 28,
-  aux_sym_css_named_color_token29 = 29,
-  aux_sym_css_named_color_token30 = 30,
-  aux_sym_css_named_color_token31 = 31,
-  aux_sym_css_named_color_token32 = 32,
-  aux_sym_css_named_color_token33 = 33,
-  aux_sym_css_named_color_token34 = 34,
-  aux_sym_css_named_color_token35 = 35,
-  aux_sym_css_named_color_token36 = 36,
-  aux_sym_css_named_color_token37 = 37,
-  aux_sym_css_named_color_token38 = 38,
-  aux_sym_css_named_color_token39 = 39,
-  aux_sym_css_named_color_token40 = 40,
-  aux_sym_css_named_color_token41 = 41,
-  aux_sym_css_named_color_token42 = 42,
-  aux_sym_css_named_color_token43 = 43,
-  aux_sym_css_named_color_token44 = 44,
-  aux_sym_css_named_color_token45 = 45,
-  aux_sym_css_named_color_token46 = 46,
-  aux_sym_css_named_color_token47 = 47,
-  aux_sym_css_named_color_token48 = 48,
-  aux_sym_css_named_color_token49 = 49,
-  aux_sym_css_named_color_token50 = 50,
-  aux_sym_css_named_color_token51 = 51,
-  aux_sym_css_named_color_token52 = 52,
-  aux_sym_css_named_color_token53 = 53,
-  aux_sym_css_named_color_token54 = 54,
-  aux_sym_css_named_color_token55 = 55,
-  aux_sym_css_named_color_token56 = 56,
-  aux_sym_css_named_color_token57 = 57,
-  aux_sym_css_named_color_token58 = 58,
-  aux_sym_css_named_color_token59 = 59,
-  aux_sym_css_named_color_token60 = 60,
-  aux_sym_css_named_color_token61 = 61,
-  aux_sym_css_named_color_token62 = 62,
-  aux_sym_css_named_color_token63 = 63,
-  aux_sym_css_named_color_token64 = 64,
-  aux_sym_css_named_color_token65 = 65,
-  aux_sym_css_named_color_token66 = 66,
-  aux_sym_css_named_color_token67 = 67,
-  aux_sym_css_named_color_token68 = 68,
-  aux_sym_css_named_color_token69 = 69,
-  aux_sym_css_named_color_token70 = 70,
-  aux_sym_css_named_color_token71 = 71,
-  aux_sym_css_named_color_token72 = 72,
-  aux_sym_css_named_color_token73 = 73,
-  aux_sym_css_named_color_token74 = 74,
-  aux_sym_css_named_color_token75 = 75,
-  aux_sym_css_named_color_token76 = 76,
-  aux_sym_css_named_color_token77 = 77,
-  aux_sym_css_named_color_token78 = 78,
-  aux_sym_css_named_color_token79 = 79,
-  aux_sym_css_named_color_token80 = 80,
-  aux_sym_css_named_color_token81 = 81,
-  aux_sym_css_named_color_token82 = 82,
-  aux_sym_css_named_color_token83 = 83,
-  aux_sym_css_named_color_token84 = 84,
-  aux_sym_css_named_color_token85 = 85,
-  aux_sym_css_named_color_token86 = 86,
-  aux_sym_css_named_color_token87 = 87,
-  aux_sym_css_named_color_token88 = 88,
-  aux_sym_css_named_color_token89 = 89,
-  aux_sym_css_named_color_token90 = 90,
-  aux_sym_css_named_color_token91 = 91,
-  aux_sym_css_named_color_token92 = 92,
-  aux_sym_css_named_color_token93 = 93,
-  aux_sym_css_named_color_token94 = 94,
-  aux_sym_css_named_color_token95 = 95,
-  aux_sym_css_named_color_token96 = 96,
-  aux_sym_css_named_color_token97 = 97,
-  aux_sym_css_named_color_token98 = 98,
-  aux_sym_css_named_color_token99 = 99,
-  aux_sym_css_named_color_token100 = 100,
-  aux_sym_css_named_color_token101 = 101,
-  aux_sym_css_named_color_token102 = 102,
-  aux_sym_css_named_color_token103 = 103,
-  aux_sym_css_named_color_token104 = 104,
-  aux_sym_css_named_color_token105 = 105,
-  aux_sym_css_named_color_token106 = 106,
-  aux_sym_css_named_color_token107 = 107,
-  aux_sym_css_named_color_token108 = 108,
-  aux_sym_css_named_color_token109 = 109,
-  aux_sym_css_named_color_token110 = 110,
-  aux_sym_css_named_color_token111 = 111,
-  aux_sym_css_named_color_token112 = 112,
-  aux_sym_css_named_color_token113 = 113,
-  aux_sym_css_named_color_token114 = 114,
-  aux_sym_css_named_color_token115 = 115,
-  aux_sym_css_named_color_token116 = 116,
-  aux_sym_css_named_color_token117 = 117,
-  aux_sym_css_named_color_token118 = 118,
-  aux_sym_css_named_color_token119 = 119,
-  aux_sym_css_named_color_token120 = 120,
-  aux_sym_css_named_color_token121 = 121,
-  aux_sym_css_named_color_token122 = 122,
-  aux_sym_css_named_color_token123 = 123,
-  aux_sym_css_named_color_token124 = 124,
-  aux_sym_css_named_color_token125 = 125,
-  aux_sym_css_named_color_token126 = 126,
-  aux_sym_css_named_color_token127 = 127,
-  aux_sym_css_named_color_token128 = 128,
-  aux_sym_css_named_color_token129 = 129,
-  aux_sym_css_named_color_token130 = 130,
-  aux_sym_css_named_color_token131 = 131,
-  aux_sym_css_named_color_token132 = 132,
-  aux_sym_css_named_color_token133 = 133,
-  aux_sym_css_named_color_token134 = 134,
-  aux_sym_css_named_color_token135 = 135,
-  aux_sym_css_named_color_token136 = 136,
-  aux_sym_css_named_color_token137 = 137,
-  aux_sym_css_named_color_token138 = 138,
-  aux_sym_css_named_color_token139 = 139,
-  aux_sym_css_named_color_token140 = 140,
-  aux_sym_css_named_color_token141 = 141,
-  aux_sym_css_named_color_token142 = 142,
-  aux_sym_css_named_color_token143 = 143,
-  aux_sym_css_named_color_token144 = 144,
-  aux_sym_css_named_color_token145 = 145,
-  aux_sym_css_named_color_token146 = 146,
-  aux_sym_css_named_color_token147 = 147,
-  aux_sym_css_named_color_token148 = 148,
-  sym_source_file = 149,
-  sym_css_named_color = 150,
-  aux_sym_source_file_repeat1 = 151,
+  sym_css_hex_color_6_digits = 1,
+  sym_css_hex_color_8_digits = 2,
+  sym_css_hex_color_3_digits = 3,
+  sym_css_hex_color_4_digits = 4,
+  aux_sym_css_named_color_token1 = 5,
+  aux_sym_css_named_color_token2 = 6,
+  aux_sym_css_named_color_token3 = 7,
+  aux_sym_css_named_color_token4 = 8,
+  aux_sym_css_named_color_token5 = 9,
+  aux_sym_css_named_color_token6 = 10,
+  aux_sym_css_named_color_token7 = 11,
+  aux_sym_css_named_color_token8 = 12,
+  aux_sym_css_named_color_token9 = 13,
+  aux_sym_css_named_color_token10 = 14,
+  aux_sym_css_named_color_token11 = 15,
+  aux_sym_css_named_color_token12 = 16,
+  aux_sym_css_named_color_token13 = 17,
+  aux_sym_css_named_color_token14 = 18,
+  aux_sym_css_named_color_token15 = 19,
+  aux_sym_css_named_color_token16 = 20,
+  aux_sym_css_named_color_token17 = 21,
+  aux_sym_css_named_color_token18 = 22,
+  aux_sym_css_named_color_token19 = 23,
+  aux_sym_css_named_color_token20 = 24,
+  aux_sym_css_named_color_token21 = 25,
+  aux_sym_css_named_color_token22 = 26,
+  aux_sym_css_named_color_token23 = 27,
+  aux_sym_css_named_color_token24 = 28,
+  aux_sym_css_named_color_token25 = 29,
+  aux_sym_css_named_color_token26 = 30,
+  aux_sym_css_named_color_token27 = 31,
+  aux_sym_css_named_color_token28 = 32,
+  aux_sym_css_named_color_token29 = 33,
+  aux_sym_css_named_color_token30 = 34,
+  aux_sym_css_named_color_token31 = 35,
+  aux_sym_css_named_color_token32 = 36,
+  aux_sym_css_named_color_token33 = 37,
+  aux_sym_css_named_color_token34 = 38,
+  aux_sym_css_named_color_token35 = 39,
+  aux_sym_css_named_color_token36 = 40,
+  aux_sym_css_named_color_token37 = 41,
+  aux_sym_css_named_color_token38 = 42,
+  aux_sym_css_named_color_token39 = 43,
+  aux_sym_css_named_color_token40 = 44,
+  aux_sym_css_named_color_token41 = 45,
+  aux_sym_css_named_color_token42 = 46,
+  aux_sym_css_named_color_token43 = 47,
+  aux_sym_css_named_color_token44 = 48,
+  aux_sym_css_named_color_token45 = 49,
+  aux_sym_css_named_color_token46 = 50,
+  aux_sym_css_named_color_token47 = 51,
+  aux_sym_css_named_color_token48 = 52,
+  aux_sym_css_named_color_token49 = 53,
+  aux_sym_css_named_color_token50 = 54,
+  aux_sym_css_named_color_token51 = 55,
+  aux_sym_css_named_color_token52 = 56,
+  aux_sym_css_named_color_token53 = 57,
+  aux_sym_css_named_color_token54 = 58,
+  aux_sym_css_named_color_token55 = 59,
+  aux_sym_css_named_color_token56 = 60,
+  aux_sym_css_named_color_token57 = 61,
+  aux_sym_css_named_color_token58 = 62,
+  aux_sym_css_named_color_token59 = 63,
+  aux_sym_css_named_color_token60 = 64,
+  aux_sym_css_named_color_token61 = 65,
+  aux_sym_css_named_color_token62 = 66,
+  aux_sym_css_named_color_token63 = 67,
+  aux_sym_css_named_color_token64 = 68,
+  aux_sym_css_named_color_token65 = 69,
+  aux_sym_css_named_color_token66 = 70,
+  aux_sym_css_named_color_token67 = 71,
+  aux_sym_css_named_color_token68 = 72,
+  aux_sym_css_named_color_token69 = 73,
+  aux_sym_css_named_color_token70 = 74,
+  aux_sym_css_named_color_token71 = 75,
+  aux_sym_css_named_color_token72 = 76,
+  aux_sym_css_named_color_token73 = 77,
+  aux_sym_css_named_color_token74 = 78,
+  aux_sym_css_named_color_token75 = 79,
+  aux_sym_css_named_color_token76 = 80,
+  aux_sym_css_named_color_token77 = 81,
+  aux_sym_css_named_color_token78 = 82,
+  aux_sym_css_named_color_token79 = 83,
+  aux_sym_css_named_color_token80 = 84,
+  aux_sym_css_named_color_token81 = 85,
+  aux_sym_css_named_color_token82 = 86,
+  aux_sym_css_named_color_token83 = 87,
+  aux_sym_css_named_color_token84 = 88,
+  aux_sym_css_named_color_token85 = 89,
+  aux_sym_css_named_color_token86 = 90,
+  aux_sym_css_named_color_token87 = 91,
+  aux_sym_css_named_color_token88 = 92,
+  aux_sym_css_named_color_token89 = 93,
+  aux_sym_css_named_color_token90 = 94,
+  aux_sym_css_named_color_token91 = 95,
+  aux_sym_css_named_color_token92 = 96,
+  aux_sym_css_named_color_token93 = 97,
+  aux_sym_css_named_color_token94 = 98,
+  aux_sym_css_named_color_token95 = 99,
+  aux_sym_css_named_color_token96 = 100,
+  aux_sym_css_named_color_token97 = 101,
+  aux_sym_css_named_color_token98 = 102,
+  aux_sym_css_named_color_token99 = 103,
+  aux_sym_css_named_color_token100 = 104,
+  aux_sym_css_named_color_token101 = 105,
+  aux_sym_css_named_color_token102 = 106,
+  aux_sym_css_named_color_token103 = 107,
+  aux_sym_css_named_color_token104 = 108,
+  aux_sym_css_named_color_token105 = 109,
+  aux_sym_css_named_color_token106 = 110,
+  aux_sym_css_named_color_token107 = 111,
+  aux_sym_css_named_color_token108 = 112,
+  aux_sym_css_named_color_token109 = 113,
+  aux_sym_css_named_color_token110 = 114,
+  aux_sym_css_named_color_token111 = 115,
+  aux_sym_css_named_color_token112 = 116,
+  aux_sym_css_named_color_token113 = 117,
+  aux_sym_css_named_color_token114 = 118,
+  aux_sym_css_named_color_token115 = 119,
+  aux_sym_css_named_color_token116 = 120,
+  aux_sym_css_named_color_token117 = 121,
+  aux_sym_css_named_color_token118 = 122,
+  aux_sym_css_named_color_token119 = 123,
+  aux_sym_css_named_color_token120 = 124,
+  aux_sym_css_named_color_token121 = 125,
+  aux_sym_css_named_color_token122 = 126,
+  aux_sym_css_named_color_token123 = 127,
+  aux_sym_css_named_color_token124 = 128,
+  aux_sym_css_named_color_token125 = 129,
+  aux_sym_css_named_color_token126 = 130,
+  aux_sym_css_named_color_token127 = 131,
+  aux_sym_css_named_color_token128 = 132,
+  aux_sym_css_named_color_token129 = 133,
+  aux_sym_css_named_color_token130 = 134,
+  aux_sym_css_named_color_token131 = 135,
+  aux_sym_css_named_color_token132 = 136,
+  aux_sym_css_named_color_token133 = 137,
+  aux_sym_css_named_color_token134 = 138,
+  aux_sym_css_named_color_token135 = 139,
+  aux_sym_css_named_color_token136 = 140,
+  aux_sym_css_named_color_token137 = 141,
+  aux_sym_css_named_color_token138 = 142,
+  aux_sym_css_named_color_token139 = 143,
+  aux_sym_css_named_color_token140 = 144,
+  aux_sym_css_named_color_token141 = 145,
+  aux_sym_css_named_color_token142 = 146,
+  aux_sym_css_named_color_token143 = 147,
+  aux_sym_css_named_color_token144 = 148,
+  aux_sym_css_named_color_token145 = 149,
+  aux_sym_css_named_color_token146 = 150,
+  aux_sym_css_named_color_token147 = 151,
+  aux_sym_css_named_color_token148 = 152,
+  sym_source_file = 153,
+  sym_css_hex_color = 154,
+  sym_css_named_color = 155,
+  aux_sym_source_file_repeat1 = 156,
 };
 
 static const char * const ts_symbol_names[] = {
   [ts_builtin_sym_end] = "end",
+  [sym_css_hex_color_6_digits] = "css_hex_color_6_digits",
+  [sym_css_hex_color_8_digits] = "css_hex_color_8_digits",
+  [sym_css_hex_color_3_digits] = "css_hex_color_3_digits",
+  [sym_css_hex_color_4_digits] = "css_hex_color_4_digits",
   [aux_sym_css_named_color_token1] = "css_named_color_token1",
   [aux_sym_css_named_color_token2] = "css_named_color_token2",
   [aux_sym_css_named_color_token3] = "css_named_color_token3",
@@ -328,12 +337,17 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_css_named_color_token147] = "css_named_color_token147",
   [aux_sym_css_named_color_token148] = "css_named_color_token148",
   [sym_source_file] = "source_file",
+  [sym_css_hex_color] = "css_hex_color",
   [sym_css_named_color] = "css_named_color",
   [aux_sym_source_file_repeat1] = "source_file_repeat1",
 };
 
 static const TSSymbol ts_symbol_map[] = {
   [ts_builtin_sym_end] = ts_builtin_sym_end,
+  [sym_css_hex_color_6_digits] = sym_css_hex_color_6_digits,
+  [sym_css_hex_color_8_digits] = sym_css_hex_color_8_digits,
+  [sym_css_hex_color_3_digits] = sym_css_hex_color_3_digits,
+  [sym_css_hex_color_4_digits] = sym_css_hex_color_4_digits,
   [aux_sym_css_named_color_token1] = aux_sym_css_named_color_token1,
   [aux_sym_css_named_color_token2] = aux_sym_css_named_color_token2,
   [aux_sym_css_named_color_token3] = aux_sym_css_named_color_token3,
@@ -483,6 +497,7 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_css_named_color_token147] = aux_sym_css_named_color_token147,
   [aux_sym_css_named_color_token148] = aux_sym_css_named_color_token148,
   [sym_source_file] = sym_source_file,
+  [sym_css_hex_color] = sym_css_hex_color,
   [sym_css_named_color] = sym_css_named_color,
   [aux_sym_source_file_repeat1] = aux_sym_source_file_repeat1,
 };
@@ -490,6 +505,22 @@ static const TSSymbol ts_symbol_map[] = {
 static const TSSymbolMetadata ts_symbol_metadata[] = {
   [ts_builtin_sym_end] = {
     .visible = false,
+    .named = true,
+  },
+  [sym_css_hex_color_6_digits] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym_css_hex_color_8_digits] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym_css_hex_color_3_digits] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym_css_hex_color_4_digits] = {
+    .visible = true,
     .named = true,
   },
   [aux_sym_css_named_color_token1] = {
@@ -1088,6 +1119,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
+  [sym_css_hex_color] = {
+    .visible = true,
+    .named = true,
+  },
   [sym_css_named_color] = {
     .visible = true,
     .named = true,
@@ -1113,6 +1148,7 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [3] = 3,
   [4] = 4,
   [5] = 5,
+  [6] = 6,
 };
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
@@ -1120,8 +1156,9 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   eof = lexer->eof(lexer);
   switch (state) {
     case 0:
-      if (eof) ADVANCE(750);
+      if (eof) ADVANCE(755);
       ADVANCE_MAP(
+        '#', 754,
         'A', 369,
         'a', 369,
         'B', 187,
@@ -1252,29 +1289,29 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 9:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(753);
+          lookahead == 'a') ADVANCE(762);
       END_STATE();
     case 10:
       if (lookahead == 'A' ||
           lookahead == 'a') ADVANCE(351);
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(852);
+          lookahead == 'y') ADVANCE(861);
       END_STATE();
     case 11:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(879);
+          lookahead == 'a') ADVANCE(888);
       END_STATE();
     case 12:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(799);
+          lookahead == 'a') ADVANCE(808);
       END_STATE();
     case 13:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(836);
+          lookahead == 'a') ADVANCE(845);
       END_STATE();
     case 14:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(779);
+          lookahead == 'a') ADVANCE(788);
       END_STATE();
     case 15:
       ADVANCE_MAP(
@@ -1558,13 +1595,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 65:
       if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(855);
+          lookahead == 'b') ADVANCE(864);
       END_STATE();
     case 66:
       if (lookahead == 'B' ||
           lookahead == 'b') ADVANCE(245);
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(871);
+          lookahead == 'd') ADVANCE(880);
       END_STATE();
     case 67:
       if (lookahead == 'B' ||
@@ -1754,59 +1791,59 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 104:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(802);
+          lookahead == 'd') ADVANCE(811);
       END_STATE();
     case 105:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(858);
+          lookahead == 'd') ADVANCE(867);
       END_STATE();
     case 106:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(783);
+          lookahead == 'd') ADVANCE(792);
       END_STATE();
     case 107:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(763);
+          lookahead == 'd') ADVANCE(772);
       END_STATE();
     case 108:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(803);
+          lookahead == 'd') ADVANCE(812);
       END_STATE();
     case 109:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(810);
+          lookahead == 'd') ADVANCE(819);
       END_STATE();
     case 110:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(857);
+          lookahead == 'd') ADVANCE(866);
       END_STATE();
     case 111:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(782);
+          lookahead == 'd') ADVANCE(791);
       END_STATE();
     case 112:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(840);
+          lookahead == 'd') ADVANCE(849);
       END_STATE();
     case 113:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(774);
+          lookahead == 'd') ADVANCE(783);
       END_STATE();
     case 114:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(859);
+          lookahead == 'd') ADVANCE(868);
       END_STATE();
     case 115:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(862);
+          lookahead == 'd') ADVANCE(871);
       END_STATE();
     case 116:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(759);
+          lookahead == 'd') ADVANCE(768);
       END_STATE();
     case 117:
       if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(846);
+          lookahead == 'd') ADVANCE(855);
       END_STATE();
     case 118:
       if (lookahead == 'D' ||
@@ -1898,11 +1935,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 137:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(760);
+          lookahead == 'e') ADVANCE(769);
       END_STATE();
     case 138:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(833);
+          lookahead == 'e') ADVANCE(842);
       END_STATE();
     case 139:
       if (lookahead == 'E' ||
@@ -1910,15 +1947,15 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 140:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(755);
+          lookahead == 'e') ADVANCE(764);
       END_STATE();
     case 141:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(756);
+          lookahead == 'e') ADVANCE(765);
       END_STATE();
     case 142:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(854);
+          lookahead == 'e') ADVANCE(863);
       END_STATE();
     case 143:
       if (lookahead == 'E' ||
@@ -1926,167 +1963,167 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 144:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(895);
+          lookahead == 'e') ADVANCE(904);
       END_STATE();
     case 145:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(757);
+          lookahead == 'e') ADVANCE(766);
       END_STATE();
     case 146:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(856);
+          lookahead == 'e') ADVANCE(865);
       END_STATE();
     case 147:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(869);
+          lookahead == 'e') ADVANCE(878);
       END_STATE();
     case 148:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(853);
+          lookahead == 'e') ADVANCE(862);
       END_STATE();
     case 149:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(881);
+          lookahead == 'e') ADVANCE(890);
       END_STATE();
     case 150:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(890);
+          lookahead == 'e') ADVANCE(899);
       END_STATE();
     case 151:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(772);
+          lookahead == 'e') ADVANCE(781);
       END_STATE();
     case 152:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(751);
+          lookahead == 'e') ADVANCE(760);
       END_STATE();
     case 153:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(764);
+          lookahead == 'e') ADVANCE(773);
       END_STATE();
     case 154:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(766);
+          lookahead == 'e') ADVANCE(775);
       END_STATE();
     case 155:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(818);
+          lookahead == 'e') ADVANCE(827);
       END_STATE();
     case 156:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(849);
+          lookahead == 'e') ADVANCE(858);
       END_STATE();
     case 157:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(873);
+          lookahead == 'e') ADVANCE(882);
       END_STATE();
     case 158:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(882);
+          lookahead == 'e') ADVANCE(891);
       END_STATE();
     case 159:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(887);
+          lookahead == 'e') ADVANCE(896);
       END_STATE();
     case 160:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(892);
+          lookahead == 'e') ADVANCE(901);
       END_STATE();
     case 161:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(754);
+          lookahead == 'e') ADVANCE(763);
       END_STATE();
     case 162:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(765);
+          lookahead == 'e') ADVANCE(774);
       END_STATE();
     case 163:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(781);
+          lookahead == 'e') ADVANCE(790);
       END_STATE();
     case 164:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(795);
+          lookahead == 'e') ADVANCE(804);
       END_STATE();
     case 165:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(801);
+          lookahead == 'e') ADVANCE(810);
       END_STATE();
     case 166:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(839);
+          lookahead == 'e') ADVANCE(848);
       END_STATE();
     case 167:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(868);
+          lookahead == 'e') ADVANCE(877);
       END_STATE();
     case 168:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(896);
+          lookahead == 'e') ADVANCE(905);
       END_STATE();
     case 169:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(792);
+          lookahead == 'e') ADVANCE(801);
       END_STATE();
     case 170:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(797);
+          lookahead == 'e') ADVANCE(806);
       END_STATE();
     case 171:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(851);
+          lookahead == 'e') ADVANCE(860);
       END_STATE();
     case 172:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(752);
+          lookahead == 'e') ADVANCE(761);
       END_STATE();
     case 173:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(828);
+          lookahead == 'e') ADVANCE(837);
       END_STATE();
     case 174:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(841);
+          lookahead == 'e') ADVANCE(850);
       END_STATE();
     case 175:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(847);
+          lookahead == 'e') ADVANCE(856);
       END_STATE();
     case 176:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(786);
+          lookahead == 'e') ADVANCE(795);
       END_STATE();
     case 177:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(789);
+          lookahead == 'e') ADVANCE(798);
       END_STATE();
     case 178:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(861);
+          lookahead == 'e') ADVANCE(870);
       END_STATE();
     case 179:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(870);
+          lookahead == 'e') ADVANCE(879);
       END_STATE();
     case 180:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(768);
+          lookahead == 'e') ADVANCE(777);
       END_STATE();
     case 181:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(831);
+          lookahead == 'e') ADVANCE(840);
       END_STATE();
     case 182:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(843);
+          lookahead == 'e') ADVANCE(852);
       END_STATE();
     case 183:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(845);
+          lookahead == 'e') ADVANCE(854);
       END_STATE();
     case 184:
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(838);
+          lookahead == 'e') ADVANCE(847);
       END_STATE();
     case 185:
       if (lookahead == 'E' ||
@@ -2144,7 +2181,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(442);
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(807);
+          lookahead == 'y') ADVANCE(816);
       END_STATE();
     case 196:
       if (lookahead == 'E' ||
@@ -2210,7 +2247,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(450);
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(777);
+          lookahead == 'y') ADVANCE(786);
       END_STATE();
     case 212:
       if (lookahead == 'E' ||
@@ -2232,7 +2269,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(457);
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(824);
+          lookahead == 'y') ADVANCE(833);
       END_STATE();
     case 217:
       if (lookahead == 'E' ||
@@ -2426,7 +2463,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 263:
       if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(864);
+          lookahead == 'f') ADVANCE(873);
       END_STATE();
     case 264:
       if (lookahead == 'F' ||
@@ -2552,7 +2589,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 291:
       if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(815);
+          lookahead == 'h') ADVANCE(824);
       END_STATE();
     case 292:
       if (lookahead == 'H' ||
@@ -2632,11 +2669,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 311:
       if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(813);
+          lookahead == 'i') ADVANCE(822);
       END_STATE();
     case 312:
       if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(778);
+          lookahead == 'i') ADVANCE(787);
       END_STATE();
     case 313:
       if (lookahead == 'I' ||
@@ -2808,31 +2845,31 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 353:
       if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(866);
+          lookahead == 'k') ADVANCE(875);
       END_STATE();
     case 354:
       if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(758);
+          lookahead == 'k') ADVANCE(767);
       END_STATE();
     case 355:
       if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(809);
+          lookahead == 'k') ADVANCE(818);
       END_STATE();
     case 356:
       if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(769);
+          lookahead == 'k') ADVANCE(778);
       END_STATE();
     case 357:
       if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(791);
+          lookahead == 'k') ADVANCE(800);
       END_STATE();
     case 358:
       if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(796);
+          lookahead == 'k') ADVANCE(805);
       END_STATE();
     case 359:
       if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(825);
+          lookahead == 'k') ADVANCE(834);
       END_STATE();
     case 360:
       if (lookahead == 'K' ||
@@ -2858,19 +2895,19 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 365:
       if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(889);
+          lookahead == 'l') ADVANCE(898);
       END_STATE();
     case 366:
       if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(767);
+          lookahead == 'l') ADVANCE(776);
       END_STATE();
     case 367:
       if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(878);
+          lookahead == 'l') ADVANCE(887);
       END_STATE();
     case 368:
       if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(819);
+          lookahead == 'l') ADVANCE(828);
       END_STATE();
     case 369:
       ADVANCE_MAP(
@@ -3114,7 +3151,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 426:
       if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(867);
+          lookahead == 'm') ADVANCE(876);
       END_STATE();
     case 427:
       if (lookahead == 'M' ||
@@ -3122,7 +3159,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 428:
       if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(848);
+          lookahead == 'm') ADVANCE(857);
       END_STATE();
     case 429:
       if (lookahead == 'M' ||
@@ -3166,127 +3203,127 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 439:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(888);
+          lookahead == 'n') ADVANCE(897);
       END_STATE();
     case 440:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(771);
+          lookahead == 'n') ADVANCE(780);
       END_STATE();
     case 441:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(762);
+          lookahead == 'n') ADVANCE(771);
       END_STATE();
     case 442:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(805);
+          lookahead == 'n') ADVANCE(814);
       END_STATE();
     case 443:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(835);
+          lookahead == 'n') ADVANCE(844);
       END_STATE();
     case 444:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(837);
+          lookahead == 'n') ADVANCE(846);
       END_STATE();
     case 445:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(875);
+          lookahead == 'n') ADVANCE(884);
       END_STATE();
     case 446:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(770);
+          lookahead == 'n') ADVANCE(779);
       END_STATE();
     case 447:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(773);
+          lookahead == 'n') ADVANCE(782);
       END_STATE();
     case 448:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(850);
+          lookahead == 'n') ADVANCE(859);
       END_STATE();
     case 449:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(877);
+          lookahead == 'n') ADVANCE(886);
       END_STATE();
     case 450:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(776);
+          lookahead == 'n') ADVANCE(785);
       END_STATE();
     case 451:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(816);
+          lookahead == 'n') ADVANCE(825);
       END_STATE();
     case 452:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(820);
+          lookahead == 'n') ADVANCE(829);
       END_STATE();
     case 453:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(834);
+          lookahead == 'n') ADVANCE(843);
       END_STATE();
     case 454:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(860);
+          lookahead == 'n') ADVANCE(869);
       END_STATE();
     case 455:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(872);
+          lookahead == 'n') ADVANCE(881);
       END_STATE();
     case 456:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(784);
+          lookahead == 'n') ADVANCE(793);
       END_STATE();
     case 457:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(823);
+          lookahead == 'n') ADVANCE(832);
       END_STATE();
     case 458:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(876);
+          lookahead == 'n') ADVANCE(885);
       END_STATE();
     case 459:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(798);
+          lookahead == 'n') ADVANCE(807);
       END_STATE();
     case 460:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(826);
+          lookahead == 'n') ADVANCE(835);
       END_STATE();
     case 461:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(874);
+          lookahead == 'n') ADVANCE(883);
       END_STATE();
     case 462:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(886);
+          lookahead == 'n') ADVANCE(895);
       END_STATE();
     case 463:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(898);
+          lookahead == 'n') ADVANCE(907);
       END_STATE();
     case 464:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(785);
+          lookahead == 'n') ADVANCE(794);
       END_STATE();
     case 465:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(817);
+          lookahead == 'n') ADVANCE(826);
       END_STATE();
     case 466:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(827);
+          lookahead == 'n') ADVANCE(836);
       END_STATE();
     case 467:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(780);
+          lookahead == 'n') ADVANCE(789);
       END_STATE();
     case 468:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(842);
+          lookahead == 'n') ADVANCE(851);
       END_STATE();
     case 469:
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(844);
+          lookahead == 'n') ADVANCE(853);
       END_STATE();
     case 470:
       if (lookahead == 'N' ||
@@ -3406,15 +3443,15 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 498:
       if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(811);
+          lookahead == 'o') ADVANCE(820);
       END_STATE();
     case 499:
       if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(891);
+          lookahead == 'o') ADVANCE(900);
       END_STATE();
     case 500:
       if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(800);
+          lookahead == 'o') ADVANCE(809);
       END_STATE();
     case 501:
       if (lookahead == 'O' ||
@@ -3614,7 +3651,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 548:
       if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(863);
+          lookahead == 'p') ADVANCE(872);
       END_STATE();
     case 549:
       if (lookahead == 'P' ||
@@ -3684,11 +3721,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 565:
       if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(880);
+          lookahead == 'r') ADVANCE(889);
       END_STATE();
     case 566:
       if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(814);
+          lookahead == 'r') ADVANCE(823);
       END_STATE();
     case 567:
       if (lookahead == 'R' ||
@@ -3978,19 +4015,19 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 638:
       if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(894);
+          lookahead == 't') ADVANCE(903);
       END_STATE();
     case 639:
       if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(893);
+          lookahead == 't') ADVANCE(902);
       END_STATE();
     case 640:
       if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(761);
+          lookahead == 't') ADVANCE(770);
       END_STATE();
     case 641:
       if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(790);
+          lookahead == 't') ADVANCE(799);
       END_STATE();
     case 642:
       if (lookahead == 'T' ||
@@ -4090,7 +4127,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 666:
       if (lookahead == 'U' ||
-          lookahead == 'u') ADVANCE(865);
+          lookahead == 'u') ADVANCE(874);
       END_STATE();
     case 667:
       if (lookahead == 'U' ||
@@ -4264,27 +4301,27 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 709:
       if (lookahead == 'W' ||
-          lookahead == 'w') ADVANCE(885);
+          lookahead == 'w') ADVANCE(894);
       END_STATE();
     case 710:
       if (lookahead == 'W' ||
-          lookahead == 'w') ADVANCE(897);
+          lookahead == 'w') ADVANCE(906);
       END_STATE();
     case 711:
       if (lookahead == 'W' ||
-          lookahead == 'w') ADVANCE(808);
+          lookahead == 'w') ADVANCE(817);
       END_STATE();
     case 712:
       if (lookahead == 'W' ||
-          lookahead == 'w') ADVANCE(806);
+          lookahead == 'w') ADVANCE(815);
       END_STATE();
     case 713:
       if (lookahead == 'W' ||
-          lookahead == 'w') ADVANCE(832);
+          lookahead == 'w') ADVANCE(841);
       END_STATE();
     case 714:
       if (lookahead == 'W' ||
-          lookahead == 'w') ADVANCE(821);
+          lookahead == 'w') ADVANCE(830);
       END_STATE();
     case 715:
       if (lookahead == 'W' ||
@@ -4340,51 +4377,51 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 728:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(804);
+          lookahead == 'y') ADVANCE(813);
       END_STATE();
     case 729:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(812);
+          lookahead == 'y') ADVANCE(821);
       END_STATE();
     case 730:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(793);
+          lookahead == 'y') ADVANCE(802);
       END_STATE();
     case 731:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(794);
+          lookahead == 'y') ADVANCE(803);
       END_STATE();
     case 732:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(775);
+          lookahead == 'y') ADVANCE(784);
       END_STATE();
     case 733:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(822);
+          lookahead == 'y') ADVANCE(831);
       END_STATE();
     case 734:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(883);
+          lookahead == 'y') ADVANCE(892);
       END_STATE();
     case 735:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(884);
+          lookahead == 'y') ADVANCE(893);
       END_STATE();
     case 736:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(787);
+          lookahead == 'y') ADVANCE(796);
       END_STATE();
     case 737:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(788);
+          lookahead == 'y') ADVANCE(797);
       END_STATE();
     case 738:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(829);
+          lookahead == 'y') ADVANCE(838);
       END_STATE();
     case 739:
       if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(830);
+          lookahead == 'y') ADVANCE(839);
       END_STATE();
     case 740:
       if (lookahead == 'Y' ||
@@ -4427,470 +4464,516 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == 'y') ADVANCE(253);
       END_STATE();
     case 750:
-      ACCEPT_TOKEN(ts_builtin_sym_end);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(758);
       END_STATE();
     case 751:
-      ACCEPT_TOKEN(aux_sym_css_named_color_token1);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(756);
       END_STATE();
     case 752:
-      ACCEPT_TOKEN(aux_sym_css_named_color_token2);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(757);
       END_STATE();
     case 753:
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(750);
+      END_STATE();
+    case 754:
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(753);
+      END_STATE();
+    case 755:
+      ACCEPT_TOKEN(ts_builtin_sym_end);
+      END_STATE();
+    case 756:
+      ACCEPT_TOKEN(sym_css_hex_color_6_digits);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(752);
+      END_STATE();
+    case 757:
+      ACCEPT_TOKEN(sym_css_hex_color_8_digits);
+      END_STATE();
+    case 758:
+      ACCEPT_TOKEN(sym_css_hex_color_3_digits);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(759);
+      END_STATE();
+    case 759:
+      ACCEPT_TOKEN(sym_css_hex_color_4_digits);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'F') ||
+          ('a' <= lookahead && lookahead <= 'f')) ADVANCE(751);
+      END_STATE();
+    case 760:
+      ACCEPT_TOKEN(aux_sym_css_named_color_token1);
+      END_STATE();
+    case 761:
+      ACCEPT_TOKEN(aux_sym_css_named_color_token2);
+      END_STATE();
+    case 762:
       ACCEPT_TOKEN(aux_sym_css_named_color_token3);
       if (lookahead == 'M' ||
           lookahead == 'm') ADVANCE(56);
       END_STATE();
-    case 754:
+    case 763:
       ACCEPT_TOKEN(aux_sym_css_named_color_token4);
       END_STATE();
-    case 755:
+    case 764:
       ACCEPT_TOKEN(aux_sym_css_named_color_token5);
       END_STATE();
-    case 756:
+    case 765:
       ACCEPT_TOKEN(aux_sym_css_named_color_token6);
       END_STATE();
-    case 757:
+    case 766:
       ACCEPT_TOKEN(aux_sym_css_named_color_token7);
       END_STATE();
-    case 758:
+    case 767:
       ACCEPT_TOKEN(aux_sym_css_named_color_token8);
       END_STATE();
-    case 759:
+    case 768:
       ACCEPT_TOKEN(aux_sym_css_named_color_token9);
       END_STATE();
-    case 760:
+    case 769:
       ACCEPT_TOKEN(aux_sym_css_named_color_token10);
       if (lookahead == 'V' ||
           lookahead == 'v') ADVANCE(346);
       END_STATE();
-    case 761:
+    case 770:
       ACCEPT_TOKEN(aux_sym_css_named_color_token11);
       END_STATE();
-    case 762:
+    case 771:
       ACCEPT_TOKEN(aux_sym_css_named_color_token12);
       END_STATE();
-    case 763:
+    case 772:
       ACCEPT_TOKEN(aux_sym_css_named_color_token13);
       END_STATE();
-    case 764:
+    case 773:
       ACCEPT_TOKEN(aux_sym_css_named_color_token14);
       END_STATE();
-    case 765:
+    case 774:
       ACCEPT_TOKEN(aux_sym_css_named_color_token15);
       END_STATE();
-    case 766:
+    case 775:
       ACCEPT_TOKEN(aux_sym_css_named_color_token16);
       END_STATE();
-    case 767:
+    case 776:
       ACCEPT_TOKEN(aux_sym_css_named_color_token17);
       END_STATE();
-    case 768:
+    case 777:
       ACCEPT_TOKEN(aux_sym_css_named_color_token18);
       END_STATE();
-    case 769:
+    case 778:
       ACCEPT_TOKEN(aux_sym_css_named_color_token19);
       END_STATE();
-    case 770:
+    case 779:
       ACCEPT_TOKEN(aux_sym_css_named_color_token20);
       END_STATE();
-    case 771:
+    case 780:
       ACCEPT_TOKEN(aux_sym_css_named_color_token21);
       END_STATE();
-    case 772:
+    case 781:
       ACCEPT_TOKEN(aux_sym_css_named_color_token22);
       END_STATE();
-    case 773:
+    case 782:
       ACCEPT_TOKEN(aux_sym_css_named_color_token23);
       END_STATE();
-    case 774:
+    case 783:
       ACCEPT_TOKEN(aux_sym_css_named_color_token24);
       END_STATE();
-    case 775:
+    case 784:
       ACCEPT_TOKEN(aux_sym_css_named_color_token25);
       END_STATE();
-    case 776:
+    case 785:
       ACCEPT_TOKEN(aux_sym_css_named_color_token26);
       END_STATE();
-    case 777:
+    case 786:
       ACCEPT_TOKEN(aux_sym_css_named_color_token27);
       END_STATE();
-    case 778:
+    case 787:
       ACCEPT_TOKEN(aux_sym_css_named_color_token28);
       END_STATE();
-    case 779:
+    case 788:
       ACCEPT_TOKEN(aux_sym_css_named_color_token29);
       END_STATE();
-    case 780:
+    case 789:
       ACCEPT_TOKEN(aux_sym_css_named_color_token30);
       END_STATE();
-    case 781:
+    case 790:
       ACCEPT_TOKEN(aux_sym_css_named_color_token31);
       END_STATE();
-    case 782:
+    case 791:
       ACCEPT_TOKEN(aux_sym_css_named_color_token32);
       END_STATE();
-    case 783:
+    case 792:
       ACCEPT_TOKEN(aux_sym_css_named_color_token33);
       END_STATE();
-    case 784:
+    case 793:
       ACCEPT_TOKEN(aux_sym_css_named_color_token34);
       END_STATE();
-    case 785:
+    case 794:
       ACCEPT_TOKEN(aux_sym_css_named_color_token35);
       END_STATE();
-    case 786:
+    case 795:
       ACCEPT_TOKEN(aux_sym_css_named_color_token36);
       END_STATE();
-    case 787:
+    case 796:
       ACCEPT_TOKEN(aux_sym_css_named_color_token37);
       END_STATE();
-    case 788:
+    case 797:
       ACCEPT_TOKEN(aux_sym_css_named_color_token38);
       END_STATE();
-    case 789:
+    case 798:
       ACCEPT_TOKEN(aux_sym_css_named_color_token39);
       END_STATE();
-    case 790:
+    case 799:
       ACCEPT_TOKEN(aux_sym_css_named_color_token40);
       END_STATE();
-    case 791:
+    case 800:
       ACCEPT_TOKEN(aux_sym_css_named_color_token41);
       END_STATE();
-    case 792:
+    case 801:
       ACCEPT_TOKEN(aux_sym_css_named_color_token42);
       END_STATE();
-    case 793:
+    case 802:
       ACCEPT_TOKEN(aux_sym_css_named_color_token43);
       END_STATE();
-    case 794:
+    case 803:
       ACCEPT_TOKEN(aux_sym_css_named_color_token44);
       END_STATE();
-    case 795:
+    case 804:
       ACCEPT_TOKEN(aux_sym_css_named_color_token45);
       END_STATE();
-    case 796:
+    case 805:
       ACCEPT_TOKEN(aux_sym_css_named_color_token46);
       END_STATE();
-    case 797:
+    case 806:
       ACCEPT_TOKEN(aux_sym_css_named_color_token47);
       END_STATE();
-    case 798:
+    case 807:
       ACCEPT_TOKEN(aux_sym_css_named_color_token48);
       END_STATE();
-    case 799:
+    case 808:
       ACCEPT_TOKEN(aux_sym_css_named_color_token49);
       END_STATE();
-    case 800:
+    case 809:
       ACCEPT_TOKEN(aux_sym_css_named_color_token50);
       END_STATE();
-    case 801:
+    case 810:
       ACCEPT_TOKEN(aux_sym_css_named_color_token51);
       END_STATE();
-    case 802:
+    case 811:
       ACCEPT_TOKEN(aux_sym_css_named_color_token52);
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(482);
       END_STATE();
-    case 803:
+    case 812:
       ACCEPT_TOKEN(aux_sym_css_named_color_token53);
       END_STATE();
-    case 804:
+    case 813:
       ACCEPT_TOKEN(aux_sym_css_named_color_token54);
       END_STATE();
-    case 805:
+    case 814:
       ACCEPT_TOKEN(aux_sym_css_named_color_token55);
       if (lookahead == 'Y' ||
           lookahead == 'y') ADVANCE(250);
       END_STATE();
-    case 806:
+    case 815:
       ACCEPT_TOKEN(aux_sym_css_named_color_token56);
       END_STATE();
-    case 807:
+    case 816:
       ACCEPT_TOKEN(aux_sym_css_named_color_token57);
       END_STATE();
-    case 808:
+    case 817:
       ACCEPT_TOKEN(aux_sym_css_named_color_token58);
       END_STATE();
-    case 809:
+    case 818:
       ACCEPT_TOKEN(aux_sym_css_named_color_token59);
       END_STATE();
-    case 810:
+    case 819:
       ACCEPT_TOKEN(aux_sym_css_named_color_token60);
       END_STATE();
-    case 811:
+    case 820:
       ACCEPT_TOKEN(aux_sym_css_named_color_token61);
       END_STATE();
-    case 812:
+    case 821:
       ACCEPT_TOKEN(aux_sym_css_named_color_token62);
       END_STATE();
-    case 813:
+    case 822:
       ACCEPT_TOKEN(aux_sym_css_named_color_token63);
       END_STATE();
-    case 814:
+    case 823:
       ACCEPT_TOKEN(aux_sym_css_named_color_token64);
       if (lookahead == 'B' ||
           lookahead == 'b') ADVANCE(374);
       END_STATE();
-    case 815:
+    case 824:
       ACCEPT_TOKEN(aux_sym_css_named_color_token65);
       END_STATE();
-    case 816:
+    case 825:
       ACCEPT_TOKEN(aux_sym_css_named_color_token66);
       END_STATE();
-    case 817:
+    case 826:
       ACCEPT_TOKEN(aux_sym_css_named_color_token67);
       END_STATE();
-    case 818:
+    case 827:
       ACCEPT_TOKEN(aux_sym_css_named_color_token68);
       END_STATE();
-    case 819:
+    case 828:
       ACCEPT_TOKEN(aux_sym_css_named_color_token69);
       END_STATE();
-    case 820:
+    case 829:
       ACCEPT_TOKEN(aux_sym_css_named_color_token70);
       END_STATE();
-    case 821:
+    case 830:
       ACCEPT_TOKEN(aux_sym_css_named_color_token71);
       END_STATE();
-    case 822:
+    case 831:
       ACCEPT_TOKEN(aux_sym_css_named_color_token72);
       END_STATE();
-    case 823:
+    case 832:
       ACCEPT_TOKEN(aux_sym_css_named_color_token73);
       END_STATE();
-    case 824:
+    case 833:
       ACCEPT_TOKEN(aux_sym_css_named_color_token74);
       END_STATE();
-    case 825:
+    case 834:
       ACCEPT_TOKEN(aux_sym_css_named_color_token75);
       END_STATE();
-    case 826:
+    case 835:
       ACCEPT_TOKEN(aux_sym_css_named_color_token76);
       END_STATE();
-    case 827:
+    case 836:
       ACCEPT_TOKEN(aux_sym_css_named_color_token77);
       END_STATE();
-    case 828:
+    case 837:
       ACCEPT_TOKEN(aux_sym_css_named_color_token78);
       END_STATE();
-    case 829:
+    case 838:
       ACCEPT_TOKEN(aux_sym_css_named_color_token79);
       END_STATE();
-    case 830:
+    case 839:
       ACCEPT_TOKEN(aux_sym_css_named_color_token80);
       END_STATE();
-    case 831:
+    case 840:
       ACCEPT_TOKEN(aux_sym_css_named_color_token81);
       END_STATE();
-    case 832:
+    case 841:
       ACCEPT_TOKEN(aux_sym_css_named_color_token82);
       END_STATE();
-    case 833:
+    case 842:
       ACCEPT_TOKEN(aux_sym_css_named_color_token83);
       if (lookahead == 'G' ||
           lookahead == 'g') ADVANCE(604);
       END_STATE();
-    case 834:
+    case 843:
       ACCEPT_TOKEN(aux_sym_css_named_color_token84);
       END_STATE();
-    case 835:
+    case 844:
       ACCEPT_TOKEN(aux_sym_css_named_color_token85);
       END_STATE();
-    case 836:
+    case 845:
       ACCEPT_TOKEN(aux_sym_css_named_color_token86);
       END_STATE();
-    case 837:
+    case 846:
       ACCEPT_TOKEN(aux_sym_css_named_color_token87);
       END_STATE();
-    case 838:
+    case 847:
       ACCEPT_TOKEN(aux_sym_css_named_color_token88);
       END_STATE();
-    case 839:
+    case 848:
       ACCEPT_TOKEN(aux_sym_css_named_color_token89);
       END_STATE();
-    case 840:
+    case 849:
       ACCEPT_TOKEN(aux_sym_css_named_color_token90);
       END_STATE();
-    case 841:
+    case 850:
       ACCEPT_TOKEN(aux_sym_css_named_color_token91);
       END_STATE();
-    case 842:
+    case 851:
       ACCEPT_TOKEN(aux_sym_css_named_color_token92);
       END_STATE();
-    case 843:
+    case 852:
       ACCEPT_TOKEN(aux_sym_css_named_color_token93);
       END_STATE();
-    case 844:
+    case 853:
       ACCEPT_TOKEN(aux_sym_css_named_color_token94);
       END_STATE();
-    case 845:
+    case 854:
       ACCEPT_TOKEN(aux_sym_css_named_color_token95);
       END_STATE();
-    case 846:
+    case 855:
       ACCEPT_TOKEN(aux_sym_css_named_color_token96);
       END_STATE();
-    case 847:
+    case 856:
       ACCEPT_TOKEN(aux_sym_css_named_color_token97);
       END_STATE();
-    case 848:
+    case 857:
       ACCEPT_TOKEN(aux_sym_css_named_color_token98);
       END_STATE();
-    case 849:
+    case 858:
       ACCEPT_TOKEN(aux_sym_css_named_color_token99);
       END_STATE();
-    case 850:
+    case 859:
       ACCEPT_TOKEN(aux_sym_css_named_color_token100);
       END_STATE();
-    case 851:
+    case 860:
       ACCEPT_TOKEN(aux_sym_css_named_color_token101);
       END_STATE();
-    case 852:
+    case 861:
       ACCEPT_TOKEN(aux_sym_css_named_color_token102);
       END_STATE();
-    case 853:
+    case 862:
       ACCEPT_TOKEN(aux_sym_css_named_color_token103);
       END_STATE();
-    case 854:
+    case 863:
       ACCEPT_TOKEN(aux_sym_css_named_color_token104);
       if (lookahead == 'D' ||
           lookahead == 'd') ADVANCE(582);
       END_STATE();
-    case 855:
+    case 864:
       ACCEPT_TOKEN(aux_sym_css_named_color_token105);
       END_STATE();
-    case 856:
+    case 865:
       ACCEPT_TOKEN(aux_sym_css_named_color_token106);
       if (lookahead == 'R' ||
           lookahead == 'r') ADVANCE(199);
       END_STATE();
-    case 857:
+    case 866:
       ACCEPT_TOKEN(aux_sym_css_named_color_token107);
       END_STATE();
-    case 858:
+    case 867:
       ACCEPT_TOKEN(aux_sym_css_named_color_token108);
       END_STATE();
-    case 859:
+    case 868:
       ACCEPT_TOKEN(aux_sym_css_named_color_token109);
       END_STATE();
-    case 860:
+    case 869:
       ACCEPT_TOKEN(aux_sym_css_named_color_token110);
       END_STATE();
-    case 861:
+    case 870:
       ACCEPT_TOKEN(aux_sym_css_named_color_token111);
       END_STATE();
-    case 862:
+    case 871:
       ACCEPT_TOKEN(aux_sym_css_named_color_token112);
       END_STATE();
-    case 863:
+    case 872:
       ACCEPT_TOKEN(aux_sym_css_named_color_token113);
       END_STATE();
-    case 864:
+    case 873:
       ACCEPT_TOKEN(aux_sym_css_named_color_token114);
       END_STATE();
-    case 865:
+    case 874:
       ACCEPT_TOKEN(aux_sym_css_named_color_token115);
       END_STATE();
-    case 866:
+    case 875:
       ACCEPT_TOKEN(aux_sym_css_named_color_token116);
       END_STATE();
-    case 867:
+    case 876:
       ACCEPT_TOKEN(aux_sym_css_named_color_token117);
       END_STATE();
-    case 868:
+    case 877:
       ACCEPT_TOKEN(aux_sym_css_named_color_token118);
       END_STATE();
-    case 869:
+    case 878:
       ACCEPT_TOKEN(aux_sym_css_named_color_token119);
       END_STATE();
-    case 870:
+    case 879:
       ACCEPT_TOKEN(aux_sym_css_named_color_token120);
       END_STATE();
-    case 871:
+    case 880:
       ACCEPT_TOKEN(aux_sym_css_named_color_token121);
       END_STATE();
-    case 872:
+    case 881:
       ACCEPT_TOKEN(aux_sym_css_named_color_token122);
       END_STATE();
-    case 873:
+    case 882:
       ACCEPT_TOKEN(aux_sym_css_named_color_token123);
       END_STATE();
-    case 874:
+    case 883:
       ACCEPT_TOKEN(aux_sym_css_named_color_token124);
       END_STATE();
-    case 875:
+    case 884:
       ACCEPT_TOKEN(aux_sym_css_named_color_token125);
       END_STATE();
-    case 876:
+    case 885:
       ACCEPT_TOKEN(aux_sym_css_named_color_token126);
       END_STATE();
-    case 877:
+    case 886:
       ACCEPT_TOKEN(aux_sym_css_named_color_token127);
       END_STATE();
-    case 878:
+    case 887:
       ACCEPT_TOKEN(aux_sym_css_named_color_token128);
       END_STATE();
-    case 879:
+    case 888:
       ACCEPT_TOKEN(aux_sym_css_named_color_token129);
       END_STATE();
-    case 880:
+    case 889:
       ACCEPT_TOKEN(aux_sym_css_named_color_token130);
       END_STATE();
-    case 881:
+    case 890:
       ACCEPT_TOKEN(aux_sym_css_named_color_token131);
       END_STATE();
-    case 882:
+    case 891:
       ACCEPT_TOKEN(aux_sym_css_named_color_token132);
       END_STATE();
-    case 883:
+    case 892:
       ACCEPT_TOKEN(aux_sym_css_named_color_token133);
       END_STATE();
-    case 884:
+    case 893:
       ACCEPT_TOKEN(aux_sym_css_named_color_token134);
       END_STATE();
-    case 885:
+    case 894:
       ACCEPT_TOKEN(aux_sym_css_named_color_token135);
       END_STATE();
-    case 886:
+    case 895:
       ACCEPT_TOKEN(aux_sym_css_named_color_token136);
       END_STATE();
-    case 887:
+    case 896:
       ACCEPT_TOKEN(aux_sym_css_named_color_token137);
       END_STATE();
-    case 888:
+    case 897:
       ACCEPT_TOKEN(aux_sym_css_named_color_token138);
       END_STATE();
-    case 889:
+    case 898:
       ACCEPT_TOKEN(aux_sym_css_named_color_token139);
       END_STATE();
-    case 890:
+    case 899:
       ACCEPT_TOKEN(aux_sym_css_named_color_token140);
       END_STATE();
-    case 891:
+    case 900:
       ACCEPT_TOKEN(aux_sym_css_named_color_token141);
       END_STATE();
-    case 892:
+    case 901:
       ACCEPT_TOKEN(aux_sym_css_named_color_token142);
       END_STATE();
-    case 893:
+    case 902:
       ACCEPT_TOKEN(aux_sym_css_named_color_token143);
       END_STATE();
-    case 894:
+    case 903:
       ACCEPT_TOKEN(aux_sym_css_named_color_token144);
       END_STATE();
-    case 895:
+    case 904:
       ACCEPT_TOKEN(aux_sym_css_named_color_token145);
       if (lookahead == 'S' ||
           lookahead == 's') ADVANCE(433);
       END_STATE();
-    case 896:
+    case 905:
       ACCEPT_TOKEN(aux_sym_css_named_color_token146);
       END_STATE();
-    case 897:
+    case 906:
       ACCEPT_TOKEN(aux_sym_css_named_color_token147);
       if (lookahead == 'G' ||
           lookahead == 'g') ADVANCE(608);
       END_STATE();
-    case 898:
+    case 907:
       ACCEPT_TOKEN(aux_sym_css_named_color_token148);
       END_STATE();
     default:
@@ -4905,11 +4988,16 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [3] = {.lex_state = 0},
   [4] = {.lex_state = 0},
   [5] = {.lex_state = 0},
+  [6] = {.lex_state = 0},
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [0] = {
     [ts_builtin_sym_end] = ACTIONS(1),
+    [sym_css_hex_color_6_digits] = ACTIONS(1),
+    [sym_css_hex_color_8_digits] = ACTIONS(1),
+    [sym_css_hex_color_3_digits] = ACTIONS(1),
+    [sym_css_hex_color_4_digits] = ACTIONS(1),
     [aux_sym_css_named_color_token1] = ACTIONS(1),
     [aux_sym_css_named_color_token2] = ACTIONS(1),
     [aux_sym_css_named_color_token3] = ACTIONS(1),
@@ -5060,641 +5148,821 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_css_named_color_token148] = ACTIONS(1),
   },
   [1] = {
-    [sym_source_file] = STATE(5),
+    [sym_source_file] = STATE(6),
+    [sym_css_hex_color] = STATE(2),
     [sym_css_named_color] = STATE(2),
     [aux_sym_source_file_repeat1] = STATE(2),
     [ts_builtin_sym_end] = ACTIONS(3),
-    [aux_sym_css_named_color_token1] = ACTIONS(5),
-    [aux_sym_css_named_color_token2] = ACTIONS(5),
-    [aux_sym_css_named_color_token3] = ACTIONS(7),
-    [aux_sym_css_named_color_token4] = ACTIONS(5),
-    [aux_sym_css_named_color_token5] = ACTIONS(5),
-    [aux_sym_css_named_color_token6] = ACTIONS(5),
-    [aux_sym_css_named_color_token7] = ACTIONS(5),
-    [aux_sym_css_named_color_token8] = ACTIONS(5),
-    [aux_sym_css_named_color_token9] = ACTIONS(5),
-    [aux_sym_css_named_color_token10] = ACTIONS(7),
-    [aux_sym_css_named_color_token11] = ACTIONS(5),
-    [aux_sym_css_named_color_token12] = ACTIONS(5),
-    [aux_sym_css_named_color_token13] = ACTIONS(5),
-    [aux_sym_css_named_color_token14] = ACTIONS(5),
-    [aux_sym_css_named_color_token15] = ACTIONS(5),
-    [aux_sym_css_named_color_token16] = ACTIONS(5),
-    [aux_sym_css_named_color_token17] = ACTIONS(5),
-    [aux_sym_css_named_color_token18] = ACTIONS(5),
-    [aux_sym_css_named_color_token19] = ACTIONS(5),
-    [aux_sym_css_named_color_token20] = ACTIONS(5),
-    [aux_sym_css_named_color_token21] = ACTIONS(5),
-    [aux_sym_css_named_color_token22] = ACTIONS(5),
-    [aux_sym_css_named_color_token23] = ACTIONS(5),
-    [aux_sym_css_named_color_token24] = ACTIONS(5),
-    [aux_sym_css_named_color_token25] = ACTIONS(5),
-    [aux_sym_css_named_color_token26] = ACTIONS(5),
-    [aux_sym_css_named_color_token27] = ACTIONS(5),
-    [aux_sym_css_named_color_token28] = ACTIONS(5),
-    [aux_sym_css_named_color_token29] = ACTIONS(5),
-    [aux_sym_css_named_color_token30] = ACTIONS(5),
-    [aux_sym_css_named_color_token31] = ACTIONS(5),
-    [aux_sym_css_named_color_token32] = ACTIONS(5),
-    [aux_sym_css_named_color_token33] = ACTIONS(5),
-    [aux_sym_css_named_color_token34] = ACTIONS(5),
-    [aux_sym_css_named_color_token35] = ACTIONS(5),
-    [aux_sym_css_named_color_token36] = ACTIONS(5),
-    [aux_sym_css_named_color_token37] = ACTIONS(5),
-    [aux_sym_css_named_color_token38] = ACTIONS(5),
-    [aux_sym_css_named_color_token39] = ACTIONS(5),
-    [aux_sym_css_named_color_token40] = ACTIONS(5),
-    [aux_sym_css_named_color_token41] = ACTIONS(5),
-    [aux_sym_css_named_color_token42] = ACTIONS(5),
-    [aux_sym_css_named_color_token43] = ACTIONS(5),
-    [aux_sym_css_named_color_token44] = ACTIONS(5),
-    [aux_sym_css_named_color_token45] = ACTIONS(5),
-    [aux_sym_css_named_color_token46] = ACTIONS(5),
-    [aux_sym_css_named_color_token47] = ACTIONS(5),
-    [aux_sym_css_named_color_token48] = ACTIONS(5),
-    [aux_sym_css_named_color_token49] = ACTIONS(5),
-    [aux_sym_css_named_color_token50] = ACTIONS(5),
-    [aux_sym_css_named_color_token51] = ACTIONS(5),
-    [aux_sym_css_named_color_token52] = ACTIONS(7),
-    [aux_sym_css_named_color_token53] = ACTIONS(5),
-    [aux_sym_css_named_color_token54] = ACTIONS(5),
-    [aux_sym_css_named_color_token55] = ACTIONS(7),
-    [aux_sym_css_named_color_token56] = ACTIONS(5),
-    [aux_sym_css_named_color_token57] = ACTIONS(5),
-    [aux_sym_css_named_color_token58] = ACTIONS(5),
-    [aux_sym_css_named_color_token59] = ACTIONS(5),
-    [aux_sym_css_named_color_token60] = ACTIONS(5),
-    [aux_sym_css_named_color_token61] = ACTIONS(5),
-    [aux_sym_css_named_color_token62] = ACTIONS(5),
-    [aux_sym_css_named_color_token63] = ACTIONS(5),
-    [aux_sym_css_named_color_token64] = ACTIONS(7),
-    [aux_sym_css_named_color_token65] = ACTIONS(5),
-    [aux_sym_css_named_color_token66] = ACTIONS(5),
-    [aux_sym_css_named_color_token67] = ACTIONS(5),
-    [aux_sym_css_named_color_token68] = ACTIONS(5),
-    [aux_sym_css_named_color_token69] = ACTIONS(5),
-    [aux_sym_css_named_color_token70] = ACTIONS(5),
-    [aux_sym_css_named_color_token71] = ACTIONS(5),
-    [aux_sym_css_named_color_token72] = ACTIONS(5),
-    [aux_sym_css_named_color_token73] = ACTIONS(5),
-    [aux_sym_css_named_color_token74] = ACTIONS(5),
-    [aux_sym_css_named_color_token75] = ACTIONS(5),
-    [aux_sym_css_named_color_token76] = ACTIONS(5),
-    [aux_sym_css_named_color_token77] = ACTIONS(5),
-    [aux_sym_css_named_color_token78] = ACTIONS(5),
-    [aux_sym_css_named_color_token79] = ACTIONS(5),
-    [aux_sym_css_named_color_token80] = ACTIONS(5),
-    [aux_sym_css_named_color_token81] = ACTIONS(5),
-    [aux_sym_css_named_color_token82] = ACTIONS(5),
-    [aux_sym_css_named_color_token83] = ACTIONS(7),
-    [aux_sym_css_named_color_token84] = ACTIONS(5),
-    [aux_sym_css_named_color_token85] = ACTIONS(5),
-    [aux_sym_css_named_color_token86] = ACTIONS(5),
-    [aux_sym_css_named_color_token87] = ACTIONS(5),
-    [aux_sym_css_named_color_token88] = ACTIONS(5),
-    [aux_sym_css_named_color_token89] = ACTIONS(5),
-    [aux_sym_css_named_color_token90] = ACTIONS(5),
-    [aux_sym_css_named_color_token91] = ACTIONS(5),
-    [aux_sym_css_named_color_token92] = ACTIONS(5),
-    [aux_sym_css_named_color_token93] = ACTIONS(5),
-    [aux_sym_css_named_color_token94] = ACTIONS(5),
-    [aux_sym_css_named_color_token95] = ACTIONS(5),
-    [aux_sym_css_named_color_token96] = ACTIONS(5),
-    [aux_sym_css_named_color_token97] = ACTIONS(5),
-    [aux_sym_css_named_color_token98] = ACTIONS(5),
-    [aux_sym_css_named_color_token99] = ACTIONS(5),
-    [aux_sym_css_named_color_token100] = ACTIONS(5),
-    [aux_sym_css_named_color_token101] = ACTIONS(5),
-    [aux_sym_css_named_color_token102] = ACTIONS(5),
-    [aux_sym_css_named_color_token103] = ACTIONS(5),
-    [aux_sym_css_named_color_token104] = ACTIONS(7),
-    [aux_sym_css_named_color_token105] = ACTIONS(5),
-    [aux_sym_css_named_color_token106] = ACTIONS(7),
-    [aux_sym_css_named_color_token107] = ACTIONS(5),
-    [aux_sym_css_named_color_token108] = ACTIONS(5),
-    [aux_sym_css_named_color_token109] = ACTIONS(5),
-    [aux_sym_css_named_color_token110] = ACTIONS(5),
-    [aux_sym_css_named_color_token111] = ACTIONS(5),
-    [aux_sym_css_named_color_token112] = ACTIONS(5),
-    [aux_sym_css_named_color_token113] = ACTIONS(5),
-    [aux_sym_css_named_color_token114] = ACTIONS(5),
-    [aux_sym_css_named_color_token115] = ACTIONS(5),
-    [aux_sym_css_named_color_token116] = ACTIONS(5),
-    [aux_sym_css_named_color_token117] = ACTIONS(5),
-    [aux_sym_css_named_color_token118] = ACTIONS(5),
-    [aux_sym_css_named_color_token119] = ACTIONS(5),
-    [aux_sym_css_named_color_token120] = ACTIONS(5),
-    [aux_sym_css_named_color_token121] = ACTIONS(5),
-    [aux_sym_css_named_color_token122] = ACTIONS(5),
-    [aux_sym_css_named_color_token123] = ACTIONS(5),
-    [aux_sym_css_named_color_token124] = ACTIONS(5),
-    [aux_sym_css_named_color_token125] = ACTIONS(5),
-    [aux_sym_css_named_color_token126] = ACTIONS(5),
-    [aux_sym_css_named_color_token127] = ACTIONS(5),
-    [aux_sym_css_named_color_token128] = ACTIONS(5),
-    [aux_sym_css_named_color_token129] = ACTIONS(5),
-    [aux_sym_css_named_color_token130] = ACTIONS(5),
-    [aux_sym_css_named_color_token131] = ACTIONS(5),
-    [aux_sym_css_named_color_token132] = ACTIONS(5),
-    [aux_sym_css_named_color_token133] = ACTIONS(5),
-    [aux_sym_css_named_color_token134] = ACTIONS(5),
-    [aux_sym_css_named_color_token135] = ACTIONS(5),
-    [aux_sym_css_named_color_token136] = ACTIONS(5),
-    [aux_sym_css_named_color_token137] = ACTIONS(5),
-    [aux_sym_css_named_color_token138] = ACTIONS(5),
-    [aux_sym_css_named_color_token139] = ACTIONS(5),
-    [aux_sym_css_named_color_token140] = ACTIONS(5),
-    [aux_sym_css_named_color_token141] = ACTIONS(5),
-    [aux_sym_css_named_color_token142] = ACTIONS(5),
-    [aux_sym_css_named_color_token143] = ACTIONS(5),
-    [aux_sym_css_named_color_token144] = ACTIONS(5),
-    [aux_sym_css_named_color_token145] = ACTIONS(7),
-    [aux_sym_css_named_color_token146] = ACTIONS(5),
-    [aux_sym_css_named_color_token147] = ACTIONS(7),
-    [aux_sym_css_named_color_token148] = ACTIONS(5),
+    [sym_css_hex_color_6_digits] = ACTIONS(5),
+    [sym_css_hex_color_8_digits] = ACTIONS(7),
+    [sym_css_hex_color_3_digits] = ACTIONS(5),
+    [sym_css_hex_color_4_digits] = ACTIONS(5),
+    [aux_sym_css_named_color_token1] = ACTIONS(9),
+    [aux_sym_css_named_color_token2] = ACTIONS(9),
+    [aux_sym_css_named_color_token3] = ACTIONS(11),
+    [aux_sym_css_named_color_token4] = ACTIONS(9),
+    [aux_sym_css_named_color_token5] = ACTIONS(9),
+    [aux_sym_css_named_color_token6] = ACTIONS(9),
+    [aux_sym_css_named_color_token7] = ACTIONS(9),
+    [aux_sym_css_named_color_token8] = ACTIONS(9),
+    [aux_sym_css_named_color_token9] = ACTIONS(9),
+    [aux_sym_css_named_color_token10] = ACTIONS(11),
+    [aux_sym_css_named_color_token11] = ACTIONS(9),
+    [aux_sym_css_named_color_token12] = ACTIONS(9),
+    [aux_sym_css_named_color_token13] = ACTIONS(9),
+    [aux_sym_css_named_color_token14] = ACTIONS(9),
+    [aux_sym_css_named_color_token15] = ACTIONS(9),
+    [aux_sym_css_named_color_token16] = ACTIONS(9),
+    [aux_sym_css_named_color_token17] = ACTIONS(9),
+    [aux_sym_css_named_color_token18] = ACTIONS(9),
+    [aux_sym_css_named_color_token19] = ACTIONS(9),
+    [aux_sym_css_named_color_token20] = ACTIONS(9),
+    [aux_sym_css_named_color_token21] = ACTIONS(9),
+    [aux_sym_css_named_color_token22] = ACTIONS(9),
+    [aux_sym_css_named_color_token23] = ACTIONS(9),
+    [aux_sym_css_named_color_token24] = ACTIONS(9),
+    [aux_sym_css_named_color_token25] = ACTIONS(9),
+    [aux_sym_css_named_color_token26] = ACTIONS(9),
+    [aux_sym_css_named_color_token27] = ACTIONS(9),
+    [aux_sym_css_named_color_token28] = ACTIONS(9),
+    [aux_sym_css_named_color_token29] = ACTIONS(9),
+    [aux_sym_css_named_color_token30] = ACTIONS(9),
+    [aux_sym_css_named_color_token31] = ACTIONS(9),
+    [aux_sym_css_named_color_token32] = ACTIONS(9),
+    [aux_sym_css_named_color_token33] = ACTIONS(9),
+    [aux_sym_css_named_color_token34] = ACTIONS(9),
+    [aux_sym_css_named_color_token35] = ACTIONS(9),
+    [aux_sym_css_named_color_token36] = ACTIONS(9),
+    [aux_sym_css_named_color_token37] = ACTIONS(9),
+    [aux_sym_css_named_color_token38] = ACTIONS(9),
+    [aux_sym_css_named_color_token39] = ACTIONS(9),
+    [aux_sym_css_named_color_token40] = ACTIONS(9),
+    [aux_sym_css_named_color_token41] = ACTIONS(9),
+    [aux_sym_css_named_color_token42] = ACTIONS(9),
+    [aux_sym_css_named_color_token43] = ACTIONS(9),
+    [aux_sym_css_named_color_token44] = ACTIONS(9),
+    [aux_sym_css_named_color_token45] = ACTIONS(9),
+    [aux_sym_css_named_color_token46] = ACTIONS(9),
+    [aux_sym_css_named_color_token47] = ACTIONS(9),
+    [aux_sym_css_named_color_token48] = ACTIONS(9),
+    [aux_sym_css_named_color_token49] = ACTIONS(9),
+    [aux_sym_css_named_color_token50] = ACTIONS(9),
+    [aux_sym_css_named_color_token51] = ACTIONS(9),
+    [aux_sym_css_named_color_token52] = ACTIONS(11),
+    [aux_sym_css_named_color_token53] = ACTIONS(9),
+    [aux_sym_css_named_color_token54] = ACTIONS(9),
+    [aux_sym_css_named_color_token55] = ACTIONS(11),
+    [aux_sym_css_named_color_token56] = ACTIONS(9),
+    [aux_sym_css_named_color_token57] = ACTIONS(9),
+    [aux_sym_css_named_color_token58] = ACTIONS(9),
+    [aux_sym_css_named_color_token59] = ACTIONS(9),
+    [aux_sym_css_named_color_token60] = ACTIONS(9),
+    [aux_sym_css_named_color_token61] = ACTIONS(9),
+    [aux_sym_css_named_color_token62] = ACTIONS(9),
+    [aux_sym_css_named_color_token63] = ACTIONS(9),
+    [aux_sym_css_named_color_token64] = ACTIONS(11),
+    [aux_sym_css_named_color_token65] = ACTIONS(9),
+    [aux_sym_css_named_color_token66] = ACTIONS(9),
+    [aux_sym_css_named_color_token67] = ACTIONS(9),
+    [aux_sym_css_named_color_token68] = ACTIONS(9),
+    [aux_sym_css_named_color_token69] = ACTIONS(9),
+    [aux_sym_css_named_color_token70] = ACTIONS(9),
+    [aux_sym_css_named_color_token71] = ACTIONS(9),
+    [aux_sym_css_named_color_token72] = ACTIONS(9),
+    [aux_sym_css_named_color_token73] = ACTIONS(9),
+    [aux_sym_css_named_color_token74] = ACTIONS(9),
+    [aux_sym_css_named_color_token75] = ACTIONS(9),
+    [aux_sym_css_named_color_token76] = ACTIONS(9),
+    [aux_sym_css_named_color_token77] = ACTIONS(9),
+    [aux_sym_css_named_color_token78] = ACTIONS(9),
+    [aux_sym_css_named_color_token79] = ACTIONS(9),
+    [aux_sym_css_named_color_token80] = ACTIONS(9),
+    [aux_sym_css_named_color_token81] = ACTIONS(9),
+    [aux_sym_css_named_color_token82] = ACTIONS(9),
+    [aux_sym_css_named_color_token83] = ACTIONS(11),
+    [aux_sym_css_named_color_token84] = ACTIONS(9),
+    [aux_sym_css_named_color_token85] = ACTIONS(9),
+    [aux_sym_css_named_color_token86] = ACTIONS(9),
+    [aux_sym_css_named_color_token87] = ACTIONS(9),
+    [aux_sym_css_named_color_token88] = ACTIONS(9),
+    [aux_sym_css_named_color_token89] = ACTIONS(9),
+    [aux_sym_css_named_color_token90] = ACTIONS(9),
+    [aux_sym_css_named_color_token91] = ACTIONS(9),
+    [aux_sym_css_named_color_token92] = ACTIONS(9),
+    [aux_sym_css_named_color_token93] = ACTIONS(9),
+    [aux_sym_css_named_color_token94] = ACTIONS(9),
+    [aux_sym_css_named_color_token95] = ACTIONS(9),
+    [aux_sym_css_named_color_token96] = ACTIONS(9),
+    [aux_sym_css_named_color_token97] = ACTIONS(9),
+    [aux_sym_css_named_color_token98] = ACTIONS(9),
+    [aux_sym_css_named_color_token99] = ACTIONS(9),
+    [aux_sym_css_named_color_token100] = ACTIONS(9),
+    [aux_sym_css_named_color_token101] = ACTIONS(9),
+    [aux_sym_css_named_color_token102] = ACTIONS(9),
+    [aux_sym_css_named_color_token103] = ACTIONS(9),
+    [aux_sym_css_named_color_token104] = ACTIONS(11),
+    [aux_sym_css_named_color_token105] = ACTIONS(9),
+    [aux_sym_css_named_color_token106] = ACTIONS(11),
+    [aux_sym_css_named_color_token107] = ACTIONS(9),
+    [aux_sym_css_named_color_token108] = ACTIONS(9),
+    [aux_sym_css_named_color_token109] = ACTIONS(9),
+    [aux_sym_css_named_color_token110] = ACTIONS(9),
+    [aux_sym_css_named_color_token111] = ACTIONS(9),
+    [aux_sym_css_named_color_token112] = ACTIONS(9),
+    [aux_sym_css_named_color_token113] = ACTIONS(9),
+    [aux_sym_css_named_color_token114] = ACTIONS(9),
+    [aux_sym_css_named_color_token115] = ACTIONS(9),
+    [aux_sym_css_named_color_token116] = ACTIONS(9),
+    [aux_sym_css_named_color_token117] = ACTIONS(9),
+    [aux_sym_css_named_color_token118] = ACTIONS(9),
+    [aux_sym_css_named_color_token119] = ACTIONS(9),
+    [aux_sym_css_named_color_token120] = ACTIONS(9),
+    [aux_sym_css_named_color_token121] = ACTIONS(9),
+    [aux_sym_css_named_color_token122] = ACTIONS(9),
+    [aux_sym_css_named_color_token123] = ACTIONS(9),
+    [aux_sym_css_named_color_token124] = ACTIONS(9),
+    [aux_sym_css_named_color_token125] = ACTIONS(9),
+    [aux_sym_css_named_color_token126] = ACTIONS(9),
+    [aux_sym_css_named_color_token127] = ACTIONS(9),
+    [aux_sym_css_named_color_token128] = ACTIONS(9),
+    [aux_sym_css_named_color_token129] = ACTIONS(9),
+    [aux_sym_css_named_color_token130] = ACTIONS(9),
+    [aux_sym_css_named_color_token131] = ACTIONS(9),
+    [aux_sym_css_named_color_token132] = ACTIONS(9),
+    [aux_sym_css_named_color_token133] = ACTIONS(9),
+    [aux_sym_css_named_color_token134] = ACTIONS(9),
+    [aux_sym_css_named_color_token135] = ACTIONS(9),
+    [aux_sym_css_named_color_token136] = ACTIONS(9),
+    [aux_sym_css_named_color_token137] = ACTIONS(9),
+    [aux_sym_css_named_color_token138] = ACTIONS(9),
+    [aux_sym_css_named_color_token139] = ACTIONS(9),
+    [aux_sym_css_named_color_token140] = ACTIONS(9),
+    [aux_sym_css_named_color_token141] = ACTIONS(9),
+    [aux_sym_css_named_color_token142] = ACTIONS(9),
+    [aux_sym_css_named_color_token143] = ACTIONS(9),
+    [aux_sym_css_named_color_token144] = ACTIONS(9),
+    [aux_sym_css_named_color_token145] = ACTIONS(11),
+    [aux_sym_css_named_color_token146] = ACTIONS(9),
+    [aux_sym_css_named_color_token147] = ACTIONS(11),
+    [aux_sym_css_named_color_token148] = ACTIONS(9),
   },
   [2] = {
+    [sym_css_hex_color] = STATE(3),
     [sym_css_named_color] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(3),
-    [ts_builtin_sym_end] = ACTIONS(9),
-    [aux_sym_css_named_color_token1] = ACTIONS(5),
-    [aux_sym_css_named_color_token2] = ACTIONS(5),
-    [aux_sym_css_named_color_token3] = ACTIONS(7),
-    [aux_sym_css_named_color_token4] = ACTIONS(5),
-    [aux_sym_css_named_color_token5] = ACTIONS(5),
-    [aux_sym_css_named_color_token6] = ACTIONS(5),
-    [aux_sym_css_named_color_token7] = ACTIONS(5),
-    [aux_sym_css_named_color_token8] = ACTIONS(5),
-    [aux_sym_css_named_color_token9] = ACTIONS(5),
-    [aux_sym_css_named_color_token10] = ACTIONS(7),
-    [aux_sym_css_named_color_token11] = ACTIONS(5),
-    [aux_sym_css_named_color_token12] = ACTIONS(5),
-    [aux_sym_css_named_color_token13] = ACTIONS(5),
-    [aux_sym_css_named_color_token14] = ACTIONS(5),
-    [aux_sym_css_named_color_token15] = ACTIONS(5),
-    [aux_sym_css_named_color_token16] = ACTIONS(5),
-    [aux_sym_css_named_color_token17] = ACTIONS(5),
-    [aux_sym_css_named_color_token18] = ACTIONS(5),
-    [aux_sym_css_named_color_token19] = ACTIONS(5),
-    [aux_sym_css_named_color_token20] = ACTIONS(5),
-    [aux_sym_css_named_color_token21] = ACTIONS(5),
-    [aux_sym_css_named_color_token22] = ACTIONS(5),
-    [aux_sym_css_named_color_token23] = ACTIONS(5),
-    [aux_sym_css_named_color_token24] = ACTIONS(5),
-    [aux_sym_css_named_color_token25] = ACTIONS(5),
-    [aux_sym_css_named_color_token26] = ACTIONS(5),
-    [aux_sym_css_named_color_token27] = ACTIONS(5),
-    [aux_sym_css_named_color_token28] = ACTIONS(5),
-    [aux_sym_css_named_color_token29] = ACTIONS(5),
-    [aux_sym_css_named_color_token30] = ACTIONS(5),
-    [aux_sym_css_named_color_token31] = ACTIONS(5),
-    [aux_sym_css_named_color_token32] = ACTIONS(5),
-    [aux_sym_css_named_color_token33] = ACTIONS(5),
-    [aux_sym_css_named_color_token34] = ACTIONS(5),
-    [aux_sym_css_named_color_token35] = ACTIONS(5),
-    [aux_sym_css_named_color_token36] = ACTIONS(5),
-    [aux_sym_css_named_color_token37] = ACTIONS(5),
-    [aux_sym_css_named_color_token38] = ACTIONS(5),
-    [aux_sym_css_named_color_token39] = ACTIONS(5),
-    [aux_sym_css_named_color_token40] = ACTIONS(5),
-    [aux_sym_css_named_color_token41] = ACTIONS(5),
-    [aux_sym_css_named_color_token42] = ACTIONS(5),
-    [aux_sym_css_named_color_token43] = ACTIONS(5),
-    [aux_sym_css_named_color_token44] = ACTIONS(5),
-    [aux_sym_css_named_color_token45] = ACTIONS(5),
-    [aux_sym_css_named_color_token46] = ACTIONS(5),
-    [aux_sym_css_named_color_token47] = ACTIONS(5),
-    [aux_sym_css_named_color_token48] = ACTIONS(5),
-    [aux_sym_css_named_color_token49] = ACTIONS(5),
-    [aux_sym_css_named_color_token50] = ACTIONS(5),
-    [aux_sym_css_named_color_token51] = ACTIONS(5),
-    [aux_sym_css_named_color_token52] = ACTIONS(7),
-    [aux_sym_css_named_color_token53] = ACTIONS(5),
-    [aux_sym_css_named_color_token54] = ACTIONS(5),
-    [aux_sym_css_named_color_token55] = ACTIONS(7),
-    [aux_sym_css_named_color_token56] = ACTIONS(5),
-    [aux_sym_css_named_color_token57] = ACTIONS(5),
-    [aux_sym_css_named_color_token58] = ACTIONS(5),
-    [aux_sym_css_named_color_token59] = ACTIONS(5),
-    [aux_sym_css_named_color_token60] = ACTIONS(5),
-    [aux_sym_css_named_color_token61] = ACTIONS(5),
-    [aux_sym_css_named_color_token62] = ACTIONS(5),
-    [aux_sym_css_named_color_token63] = ACTIONS(5),
-    [aux_sym_css_named_color_token64] = ACTIONS(7),
-    [aux_sym_css_named_color_token65] = ACTIONS(5),
-    [aux_sym_css_named_color_token66] = ACTIONS(5),
-    [aux_sym_css_named_color_token67] = ACTIONS(5),
-    [aux_sym_css_named_color_token68] = ACTIONS(5),
-    [aux_sym_css_named_color_token69] = ACTIONS(5),
-    [aux_sym_css_named_color_token70] = ACTIONS(5),
-    [aux_sym_css_named_color_token71] = ACTIONS(5),
-    [aux_sym_css_named_color_token72] = ACTIONS(5),
-    [aux_sym_css_named_color_token73] = ACTIONS(5),
-    [aux_sym_css_named_color_token74] = ACTIONS(5),
-    [aux_sym_css_named_color_token75] = ACTIONS(5),
-    [aux_sym_css_named_color_token76] = ACTIONS(5),
-    [aux_sym_css_named_color_token77] = ACTIONS(5),
-    [aux_sym_css_named_color_token78] = ACTIONS(5),
-    [aux_sym_css_named_color_token79] = ACTIONS(5),
-    [aux_sym_css_named_color_token80] = ACTIONS(5),
-    [aux_sym_css_named_color_token81] = ACTIONS(5),
-    [aux_sym_css_named_color_token82] = ACTIONS(5),
-    [aux_sym_css_named_color_token83] = ACTIONS(7),
-    [aux_sym_css_named_color_token84] = ACTIONS(5),
-    [aux_sym_css_named_color_token85] = ACTIONS(5),
-    [aux_sym_css_named_color_token86] = ACTIONS(5),
-    [aux_sym_css_named_color_token87] = ACTIONS(5),
-    [aux_sym_css_named_color_token88] = ACTIONS(5),
-    [aux_sym_css_named_color_token89] = ACTIONS(5),
-    [aux_sym_css_named_color_token90] = ACTIONS(5),
-    [aux_sym_css_named_color_token91] = ACTIONS(5),
-    [aux_sym_css_named_color_token92] = ACTIONS(5),
-    [aux_sym_css_named_color_token93] = ACTIONS(5),
-    [aux_sym_css_named_color_token94] = ACTIONS(5),
-    [aux_sym_css_named_color_token95] = ACTIONS(5),
-    [aux_sym_css_named_color_token96] = ACTIONS(5),
-    [aux_sym_css_named_color_token97] = ACTIONS(5),
-    [aux_sym_css_named_color_token98] = ACTIONS(5),
-    [aux_sym_css_named_color_token99] = ACTIONS(5),
-    [aux_sym_css_named_color_token100] = ACTIONS(5),
-    [aux_sym_css_named_color_token101] = ACTIONS(5),
-    [aux_sym_css_named_color_token102] = ACTIONS(5),
-    [aux_sym_css_named_color_token103] = ACTIONS(5),
-    [aux_sym_css_named_color_token104] = ACTIONS(7),
-    [aux_sym_css_named_color_token105] = ACTIONS(5),
-    [aux_sym_css_named_color_token106] = ACTIONS(7),
-    [aux_sym_css_named_color_token107] = ACTIONS(5),
-    [aux_sym_css_named_color_token108] = ACTIONS(5),
-    [aux_sym_css_named_color_token109] = ACTIONS(5),
-    [aux_sym_css_named_color_token110] = ACTIONS(5),
-    [aux_sym_css_named_color_token111] = ACTIONS(5),
-    [aux_sym_css_named_color_token112] = ACTIONS(5),
-    [aux_sym_css_named_color_token113] = ACTIONS(5),
-    [aux_sym_css_named_color_token114] = ACTIONS(5),
-    [aux_sym_css_named_color_token115] = ACTIONS(5),
-    [aux_sym_css_named_color_token116] = ACTIONS(5),
-    [aux_sym_css_named_color_token117] = ACTIONS(5),
-    [aux_sym_css_named_color_token118] = ACTIONS(5),
-    [aux_sym_css_named_color_token119] = ACTIONS(5),
-    [aux_sym_css_named_color_token120] = ACTIONS(5),
-    [aux_sym_css_named_color_token121] = ACTIONS(5),
-    [aux_sym_css_named_color_token122] = ACTIONS(5),
-    [aux_sym_css_named_color_token123] = ACTIONS(5),
-    [aux_sym_css_named_color_token124] = ACTIONS(5),
-    [aux_sym_css_named_color_token125] = ACTIONS(5),
-    [aux_sym_css_named_color_token126] = ACTIONS(5),
-    [aux_sym_css_named_color_token127] = ACTIONS(5),
-    [aux_sym_css_named_color_token128] = ACTIONS(5),
-    [aux_sym_css_named_color_token129] = ACTIONS(5),
-    [aux_sym_css_named_color_token130] = ACTIONS(5),
-    [aux_sym_css_named_color_token131] = ACTIONS(5),
-    [aux_sym_css_named_color_token132] = ACTIONS(5),
-    [aux_sym_css_named_color_token133] = ACTIONS(5),
-    [aux_sym_css_named_color_token134] = ACTIONS(5),
-    [aux_sym_css_named_color_token135] = ACTIONS(5),
-    [aux_sym_css_named_color_token136] = ACTIONS(5),
-    [aux_sym_css_named_color_token137] = ACTIONS(5),
-    [aux_sym_css_named_color_token138] = ACTIONS(5),
-    [aux_sym_css_named_color_token139] = ACTIONS(5),
-    [aux_sym_css_named_color_token140] = ACTIONS(5),
-    [aux_sym_css_named_color_token141] = ACTIONS(5),
-    [aux_sym_css_named_color_token142] = ACTIONS(5),
-    [aux_sym_css_named_color_token143] = ACTIONS(5),
-    [aux_sym_css_named_color_token144] = ACTIONS(5),
-    [aux_sym_css_named_color_token145] = ACTIONS(7),
-    [aux_sym_css_named_color_token146] = ACTIONS(5),
-    [aux_sym_css_named_color_token147] = ACTIONS(7),
-    [aux_sym_css_named_color_token148] = ACTIONS(5),
+    [ts_builtin_sym_end] = ACTIONS(13),
+    [sym_css_hex_color_6_digits] = ACTIONS(5),
+    [sym_css_hex_color_8_digits] = ACTIONS(7),
+    [sym_css_hex_color_3_digits] = ACTIONS(5),
+    [sym_css_hex_color_4_digits] = ACTIONS(5),
+    [aux_sym_css_named_color_token1] = ACTIONS(9),
+    [aux_sym_css_named_color_token2] = ACTIONS(9),
+    [aux_sym_css_named_color_token3] = ACTIONS(11),
+    [aux_sym_css_named_color_token4] = ACTIONS(9),
+    [aux_sym_css_named_color_token5] = ACTIONS(9),
+    [aux_sym_css_named_color_token6] = ACTIONS(9),
+    [aux_sym_css_named_color_token7] = ACTIONS(9),
+    [aux_sym_css_named_color_token8] = ACTIONS(9),
+    [aux_sym_css_named_color_token9] = ACTIONS(9),
+    [aux_sym_css_named_color_token10] = ACTIONS(11),
+    [aux_sym_css_named_color_token11] = ACTIONS(9),
+    [aux_sym_css_named_color_token12] = ACTIONS(9),
+    [aux_sym_css_named_color_token13] = ACTIONS(9),
+    [aux_sym_css_named_color_token14] = ACTIONS(9),
+    [aux_sym_css_named_color_token15] = ACTIONS(9),
+    [aux_sym_css_named_color_token16] = ACTIONS(9),
+    [aux_sym_css_named_color_token17] = ACTIONS(9),
+    [aux_sym_css_named_color_token18] = ACTIONS(9),
+    [aux_sym_css_named_color_token19] = ACTIONS(9),
+    [aux_sym_css_named_color_token20] = ACTIONS(9),
+    [aux_sym_css_named_color_token21] = ACTIONS(9),
+    [aux_sym_css_named_color_token22] = ACTIONS(9),
+    [aux_sym_css_named_color_token23] = ACTIONS(9),
+    [aux_sym_css_named_color_token24] = ACTIONS(9),
+    [aux_sym_css_named_color_token25] = ACTIONS(9),
+    [aux_sym_css_named_color_token26] = ACTIONS(9),
+    [aux_sym_css_named_color_token27] = ACTIONS(9),
+    [aux_sym_css_named_color_token28] = ACTIONS(9),
+    [aux_sym_css_named_color_token29] = ACTIONS(9),
+    [aux_sym_css_named_color_token30] = ACTIONS(9),
+    [aux_sym_css_named_color_token31] = ACTIONS(9),
+    [aux_sym_css_named_color_token32] = ACTIONS(9),
+    [aux_sym_css_named_color_token33] = ACTIONS(9),
+    [aux_sym_css_named_color_token34] = ACTIONS(9),
+    [aux_sym_css_named_color_token35] = ACTIONS(9),
+    [aux_sym_css_named_color_token36] = ACTIONS(9),
+    [aux_sym_css_named_color_token37] = ACTIONS(9),
+    [aux_sym_css_named_color_token38] = ACTIONS(9),
+    [aux_sym_css_named_color_token39] = ACTIONS(9),
+    [aux_sym_css_named_color_token40] = ACTIONS(9),
+    [aux_sym_css_named_color_token41] = ACTIONS(9),
+    [aux_sym_css_named_color_token42] = ACTIONS(9),
+    [aux_sym_css_named_color_token43] = ACTIONS(9),
+    [aux_sym_css_named_color_token44] = ACTIONS(9),
+    [aux_sym_css_named_color_token45] = ACTIONS(9),
+    [aux_sym_css_named_color_token46] = ACTIONS(9),
+    [aux_sym_css_named_color_token47] = ACTIONS(9),
+    [aux_sym_css_named_color_token48] = ACTIONS(9),
+    [aux_sym_css_named_color_token49] = ACTIONS(9),
+    [aux_sym_css_named_color_token50] = ACTIONS(9),
+    [aux_sym_css_named_color_token51] = ACTIONS(9),
+    [aux_sym_css_named_color_token52] = ACTIONS(11),
+    [aux_sym_css_named_color_token53] = ACTIONS(9),
+    [aux_sym_css_named_color_token54] = ACTIONS(9),
+    [aux_sym_css_named_color_token55] = ACTIONS(11),
+    [aux_sym_css_named_color_token56] = ACTIONS(9),
+    [aux_sym_css_named_color_token57] = ACTIONS(9),
+    [aux_sym_css_named_color_token58] = ACTIONS(9),
+    [aux_sym_css_named_color_token59] = ACTIONS(9),
+    [aux_sym_css_named_color_token60] = ACTIONS(9),
+    [aux_sym_css_named_color_token61] = ACTIONS(9),
+    [aux_sym_css_named_color_token62] = ACTIONS(9),
+    [aux_sym_css_named_color_token63] = ACTIONS(9),
+    [aux_sym_css_named_color_token64] = ACTIONS(11),
+    [aux_sym_css_named_color_token65] = ACTIONS(9),
+    [aux_sym_css_named_color_token66] = ACTIONS(9),
+    [aux_sym_css_named_color_token67] = ACTIONS(9),
+    [aux_sym_css_named_color_token68] = ACTIONS(9),
+    [aux_sym_css_named_color_token69] = ACTIONS(9),
+    [aux_sym_css_named_color_token70] = ACTIONS(9),
+    [aux_sym_css_named_color_token71] = ACTIONS(9),
+    [aux_sym_css_named_color_token72] = ACTIONS(9),
+    [aux_sym_css_named_color_token73] = ACTIONS(9),
+    [aux_sym_css_named_color_token74] = ACTIONS(9),
+    [aux_sym_css_named_color_token75] = ACTIONS(9),
+    [aux_sym_css_named_color_token76] = ACTIONS(9),
+    [aux_sym_css_named_color_token77] = ACTIONS(9),
+    [aux_sym_css_named_color_token78] = ACTIONS(9),
+    [aux_sym_css_named_color_token79] = ACTIONS(9),
+    [aux_sym_css_named_color_token80] = ACTIONS(9),
+    [aux_sym_css_named_color_token81] = ACTIONS(9),
+    [aux_sym_css_named_color_token82] = ACTIONS(9),
+    [aux_sym_css_named_color_token83] = ACTIONS(11),
+    [aux_sym_css_named_color_token84] = ACTIONS(9),
+    [aux_sym_css_named_color_token85] = ACTIONS(9),
+    [aux_sym_css_named_color_token86] = ACTIONS(9),
+    [aux_sym_css_named_color_token87] = ACTIONS(9),
+    [aux_sym_css_named_color_token88] = ACTIONS(9),
+    [aux_sym_css_named_color_token89] = ACTIONS(9),
+    [aux_sym_css_named_color_token90] = ACTIONS(9),
+    [aux_sym_css_named_color_token91] = ACTIONS(9),
+    [aux_sym_css_named_color_token92] = ACTIONS(9),
+    [aux_sym_css_named_color_token93] = ACTIONS(9),
+    [aux_sym_css_named_color_token94] = ACTIONS(9),
+    [aux_sym_css_named_color_token95] = ACTIONS(9),
+    [aux_sym_css_named_color_token96] = ACTIONS(9),
+    [aux_sym_css_named_color_token97] = ACTIONS(9),
+    [aux_sym_css_named_color_token98] = ACTIONS(9),
+    [aux_sym_css_named_color_token99] = ACTIONS(9),
+    [aux_sym_css_named_color_token100] = ACTIONS(9),
+    [aux_sym_css_named_color_token101] = ACTIONS(9),
+    [aux_sym_css_named_color_token102] = ACTIONS(9),
+    [aux_sym_css_named_color_token103] = ACTIONS(9),
+    [aux_sym_css_named_color_token104] = ACTIONS(11),
+    [aux_sym_css_named_color_token105] = ACTIONS(9),
+    [aux_sym_css_named_color_token106] = ACTIONS(11),
+    [aux_sym_css_named_color_token107] = ACTIONS(9),
+    [aux_sym_css_named_color_token108] = ACTIONS(9),
+    [aux_sym_css_named_color_token109] = ACTIONS(9),
+    [aux_sym_css_named_color_token110] = ACTIONS(9),
+    [aux_sym_css_named_color_token111] = ACTIONS(9),
+    [aux_sym_css_named_color_token112] = ACTIONS(9),
+    [aux_sym_css_named_color_token113] = ACTIONS(9),
+    [aux_sym_css_named_color_token114] = ACTIONS(9),
+    [aux_sym_css_named_color_token115] = ACTIONS(9),
+    [aux_sym_css_named_color_token116] = ACTIONS(9),
+    [aux_sym_css_named_color_token117] = ACTIONS(9),
+    [aux_sym_css_named_color_token118] = ACTIONS(9),
+    [aux_sym_css_named_color_token119] = ACTIONS(9),
+    [aux_sym_css_named_color_token120] = ACTIONS(9),
+    [aux_sym_css_named_color_token121] = ACTIONS(9),
+    [aux_sym_css_named_color_token122] = ACTIONS(9),
+    [aux_sym_css_named_color_token123] = ACTIONS(9),
+    [aux_sym_css_named_color_token124] = ACTIONS(9),
+    [aux_sym_css_named_color_token125] = ACTIONS(9),
+    [aux_sym_css_named_color_token126] = ACTIONS(9),
+    [aux_sym_css_named_color_token127] = ACTIONS(9),
+    [aux_sym_css_named_color_token128] = ACTIONS(9),
+    [aux_sym_css_named_color_token129] = ACTIONS(9),
+    [aux_sym_css_named_color_token130] = ACTIONS(9),
+    [aux_sym_css_named_color_token131] = ACTIONS(9),
+    [aux_sym_css_named_color_token132] = ACTIONS(9),
+    [aux_sym_css_named_color_token133] = ACTIONS(9),
+    [aux_sym_css_named_color_token134] = ACTIONS(9),
+    [aux_sym_css_named_color_token135] = ACTIONS(9),
+    [aux_sym_css_named_color_token136] = ACTIONS(9),
+    [aux_sym_css_named_color_token137] = ACTIONS(9),
+    [aux_sym_css_named_color_token138] = ACTIONS(9),
+    [aux_sym_css_named_color_token139] = ACTIONS(9),
+    [aux_sym_css_named_color_token140] = ACTIONS(9),
+    [aux_sym_css_named_color_token141] = ACTIONS(9),
+    [aux_sym_css_named_color_token142] = ACTIONS(9),
+    [aux_sym_css_named_color_token143] = ACTIONS(9),
+    [aux_sym_css_named_color_token144] = ACTIONS(9),
+    [aux_sym_css_named_color_token145] = ACTIONS(11),
+    [aux_sym_css_named_color_token146] = ACTIONS(9),
+    [aux_sym_css_named_color_token147] = ACTIONS(11),
+    [aux_sym_css_named_color_token148] = ACTIONS(9),
   },
   [3] = {
+    [sym_css_hex_color] = STATE(3),
     [sym_css_named_color] = STATE(3),
     [aux_sym_source_file_repeat1] = STATE(3),
-    [ts_builtin_sym_end] = ACTIONS(11),
-    [aux_sym_css_named_color_token1] = ACTIONS(13),
-    [aux_sym_css_named_color_token2] = ACTIONS(13),
-    [aux_sym_css_named_color_token3] = ACTIONS(16),
-    [aux_sym_css_named_color_token4] = ACTIONS(13),
-    [aux_sym_css_named_color_token5] = ACTIONS(13),
-    [aux_sym_css_named_color_token6] = ACTIONS(13),
-    [aux_sym_css_named_color_token7] = ACTIONS(13),
-    [aux_sym_css_named_color_token8] = ACTIONS(13),
-    [aux_sym_css_named_color_token9] = ACTIONS(13),
-    [aux_sym_css_named_color_token10] = ACTIONS(16),
-    [aux_sym_css_named_color_token11] = ACTIONS(13),
-    [aux_sym_css_named_color_token12] = ACTIONS(13),
-    [aux_sym_css_named_color_token13] = ACTIONS(13),
-    [aux_sym_css_named_color_token14] = ACTIONS(13),
-    [aux_sym_css_named_color_token15] = ACTIONS(13),
-    [aux_sym_css_named_color_token16] = ACTIONS(13),
-    [aux_sym_css_named_color_token17] = ACTIONS(13),
-    [aux_sym_css_named_color_token18] = ACTIONS(13),
-    [aux_sym_css_named_color_token19] = ACTIONS(13),
-    [aux_sym_css_named_color_token20] = ACTIONS(13),
-    [aux_sym_css_named_color_token21] = ACTIONS(13),
-    [aux_sym_css_named_color_token22] = ACTIONS(13),
-    [aux_sym_css_named_color_token23] = ACTIONS(13),
-    [aux_sym_css_named_color_token24] = ACTIONS(13),
-    [aux_sym_css_named_color_token25] = ACTIONS(13),
-    [aux_sym_css_named_color_token26] = ACTIONS(13),
-    [aux_sym_css_named_color_token27] = ACTIONS(13),
-    [aux_sym_css_named_color_token28] = ACTIONS(13),
-    [aux_sym_css_named_color_token29] = ACTIONS(13),
-    [aux_sym_css_named_color_token30] = ACTIONS(13),
-    [aux_sym_css_named_color_token31] = ACTIONS(13),
-    [aux_sym_css_named_color_token32] = ACTIONS(13),
-    [aux_sym_css_named_color_token33] = ACTIONS(13),
-    [aux_sym_css_named_color_token34] = ACTIONS(13),
-    [aux_sym_css_named_color_token35] = ACTIONS(13),
-    [aux_sym_css_named_color_token36] = ACTIONS(13),
-    [aux_sym_css_named_color_token37] = ACTIONS(13),
-    [aux_sym_css_named_color_token38] = ACTIONS(13),
-    [aux_sym_css_named_color_token39] = ACTIONS(13),
-    [aux_sym_css_named_color_token40] = ACTIONS(13),
-    [aux_sym_css_named_color_token41] = ACTIONS(13),
-    [aux_sym_css_named_color_token42] = ACTIONS(13),
-    [aux_sym_css_named_color_token43] = ACTIONS(13),
-    [aux_sym_css_named_color_token44] = ACTIONS(13),
-    [aux_sym_css_named_color_token45] = ACTIONS(13),
-    [aux_sym_css_named_color_token46] = ACTIONS(13),
-    [aux_sym_css_named_color_token47] = ACTIONS(13),
-    [aux_sym_css_named_color_token48] = ACTIONS(13),
-    [aux_sym_css_named_color_token49] = ACTIONS(13),
-    [aux_sym_css_named_color_token50] = ACTIONS(13),
-    [aux_sym_css_named_color_token51] = ACTIONS(13),
-    [aux_sym_css_named_color_token52] = ACTIONS(16),
-    [aux_sym_css_named_color_token53] = ACTIONS(13),
-    [aux_sym_css_named_color_token54] = ACTIONS(13),
-    [aux_sym_css_named_color_token55] = ACTIONS(16),
-    [aux_sym_css_named_color_token56] = ACTIONS(13),
-    [aux_sym_css_named_color_token57] = ACTIONS(13),
-    [aux_sym_css_named_color_token58] = ACTIONS(13),
-    [aux_sym_css_named_color_token59] = ACTIONS(13),
-    [aux_sym_css_named_color_token60] = ACTIONS(13),
-    [aux_sym_css_named_color_token61] = ACTIONS(13),
-    [aux_sym_css_named_color_token62] = ACTIONS(13),
-    [aux_sym_css_named_color_token63] = ACTIONS(13),
-    [aux_sym_css_named_color_token64] = ACTIONS(16),
-    [aux_sym_css_named_color_token65] = ACTIONS(13),
-    [aux_sym_css_named_color_token66] = ACTIONS(13),
-    [aux_sym_css_named_color_token67] = ACTIONS(13),
-    [aux_sym_css_named_color_token68] = ACTIONS(13),
-    [aux_sym_css_named_color_token69] = ACTIONS(13),
-    [aux_sym_css_named_color_token70] = ACTIONS(13),
-    [aux_sym_css_named_color_token71] = ACTIONS(13),
-    [aux_sym_css_named_color_token72] = ACTIONS(13),
-    [aux_sym_css_named_color_token73] = ACTIONS(13),
-    [aux_sym_css_named_color_token74] = ACTIONS(13),
-    [aux_sym_css_named_color_token75] = ACTIONS(13),
-    [aux_sym_css_named_color_token76] = ACTIONS(13),
-    [aux_sym_css_named_color_token77] = ACTIONS(13),
-    [aux_sym_css_named_color_token78] = ACTIONS(13),
-    [aux_sym_css_named_color_token79] = ACTIONS(13),
-    [aux_sym_css_named_color_token80] = ACTIONS(13),
-    [aux_sym_css_named_color_token81] = ACTIONS(13),
-    [aux_sym_css_named_color_token82] = ACTIONS(13),
-    [aux_sym_css_named_color_token83] = ACTIONS(16),
-    [aux_sym_css_named_color_token84] = ACTIONS(13),
-    [aux_sym_css_named_color_token85] = ACTIONS(13),
-    [aux_sym_css_named_color_token86] = ACTIONS(13),
-    [aux_sym_css_named_color_token87] = ACTIONS(13),
-    [aux_sym_css_named_color_token88] = ACTIONS(13),
-    [aux_sym_css_named_color_token89] = ACTIONS(13),
-    [aux_sym_css_named_color_token90] = ACTIONS(13),
-    [aux_sym_css_named_color_token91] = ACTIONS(13),
-    [aux_sym_css_named_color_token92] = ACTIONS(13),
-    [aux_sym_css_named_color_token93] = ACTIONS(13),
-    [aux_sym_css_named_color_token94] = ACTIONS(13),
-    [aux_sym_css_named_color_token95] = ACTIONS(13),
-    [aux_sym_css_named_color_token96] = ACTIONS(13),
-    [aux_sym_css_named_color_token97] = ACTIONS(13),
-    [aux_sym_css_named_color_token98] = ACTIONS(13),
-    [aux_sym_css_named_color_token99] = ACTIONS(13),
-    [aux_sym_css_named_color_token100] = ACTIONS(13),
-    [aux_sym_css_named_color_token101] = ACTIONS(13),
-    [aux_sym_css_named_color_token102] = ACTIONS(13),
-    [aux_sym_css_named_color_token103] = ACTIONS(13),
-    [aux_sym_css_named_color_token104] = ACTIONS(16),
-    [aux_sym_css_named_color_token105] = ACTIONS(13),
-    [aux_sym_css_named_color_token106] = ACTIONS(16),
-    [aux_sym_css_named_color_token107] = ACTIONS(13),
-    [aux_sym_css_named_color_token108] = ACTIONS(13),
-    [aux_sym_css_named_color_token109] = ACTIONS(13),
-    [aux_sym_css_named_color_token110] = ACTIONS(13),
-    [aux_sym_css_named_color_token111] = ACTIONS(13),
-    [aux_sym_css_named_color_token112] = ACTIONS(13),
-    [aux_sym_css_named_color_token113] = ACTIONS(13),
-    [aux_sym_css_named_color_token114] = ACTIONS(13),
-    [aux_sym_css_named_color_token115] = ACTIONS(13),
-    [aux_sym_css_named_color_token116] = ACTIONS(13),
-    [aux_sym_css_named_color_token117] = ACTIONS(13),
-    [aux_sym_css_named_color_token118] = ACTIONS(13),
-    [aux_sym_css_named_color_token119] = ACTIONS(13),
-    [aux_sym_css_named_color_token120] = ACTIONS(13),
-    [aux_sym_css_named_color_token121] = ACTIONS(13),
-    [aux_sym_css_named_color_token122] = ACTIONS(13),
-    [aux_sym_css_named_color_token123] = ACTIONS(13),
-    [aux_sym_css_named_color_token124] = ACTIONS(13),
-    [aux_sym_css_named_color_token125] = ACTIONS(13),
-    [aux_sym_css_named_color_token126] = ACTIONS(13),
-    [aux_sym_css_named_color_token127] = ACTIONS(13),
-    [aux_sym_css_named_color_token128] = ACTIONS(13),
-    [aux_sym_css_named_color_token129] = ACTIONS(13),
-    [aux_sym_css_named_color_token130] = ACTIONS(13),
-    [aux_sym_css_named_color_token131] = ACTIONS(13),
-    [aux_sym_css_named_color_token132] = ACTIONS(13),
-    [aux_sym_css_named_color_token133] = ACTIONS(13),
-    [aux_sym_css_named_color_token134] = ACTIONS(13),
-    [aux_sym_css_named_color_token135] = ACTIONS(13),
-    [aux_sym_css_named_color_token136] = ACTIONS(13),
-    [aux_sym_css_named_color_token137] = ACTIONS(13),
-    [aux_sym_css_named_color_token138] = ACTIONS(13),
-    [aux_sym_css_named_color_token139] = ACTIONS(13),
-    [aux_sym_css_named_color_token140] = ACTIONS(13),
-    [aux_sym_css_named_color_token141] = ACTIONS(13),
-    [aux_sym_css_named_color_token142] = ACTIONS(13),
-    [aux_sym_css_named_color_token143] = ACTIONS(13),
-    [aux_sym_css_named_color_token144] = ACTIONS(13),
-    [aux_sym_css_named_color_token145] = ACTIONS(16),
-    [aux_sym_css_named_color_token146] = ACTIONS(13),
-    [aux_sym_css_named_color_token147] = ACTIONS(16),
-    [aux_sym_css_named_color_token148] = ACTIONS(13),
+    [ts_builtin_sym_end] = ACTIONS(15),
+    [sym_css_hex_color_6_digits] = ACTIONS(17),
+    [sym_css_hex_color_8_digits] = ACTIONS(20),
+    [sym_css_hex_color_3_digits] = ACTIONS(17),
+    [sym_css_hex_color_4_digits] = ACTIONS(17),
+    [aux_sym_css_named_color_token1] = ACTIONS(23),
+    [aux_sym_css_named_color_token2] = ACTIONS(23),
+    [aux_sym_css_named_color_token3] = ACTIONS(26),
+    [aux_sym_css_named_color_token4] = ACTIONS(23),
+    [aux_sym_css_named_color_token5] = ACTIONS(23),
+    [aux_sym_css_named_color_token6] = ACTIONS(23),
+    [aux_sym_css_named_color_token7] = ACTIONS(23),
+    [aux_sym_css_named_color_token8] = ACTIONS(23),
+    [aux_sym_css_named_color_token9] = ACTIONS(23),
+    [aux_sym_css_named_color_token10] = ACTIONS(26),
+    [aux_sym_css_named_color_token11] = ACTIONS(23),
+    [aux_sym_css_named_color_token12] = ACTIONS(23),
+    [aux_sym_css_named_color_token13] = ACTIONS(23),
+    [aux_sym_css_named_color_token14] = ACTIONS(23),
+    [aux_sym_css_named_color_token15] = ACTIONS(23),
+    [aux_sym_css_named_color_token16] = ACTIONS(23),
+    [aux_sym_css_named_color_token17] = ACTIONS(23),
+    [aux_sym_css_named_color_token18] = ACTIONS(23),
+    [aux_sym_css_named_color_token19] = ACTIONS(23),
+    [aux_sym_css_named_color_token20] = ACTIONS(23),
+    [aux_sym_css_named_color_token21] = ACTIONS(23),
+    [aux_sym_css_named_color_token22] = ACTIONS(23),
+    [aux_sym_css_named_color_token23] = ACTIONS(23),
+    [aux_sym_css_named_color_token24] = ACTIONS(23),
+    [aux_sym_css_named_color_token25] = ACTIONS(23),
+    [aux_sym_css_named_color_token26] = ACTIONS(23),
+    [aux_sym_css_named_color_token27] = ACTIONS(23),
+    [aux_sym_css_named_color_token28] = ACTIONS(23),
+    [aux_sym_css_named_color_token29] = ACTIONS(23),
+    [aux_sym_css_named_color_token30] = ACTIONS(23),
+    [aux_sym_css_named_color_token31] = ACTIONS(23),
+    [aux_sym_css_named_color_token32] = ACTIONS(23),
+    [aux_sym_css_named_color_token33] = ACTIONS(23),
+    [aux_sym_css_named_color_token34] = ACTIONS(23),
+    [aux_sym_css_named_color_token35] = ACTIONS(23),
+    [aux_sym_css_named_color_token36] = ACTIONS(23),
+    [aux_sym_css_named_color_token37] = ACTIONS(23),
+    [aux_sym_css_named_color_token38] = ACTIONS(23),
+    [aux_sym_css_named_color_token39] = ACTIONS(23),
+    [aux_sym_css_named_color_token40] = ACTIONS(23),
+    [aux_sym_css_named_color_token41] = ACTIONS(23),
+    [aux_sym_css_named_color_token42] = ACTIONS(23),
+    [aux_sym_css_named_color_token43] = ACTIONS(23),
+    [aux_sym_css_named_color_token44] = ACTIONS(23),
+    [aux_sym_css_named_color_token45] = ACTIONS(23),
+    [aux_sym_css_named_color_token46] = ACTIONS(23),
+    [aux_sym_css_named_color_token47] = ACTIONS(23),
+    [aux_sym_css_named_color_token48] = ACTIONS(23),
+    [aux_sym_css_named_color_token49] = ACTIONS(23),
+    [aux_sym_css_named_color_token50] = ACTIONS(23),
+    [aux_sym_css_named_color_token51] = ACTIONS(23),
+    [aux_sym_css_named_color_token52] = ACTIONS(26),
+    [aux_sym_css_named_color_token53] = ACTIONS(23),
+    [aux_sym_css_named_color_token54] = ACTIONS(23),
+    [aux_sym_css_named_color_token55] = ACTIONS(26),
+    [aux_sym_css_named_color_token56] = ACTIONS(23),
+    [aux_sym_css_named_color_token57] = ACTIONS(23),
+    [aux_sym_css_named_color_token58] = ACTIONS(23),
+    [aux_sym_css_named_color_token59] = ACTIONS(23),
+    [aux_sym_css_named_color_token60] = ACTIONS(23),
+    [aux_sym_css_named_color_token61] = ACTIONS(23),
+    [aux_sym_css_named_color_token62] = ACTIONS(23),
+    [aux_sym_css_named_color_token63] = ACTIONS(23),
+    [aux_sym_css_named_color_token64] = ACTIONS(26),
+    [aux_sym_css_named_color_token65] = ACTIONS(23),
+    [aux_sym_css_named_color_token66] = ACTIONS(23),
+    [aux_sym_css_named_color_token67] = ACTIONS(23),
+    [aux_sym_css_named_color_token68] = ACTIONS(23),
+    [aux_sym_css_named_color_token69] = ACTIONS(23),
+    [aux_sym_css_named_color_token70] = ACTIONS(23),
+    [aux_sym_css_named_color_token71] = ACTIONS(23),
+    [aux_sym_css_named_color_token72] = ACTIONS(23),
+    [aux_sym_css_named_color_token73] = ACTIONS(23),
+    [aux_sym_css_named_color_token74] = ACTIONS(23),
+    [aux_sym_css_named_color_token75] = ACTIONS(23),
+    [aux_sym_css_named_color_token76] = ACTIONS(23),
+    [aux_sym_css_named_color_token77] = ACTIONS(23),
+    [aux_sym_css_named_color_token78] = ACTIONS(23),
+    [aux_sym_css_named_color_token79] = ACTIONS(23),
+    [aux_sym_css_named_color_token80] = ACTIONS(23),
+    [aux_sym_css_named_color_token81] = ACTIONS(23),
+    [aux_sym_css_named_color_token82] = ACTIONS(23),
+    [aux_sym_css_named_color_token83] = ACTIONS(26),
+    [aux_sym_css_named_color_token84] = ACTIONS(23),
+    [aux_sym_css_named_color_token85] = ACTIONS(23),
+    [aux_sym_css_named_color_token86] = ACTIONS(23),
+    [aux_sym_css_named_color_token87] = ACTIONS(23),
+    [aux_sym_css_named_color_token88] = ACTIONS(23),
+    [aux_sym_css_named_color_token89] = ACTIONS(23),
+    [aux_sym_css_named_color_token90] = ACTIONS(23),
+    [aux_sym_css_named_color_token91] = ACTIONS(23),
+    [aux_sym_css_named_color_token92] = ACTIONS(23),
+    [aux_sym_css_named_color_token93] = ACTIONS(23),
+    [aux_sym_css_named_color_token94] = ACTIONS(23),
+    [aux_sym_css_named_color_token95] = ACTIONS(23),
+    [aux_sym_css_named_color_token96] = ACTIONS(23),
+    [aux_sym_css_named_color_token97] = ACTIONS(23),
+    [aux_sym_css_named_color_token98] = ACTIONS(23),
+    [aux_sym_css_named_color_token99] = ACTIONS(23),
+    [aux_sym_css_named_color_token100] = ACTIONS(23),
+    [aux_sym_css_named_color_token101] = ACTIONS(23),
+    [aux_sym_css_named_color_token102] = ACTIONS(23),
+    [aux_sym_css_named_color_token103] = ACTIONS(23),
+    [aux_sym_css_named_color_token104] = ACTIONS(26),
+    [aux_sym_css_named_color_token105] = ACTIONS(23),
+    [aux_sym_css_named_color_token106] = ACTIONS(26),
+    [aux_sym_css_named_color_token107] = ACTIONS(23),
+    [aux_sym_css_named_color_token108] = ACTIONS(23),
+    [aux_sym_css_named_color_token109] = ACTIONS(23),
+    [aux_sym_css_named_color_token110] = ACTIONS(23),
+    [aux_sym_css_named_color_token111] = ACTIONS(23),
+    [aux_sym_css_named_color_token112] = ACTIONS(23),
+    [aux_sym_css_named_color_token113] = ACTIONS(23),
+    [aux_sym_css_named_color_token114] = ACTIONS(23),
+    [aux_sym_css_named_color_token115] = ACTIONS(23),
+    [aux_sym_css_named_color_token116] = ACTIONS(23),
+    [aux_sym_css_named_color_token117] = ACTIONS(23),
+    [aux_sym_css_named_color_token118] = ACTIONS(23),
+    [aux_sym_css_named_color_token119] = ACTIONS(23),
+    [aux_sym_css_named_color_token120] = ACTIONS(23),
+    [aux_sym_css_named_color_token121] = ACTIONS(23),
+    [aux_sym_css_named_color_token122] = ACTIONS(23),
+    [aux_sym_css_named_color_token123] = ACTIONS(23),
+    [aux_sym_css_named_color_token124] = ACTIONS(23),
+    [aux_sym_css_named_color_token125] = ACTIONS(23),
+    [aux_sym_css_named_color_token126] = ACTIONS(23),
+    [aux_sym_css_named_color_token127] = ACTIONS(23),
+    [aux_sym_css_named_color_token128] = ACTIONS(23),
+    [aux_sym_css_named_color_token129] = ACTIONS(23),
+    [aux_sym_css_named_color_token130] = ACTIONS(23),
+    [aux_sym_css_named_color_token131] = ACTIONS(23),
+    [aux_sym_css_named_color_token132] = ACTIONS(23),
+    [aux_sym_css_named_color_token133] = ACTIONS(23),
+    [aux_sym_css_named_color_token134] = ACTIONS(23),
+    [aux_sym_css_named_color_token135] = ACTIONS(23),
+    [aux_sym_css_named_color_token136] = ACTIONS(23),
+    [aux_sym_css_named_color_token137] = ACTIONS(23),
+    [aux_sym_css_named_color_token138] = ACTIONS(23),
+    [aux_sym_css_named_color_token139] = ACTIONS(23),
+    [aux_sym_css_named_color_token140] = ACTIONS(23),
+    [aux_sym_css_named_color_token141] = ACTIONS(23),
+    [aux_sym_css_named_color_token142] = ACTIONS(23),
+    [aux_sym_css_named_color_token143] = ACTIONS(23),
+    [aux_sym_css_named_color_token144] = ACTIONS(23),
+    [aux_sym_css_named_color_token145] = ACTIONS(26),
+    [aux_sym_css_named_color_token146] = ACTIONS(23),
+    [aux_sym_css_named_color_token147] = ACTIONS(26),
+    [aux_sym_css_named_color_token148] = ACTIONS(23),
   },
   [4] = {
-    [ts_builtin_sym_end] = ACTIONS(19),
-    [aux_sym_css_named_color_token1] = ACTIONS(19),
-    [aux_sym_css_named_color_token2] = ACTIONS(19),
-    [aux_sym_css_named_color_token3] = ACTIONS(21),
-    [aux_sym_css_named_color_token4] = ACTIONS(19),
-    [aux_sym_css_named_color_token5] = ACTIONS(19),
-    [aux_sym_css_named_color_token6] = ACTIONS(19),
-    [aux_sym_css_named_color_token7] = ACTIONS(19),
-    [aux_sym_css_named_color_token8] = ACTIONS(19),
-    [aux_sym_css_named_color_token9] = ACTIONS(19),
-    [aux_sym_css_named_color_token10] = ACTIONS(21),
-    [aux_sym_css_named_color_token11] = ACTIONS(19),
-    [aux_sym_css_named_color_token12] = ACTIONS(19),
-    [aux_sym_css_named_color_token13] = ACTIONS(19),
-    [aux_sym_css_named_color_token14] = ACTIONS(19),
-    [aux_sym_css_named_color_token15] = ACTIONS(19),
-    [aux_sym_css_named_color_token16] = ACTIONS(19),
-    [aux_sym_css_named_color_token17] = ACTIONS(19),
-    [aux_sym_css_named_color_token18] = ACTIONS(19),
-    [aux_sym_css_named_color_token19] = ACTIONS(19),
-    [aux_sym_css_named_color_token20] = ACTIONS(19),
-    [aux_sym_css_named_color_token21] = ACTIONS(19),
-    [aux_sym_css_named_color_token22] = ACTIONS(19),
-    [aux_sym_css_named_color_token23] = ACTIONS(19),
-    [aux_sym_css_named_color_token24] = ACTIONS(19),
-    [aux_sym_css_named_color_token25] = ACTIONS(19),
-    [aux_sym_css_named_color_token26] = ACTIONS(19),
-    [aux_sym_css_named_color_token27] = ACTIONS(19),
-    [aux_sym_css_named_color_token28] = ACTIONS(19),
-    [aux_sym_css_named_color_token29] = ACTIONS(19),
-    [aux_sym_css_named_color_token30] = ACTIONS(19),
-    [aux_sym_css_named_color_token31] = ACTIONS(19),
-    [aux_sym_css_named_color_token32] = ACTIONS(19),
-    [aux_sym_css_named_color_token33] = ACTIONS(19),
-    [aux_sym_css_named_color_token34] = ACTIONS(19),
-    [aux_sym_css_named_color_token35] = ACTIONS(19),
-    [aux_sym_css_named_color_token36] = ACTIONS(19),
-    [aux_sym_css_named_color_token37] = ACTIONS(19),
-    [aux_sym_css_named_color_token38] = ACTIONS(19),
-    [aux_sym_css_named_color_token39] = ACTIONS(19),
-    [aux_sym_css_named_color_token40] = ACTIONS(19),
-    [aux_sym_css_named_color_token41] = ACTIONS(19),
-    [aux_sym_css_named_color_token42] = ACTIONS(19),
-    [aux_sym_css_named_color_token43] = ACTIONS(19),
-    [aux_sym_css_named_color_token44] = ACTIONS(19),
-    [aux_sym_css_named_color_token45] = ACTIONS(19),
-    [aux_sym_css_named_color_token46] = ACTIONS(19),
-    [aux_sym_css_named_color_token47] = ACTIONS(19),
-    [aux_sym_css_named_color_token48] = ACTIONS(19),
-    [aux_sym_css_named_color_token49] = ACTIONS(19),
-    [aux_sym_css_named_color_token50] = ACTIONS(19),
-    [aux_sym_css_named_color_token51] = ACTIONS(19),
-    [aux_sym_css_named_color_token52] = ACTIONS(21),
-    [aux_sym_css_named_color_token53] = ACTIONS(19),
-    [aux_sym_css_named_color_token54] = ACTIONS(19),
-    [aux_sym_css_named_color_token55] = ACTIONS(21),
-    [aux_sym_css_named_color_token56] = ACTIONS(19),
-    [aux_sym_css_named_color_token57] = ACTIONS(19),
-    [aux_sym_css_named_color_token58] = ACTIONS(19),
-    [aux_sym_css_named_color_token59] = ACTIONS(19),
-    [aux_sym_css_named_color_token60] = ACTIONS(19),
-    [aux_sym_css_named_color_token61] = ACTIONS(19),
-    [aux_sym_css_named_color_token62] = ACTIONS(19),
-    [aux_sym_css_named_color_token63] = ACTIONS(19),
-    [aux_sym_css_named_color_token64] = ACTIONS(21),
-    [aux_sym_css_named_color_token65] = ACTIONS(19),
-    [aux_sym_css_named_color_token66] = ACTIONS(19),
-    [aux_sym_css_named_color_token67] = ACTIONS(19),
-    [aux_sym_css_named_color_token68] = ACTIONS(19),
-    [aux_sym_css_named_color_token69] = ACTIONS(19),
-    [aux_sym_css_named_color_token70] = ACTIONS(19),
-    [aux_sym_css_named_color_token71] = ACTIONS(19),
-    [aux_sym_css_named_color_token72] = ACTIONS(19),
-    [aux_sym_css_named_color_token73] = ACTIONS(19),
-    [aux_sym_css_named_color_token74] = ACTIONS(19),
-    [aux_sym_css_named_color_token75] = ACTIONS(19),
-    [aux_sym_css_named_color_token76] = ACTIONS(19),
-    [aux_sym_css_named_color_token77] = ACTIONS(19),
-    [aux_sym_css_named_color_token78] = ACTIONS(19),
-    [aux_sym_css_named_color_token79] = ACTIONS(19),
-    [aux_sym_css_named_color_token80] = ACTIONS(19),
-    [aux_sym_css_named_color_token81] = ACTIONS(19),
-    [aux_sym_css_named_color_token82] = ACTIONS(19),
-    [aux_sym_css_named_color_token83] = ACTIONS(21),
-    [aux_sym_css_named_color_token84] = ACTIONS(19),
-    [aux_sym_css_named_color_token85] = ACTIONS(19),
-    [aux_sym_css_named_color_token86] = ACTIONS(19),
-    [aux_sym_css_named_color_token87] = ACTIONS(19),
-    [aux_sym_css_named_color_token88] = ACTIONS(19),
-    [aux_sym_css_named_color_token89] = ACTIONS(19),
-    [aux_sym_css_named_color_token90] = ACTIONS(19),
-    [aux_sym_css_named_color_token91] = ACTIONS(19),
-    [aux_sym_css_named_color_token92] = ACTIONS(19),
-    [aux_sym_css_named_color_token93] = ACTIONS(19),
-    [aux_sym_css_named_color_token94] = ACTIONS(19),
-    [aux_sym_css_named_color_token95] = ACTIONS(19),
-    [aux_sym_css_named_color_token96] = ACTIONS(19),
-    [aux_sym_css_named_color_token97] = ACTIONS(19),
-    [aux_sym_css_named_color_token98] = ACTIONS(19),
-    [aux_sym_css_named_color_token99] = ACTIONS(19),
-    [aux_sym_css_named_color_token100] = ACTIONS(19),
-    [aux_sym_css_named_color_token101] = ACTIONS(19),
-    [aux_sym_css_named_color_token102] = ACTIONS(19),
-    [aux_sym_css_named_color_token103] = ACTIONS(19),
-    [aux_sym_css_named_color_token104] = ACTIONS(21),
-    [aux_sym_css_named_color_token105] = ACTIONS(19),
-    [aux_sym_css_named_color_token106] = ACTIONS(21),
-    [aux_sym_css_named_color_token107] = ACTIONS(19),
-    [aux_sym_css_named_color_token108] = ACTIONS(19),
-    [aux_sym_css_named_color_token109] = ACTIONS(19),
-    [aux_sym_css_named_color_token110] = ACTIONS(19),
-    [aux_sym_css_named_color_token111] = ACTIONS(19),
-    [aux_sym_css_named_color_token112] = ACTIONS(19),
-    [aux_sym_css_named_color_token113] = ACTIONS(19),
-    [aux_sym_css_named_color_token114] = ACTIONS(19),
-    [aux_sym_css_named_color_token115] = ACTIONS(19),
-    [aux_sym_css_named_color_token116] = ACTIONS(19),
-    [aux_sym_css_named_color_token117] = ACTIONS(19),
-    [aux_sym_css_named_color_token118] = ACTIONS(19),
-    [aux_sym_css_named_color_token119] = ACTIONS(19),
-    [aux_sym_css_named_color_token120] = ACTIONS(19),
-    [aux_sym_css_named_color_token121] = ACTIONS(19),
-    [aux_sym_css_named_color_token122] = ACTIONS(19),
-    [aux_sym_css_named_color_token123] = ACTIONS(19),
-    [aux_sym_css_named_color_token124] = ACTIONS(19),
-    [aux_sym_css_named_color_token125] = ACTIONS(19),
-    [aux_sym_css_named_color_token126] = ACTIONS(19),
-    [aux_sym_css_named_color_token127] = ACTIONS(19),
-    [aux_sym_css_named_color_token128] = ACTIONS(19),
-    [aux_sym_css_named_color_token129] = ACTIONS(19),
-    [aux_sym_css_named_color_token130] = ACTIONS(19),
-    [aux_sym_css_named_color_token131] = ACTIONS(19),
-    [aux_sym_css_named_color_token132] = ACTIONS(19),
-    [aux_sym_css_named_color_token133] = ACTIONS(19),
-    [aux_sym_css_named_color_token134] = ACTIONS(19),
-    [aux_sym_css_named_color_token135] = ACTIONS(19),
-    [aux_sym_css_named_color_token136] = ACTIONS(19),
-    [aux_sym_css_named_color_token137] = ACTIONS(19),
-    [aux_sym_css_named_color_token138] = ACTIONS(19),
-    [aux_sym_css_named_color_token139] = ACTIONS(19),
-    [aux_sym_css_named_color_token140] = ACTIONS(19),
-    [aux_sym_css_named_color_token141] = ACTIONS(19),
-    [aux_sym_css_named_color_token142] = ACTIONS(19),
-    [aux_sym_css_named_color_token143] = ACTIONS(19),
-    [aux_sym_css_named_color_token144] = ACTIONS(19),
-    [aux_sym_css_named_color_token145] = ACTIONS(21),
-    [aux_sym_css_named_color_token146] = ACTIONS(19),
-    [aux_sym_css_named_color_token147] = ACTIONS(21),
-    [aux_sym_css_named_color_token148] = ACTIONS(19),
+    [ts_builtin_sym_end] = ACTIONS(29),
+    [sym_css_hex_color_6_digits] = ACTIONS(31),
+    [sym_css_hex_color_8_digits] = ACTIONS(29),
+    [sym_css_hex_color_3_digits] = ACTIONS(31),
+    [sym_css_hex_color_4_digits] = ACTIONS(31),
+    [aux_sym_css_named_color_token1] = ACTIONS(29),
+    [aux_sym_css_named_color_token2] = ACTIONS(29),
+    [aux_sym_css_named_color_token3] = ACTIONS(31),
+    [aux_sym_css_named_color_token4] = ACTIONS(29),
+    [aux_sym_css_named_color_token5] = ACTIONS(29),
+    [aux_sym_css_named_color_token6] = ACTIONS(29),
+    [aux_sym_css_named_color_token7] = ACTIONS(29),
+    [aux_sym_css_named_color_token8] = ACTIONS(29),
+    [aux_sym_css_named_color_token9] = ACTIONS(29),
+    [aux_sym_css_named_color_token10] = ACTIONS(31),
+    [aux_sym_css_named_color_token11] = ACTIONS(29),
+    [aux_sym_css_named_color_token12] = ACTIONS(29),
+    [aux_sym_css_named_color_token13] = ACTIONS(29),
+    [aux_sym_css_named_color_token14] = ACTIONS(29),
+    [aux_sym_css_named_color_token15] = ACTIONS(29),
+    [aux_sym_css_named_color_token16] = ACTIONS(29),
+    [aux_sym_css_named_color_token17] = ACTIONS(29),
+    [aux_sym_css_named_color_token18] = ACTIONS(29),
+    [aux_sym_css_named_color_token19] = ACTIONS(29),
+    [aux_sym_css_named_color_token20] = ACTIONS(29),
+    [aux_sym_css_named_color_token21] = ACTIONS(29),
+    [aux_sym_css_named_color_token22] = ACTIONS(29),
+    [aux_sym_css_named_color_token23] = ACTIONS(29),
+    [aux_sym_css_named_color_token24] = ACTIONS(29),
+    [aux_sym_css_named_color_token25] = ACTIONS(29),
+    [aux_sym_css_named_color_token26] = ACTIONS(29),
+    [aux_sym_css_named_color_token27] = ACTIONS(29),
+    [aux_sym_css_named_color_token28] = ACTIONS(29),
+    [aux_sym_css_named_color_token29] = ACTIONS(29),
+    [aux_sym_css_named_color_token30] = ACTIONS(29),
+    [aux_sym_css_named_color_token31] = ACTIONS(29),
+    [aux_sym_css_named_color_token32] = ACTIONS(29),
+    [aux_sym_css_named_color_token33] = ACTIONS(29),
+    [aux_sym_css_named_color_token34] = ACTIONS(29),
+    [aux_sym_css_named_color_token35] = ACTIONS(29),
+    [aux_sym_css_named_color_token36] = ACTIONS(29),
+    [aux_sym_css_named_color_token37] = ACTIONS(29),
+    [aux_sym_css_named_color_token38] = ACTIONS(29),
+    [aux_sym_css_named_color_token39] = ACTIONS(29),
+    [aux_sym_css_named_color_token40] = ACTIONS(29),
+    [aux_sym_css_named_color_token41] = ACTIONS(29),
+    [aux_sym_css_named_color_token42] = ACTIONS(29),
+    [aux_sym_css_named_color_token43] = ACTIONS(29),
+    [aux_sym_css_named_color_token44] = ACTIONS(29),
+    [aux_sym_css_named_color_token45] = ACTIONS(29),
+    [aux_sym_css_named_color_token46] = ACTIONS(29),
+    [aux_sym_css_named_color_token47] = ACTIONS(29),
+    [aux_sym_css_named_color_token48] = ACTIONS(29),
+    [aux_sym_css_named_color_token49] = ACTIONS(29),
+    [aux_sym_css_named_color_token50] = ACTIONS(29),
+    [aux_sym_css_named_color_token51] = ACTIONS(29),
+    [aux_sym_css_named_color_token52] = ACTIONS(31),
+    [aux_sym_css_named_color_token53] = ACTIONS(29),
+    [aux_sym_css_named_color_token54] = ACTIONS(29),
+    [aux_sym_css_named_color_token55] = ACTIONS(31),
+    [aux_sym_css_named_color_token56] = ACTIONS(29),
+    [aux_sym_css_named_color_token57] = ACTIONS(29),
+    [aux_sym_css_named_color_token58] = ACTIONS(29),
+    [aux_sym_css_named_color_token59] = ACTIONS(29),
+    [aux_sym_css_named_color_token60] = ACTIONS(29),
+    [aux_sym_css_named_color_token61] = ACTIONS(29),
+    [aux_sym_css_named_color_token62] = ACTIONS(29),
+    [aux_sym_css_named_color_token63] = ACTIONS(29),
+    [aux_sym_css_named_color_token64] = ACTIONS(31),
+    [aux_sym_css_named_color_token65] = ACTIONS(29),
+    [aux_sym_css_named_color_token66] = ACTIONS(29),
+    [aux_sym_css_named_color_token67] = ACTIONS(29),
+    [aux_sym_css_named_color_token68] = ACTIONS(29),
+    [aux_sym_css_named_color_token69] = ACTIONS(29),
+    [aux_sym_css_named_color_token70] = ACTIONS(29),
+    [aux_sym_css_named_color_token71] = ACTIONS(29),
+    [aux_sym_css_named_color_token72] = ACTIONS(29),
+    [aux_sym_css_named_color_token73] = ACTIONS(29),
+    [aux_sym_css_named_color_token74] = ACTIONS(29),
+    [aux_sym_css_named_color_token75] = ACTIONS(29),
+    [aux_sym_css_named_color_token76] = ACTIONS(29),
+    [aux_sym_css_named_color_token77] = ACTIONS(29),
+    [aux_sym_css_named_color_token78] = ACTIONS(29),
+    [aux_sym_css_named_color_token79] = ACTIONS(29),
+    [aux_sym_css_named_color_token80] = ACTIONS(29),
+    [aux_sym_css_named_color_token81] = ACTIONS(29),
+    [aux_sym_css_named_color_token82] = ACTIONS(29),
+    [aux_sym_css_named_color_token83] = ACTIONS(31),
+    [aux_sym_css_named_color_token84] = ACTIONS(29),
+    [aux_sym_css_named_color_token85] = ACTIONS(29),
+    [aux_sym_css_named_color_token86] = ACTIONS(29),
+    [aux_sym_css_named_color_token87] = ACTIONS(29),
+    [aux_sym_css_named_color_token88] = ACTIONS(29),
+    [aux_sym_css_named_color_token89] = ACTIONS(29),
+    [aux_sym_css_named_color_token90] = ACTIONS(29),
+    [aux_sym_css_named_color_token91] = ACTIONS(29),
+    [aux_sym_css_named_color_token92] = ACTIONS(29),
+    [aux_sym_css_named_color_token93] = ACTIONS(29),
+    [aux_sym_css_named_color_token94] = ACTIONS(29),
+    [aux_sym_css_named_color_token95] = ACTIONS(29),
+    [aux_sym_css_named_color_token96] = ACTIONS(29),
+    [aux_sym_css_named_color_token97] = ACTIONS(29),
+    [aux_sym_css_named_color_token98] = ACTIONS(29),
+    [aux_sym_css_named_color_token99] = ACTIONS(29),
+    [aux_sym_css_named_color_token100] = ACTIONS(29),
+    [aux_sym_css_named_color_token101] = ACTIONS(29),
+    [aux_sym_css_named_color_token102] = ACTIONS(29),
+    [aux_sym_css_named_color_token103] = ACTIONS(29),
+    [aux_sym_css_named_color_token104] = ACTIONS(31),
+    [aux_sym_css_named_color_token105] = ACTIONS(29),
+    [aux_sym_css_named_color_token106] = ACTIONS(31),
+    [aux_sym_css_named_color_token107] = ACTIONS(29),
+    [aux_sym_css_named_color_token108] = ACTIONS(29),
+    [aux_sym_css_named_color_token109] = ACTIONS(29),
+    [aux_sym_css_named_color_token110] = ACTIONS(29),
+    [aux_sym_css_named_color_token111] = ACTIONS(29),
+    [aux_sym_css_named_color_token112] = ACTIONS(29),
+    [aux_sym_css_named_color_token113] = ACTIONS(29),
+    [aux_sym_css_named_color_token114] = ACTIONS(29),
+    [aux_sym_css_named_color_token115] = ACTIONS(29),
+    [aux_sym_css_named_color_token116] = ACTIONS(29),
+    [aux_sym_css_named_color_token117] = ACTIONS(29),
+    [aux_sym_css_named_color_token118] = ACTIONS(29),
+    [aux_sym_css_named_color_token119] = ACTIONS(29),
+    [aux_sym_css_named_color_token120] = ACTIONS(29),
+    [aux_sym_css_named_color_token121] = ACTIONS(29),
+    [aux_sym_css_named_color_token122] = ACTIONS(29),
+    [aux_sym_css_named_color_token123] = ACTIONS(29),
+    [aux_sym_css_named_color_token124] = ACTIONS(29),
+    [aux_sym_css_named_color_token125] = ACTIONS(29),
+    [aux_sym_css_named_color_token126] = ACTIONS(29),
+    [aux_sym_css_named_color_token127] = ACTIONS(29),
+    [aux_sym_css_named_color_token128] = ACTIONS(29),
+    [aux_sym_css_named_color_token129] = ACTIONS(29),
+    [aux_sym_css_named_color_token130] = ACTIONS(29),
+    [aux_sym_css_named_color_token131] = ACTIONS(29),
+    [aux_sym_css_named_color_token132] = ACTIONS(29),
+    [aux_sym_css_named_color_token133] = ACTIONS(29),
+    [aux_sym_css_named_color_token134] = ACTIONS(29),
+    [aux_sym_css_named_color_token135] = ACTIONS(29),
+    [aux_sym_css_named_color_token136] = ACTIONS(29),
+    [aux_sym_css_named_color_token137] = ACTIONS(29),
+    [aux_sym_css_named_color_token138] = ACTIONS(29),
+    [aux_sym_css_named_color_token139] = ACTIONS(29),
+    [aux_sym_css_named_color_token140] = ACTIONS(29),
+    [aux_sym_css_named_color_token141] = ACTIONS(29),
+    [aux_sym_css_named_color_token142] = ACTIONS(29),
+    [aux_sym_css_named_color_token143] = ACTIONS(29),
+    [aux_sym_css_named_color_token144] = ACTIONS(29),
+    [aux_sym_css_named_color_token145] = ACTIONS(31),
+    [aux_sym_css_named_color_token146] = ACTIONS(29),
+    [aux_sym_css_named_color_token147] = ACTIONS(31),
+    [aux_sym_css_named_color_token148] = ACTIONS(29),
+  },
+  [5] = {
+    [ts_builtin_sym_end] = ACTIONS(33),
+    [sym_css_hex_color_6_digits] = ACTIONS(35),
+    [sym_css_hex_color_8_digits] = ACTIONS(33),
+    [sym_css_hex_color_3_digits] = ACTIONS(35),
+    [sym_css_hex_color_4_digits] = ACTIONS(35),
+    [aux_sym_css_named_color_token1] = ACTIONS(33),
+    [aux_sym_css_named_color_token2] = ACTIONS(33),
+    [aux_sym_css_named_color_token3] = ACTIONS(35),
+    [aux_sym_css_named_color_token4] = ACTIONS(33),
+    [aux_sym_css_named_color_token5] = ACTIONS(33),
+    [aux_sym_css_named_color_token6] = ACTIONS(33),
+    [aux_sym_css_named_color_token7] = ACTIONS(33),
+    [aux_sym_css_named_color_token8] = ACTIONS(33),
+    [aux_sym_css_named_color_token9] = ACTIONS(33),
+    [aux_sym_css_named_color_token10] = ACTIONS(35),
+    [aux_sym_css_named_color_token11] = ACTIONS(33),
+    [aux_sym_css_named_color_token12] = ACTIONS(33),
+    [aux_sym_css_named_color_token13] = ACTIONS(33),
+    [aux_sym_css_named_color_token14] = ACTIONS(33),
+    [aux_sym_css_named_color_token15] = ACTIONS(33),
+    [aux_sym_css_named_color_token16] = ACTIONS(33),
+    [aux_sym_css_named_color_token17] = ACTIONS(33),
+    [aux_sym_css_named_color_token18] = ACTIONS(33),
+    [aux_sym_css_named_color_token19] = ACTIONS(33),
+    [aux_sym_css_named_color_token20] = ACTIONS(33),
+    [aux_sym_css_named_color_token21] = ACTIONS(33),
+    [aux_sym_css_named_color_token22] = ACTIONS(33),
+    [aux_sym_css_named_color_token23] = ACTIONS(33),
+    [aux_sym_css_named_color_token24] = ACTIONS(33),
+    [aux_sym_css_named_color_token25] = ACTIONS(33),
+    [aux_sym_css_named_color_token26] = ACTIONS(33),
+    [aux_sym_css_named_color_token27] = ACTIONS(33),
+    [aux_sym_css_named_color_token28] = ACTIONS(33),
+    [aux_sym_css_named_color_token29] = ACTIONS(33),
+    [aux_sym_css_named_color_token30] = ACTIONS(33),
+    [aux_sym_css_named_color_token31] = ACTIONS(33),
+    [aux_sym_css_named_color_token32] = ACTIONS(33),
+    [aux_sym_css_named_color_token33] = ACTIONS(33),
+    [aux_sym_css_named_color_token34] = ACTIONS(33),
+    [aux_sym_css_named_color_token35] = ACTIONS(33),
+    [aux_sym_css_named_color_token36] = ACTIONS(33),
+    [aux_sym_css_named_color_token37] = ACTIONS(33),
+    [aux_sym_css_named_color_token38] = ACTIONS(33),
+    [aux_sym_css_named_color_token39] = ACTIONS(33),
+    [aux_sym_css_named_color_token40] = ACTIONS(33),
+    [aux_sym_css_named_color_token41] = ACTIONS(33),
+    [aux_sym_css_named_color_token42] = ACTIONS(33),
+    [aux_sym_css_named_color_token43] = ACTIONS(33),
+    [aux_sym_css_named_color_token44] = ACTIONS(33),
+    [aux_sym_css_named_color_token45] = ACTIONS(33),
+    [aux_sym_css_named_color_token46] = ACTIONS(33),
+    [aux_sym_css_named_color_token47] = ACTIONS(33),
+    [aux_sym_css_named_color_token48] = ACTIONS(33),
+    [aux_sym_css_named_color_token49] = ACTIONS(33),
+    [aux_sym_css_named_color_token50] = ACTIONS(33),
+    [aux_sym_css_named_color_token51] = ACTIONS(33),
+    [aux_sym_css_named_color_token52] = ACTIONS(35),
+    [aux_sym_css_named_color_token53] = ACTIONS(33),
+    [aux_sym_css_named_color_token54] = ACTIONS(33),
+    [aux_sym_css_named_color_token55] = ACTIONS(35),
+    [aux_sym_css_named_color_token56] = ACTIONS(33),
+    [aux_sym_css_named_color_token57] = ACTIONS(33),
+    [aux_sym_css_named_color_token58] = ACTIONS(33),
+    [aux_sym_css_named_color_token59] = ACTIONS(33),
+    [aux_sym_css_named_color_token60] = ACTIONS(33),
+    [aux_sym_css_named_color_token61] = ACTIONS(33),
+    [aux_sym_css_named_color_token62] = ACTIONS(33),
+    [aux_sym_css_named_color_token63] = ACTIONS(33),
+    [aux_sym_css_named_color_token64] = ACTIONS(35),
+    [aux_sym_css_named_color_token65] = ACTIONS(33),
+    [aux_sym_css_named_color_token66] = ACTIONS(33),
+    [aux_sym_css_named_color_token67] = ACTIONS(33),
+    [aux_sym_css_named_color_token68] = ACTIONS(33),
+    [aux_sym_css_named_color_token69] = ACTIONS(33),
+    [aux_sym_css_named_color_token70] = ACTIONS(33),
+    [aux_sym_css_named_color_token71] = ACTIONS(33),
+    [aux_sym_css_named_color_token72] = ACTIONS(33),
+    [aux_sym_css_named_color_token73] = ACTIONS(33),
+    [aux_sym_css_named_color_token74] = ACTIONS(33),
+    [aux_sym_css_named_color_token75] = ACTIONS(33),
+    [aux_sym_css_named_color_token76] = ACTIONS(33),
+    [aux_sym_css_named_color_token77] = ACTIONS(33),
+    [aux_sym_css_named_color_token78] = ACTIONS(33),
+    [aux_sym_css_named_color_token79] = ACTIONS(33),
+    [aux_sym_css_named_color_token80] = ACTIONS(33),
+    [aux_sym_css_named_color_token81] = ACTIONS(33),
+    [aux_sym_css_named_color_token82] = ACTIONS(33),
+    [aux_sym_css_named_color_token83] = ACTIONS(35),
+    [aux_sym_css_named_color_token84] = ACTIONS(33),
+    [aux_sym_css_named_color_token85] = ACTIONS(33),
+    [aux_sym_css_named_color_token86] = ACTIONS(33),
+    [aux_sym_css_named_color_token87] = ACTIONS(33),
+    [aux_sym_css_named_color_token88] = ACTIONS(33),
+    [aux_sym_css_named_color_token89] = ACTIONS(33),
+    [aux_sym_css_named_color_token90] = ACTIONS(33),
+    [aux_sym_css_named_color_token91] = ACTIONS(33),
+    [aux_sym_css_named_color_token92] = ACTIONS(33),
+    [aux_sym_css_named_color_token93] = ACTIONS(33),
+    [aux_sym_css_named_color_token94] = ACTIONS(33),
+    [aux_sym_css_named_color_token95] = ACTIONS(33),
+    [aux_sym_css_named_color_token96] = ACTIONS(33),
+    [aux_sym_css_named_color_token97] = ACTIONS(33),
+    [aux_sym_css_named_color_token98] = ACTIONS(33),
+    [aux_sym_css_named_color_token99] = ACTIONS(33),
+    [aux_sym_css_named_color_token100] = ACTIONS(33),
+    [aux_sym_css_named_color_token101] = ACTIONS(33),
+    [aux_sym_css_named_color_token102] = ACTIONS(33),
+    [aux_sym_css_named_color_token103] = ACTIONS(33),
+    [aux_sym_css_named_color_token104] = ACTIONS(35),
+    [aux_sym_css_named_color_token105] = ACTIONS(33),
+    [aux_sym_css_named_color_token106] = ACTIONS(35),
+    [aux_sym_css_named_color_token107] = ACTIONS(33),
+    [aux_sym_css_named_color_token108] = ACTIONS(33),
+    [aux_sym_css_named_color_token109] = ACTIONS(33),
+    [aux_sym_css_named_color_token110] = ACTIONS(33),
+    [aux_sym_css_named_color_token111] = ACTIONS(33),
+    [aux_sym_css_named_color_token112] = ACTIONS(33),
+    [aux_sym_css_named_color_token113] = ACTIONS(33),
+    [aux_sym_css_named_color_token114] = ACTIONS(33),
+    [aux_sym_css_named_color_token115] = ACTIONS(33),
+    [aux_sym_css_named_color_token116] = ACTIONS(33),
+    [aux_sym_css_named_color_token117] = ACTIONS(33),
+    [aux_sym_css_named_color_token118] = ACTIONS(33),
+    [aux_sym_css_named_color_token119] = ACTIONS(33),
+    [aux_sym_css_named_color_token120] = ACTIONS(33),
+    [aux_sym_css_named_color_token121] = ACTIONS(33),
+    [aux_sym_css_named_color_token122] = ACTIONS(33),
+    [aux_sym_css_named_color_token123] = ACTIONS(33),
+    [aux_sym_css_named_color_token124] = ACTIONS(33),
+    [aux_sym_css_named_color_token125] = ACTIONS(33),
+    [aux_sym_css_named_color_token126] = ACTIONS(33),
+    [aux_sym_css_named_color_token127] = ACTIONS(33),
+    [aux_sym_css_named_color_token128] = ACTIONS(33),
+    [aux_sym_css_named_color_token129] = ACTIONS(33),
+    [aux_sym_css_named_color_token130] = ACTIONS(33),
+    [aux_sym_css_named_color_token131] = ACTIONS(33),
+    [aux_sym_css_named_color_token132] = ACTIONS(33),
+    [aux_sym_css_named_color_token133] = ACTIONS(33),
+    [aux_sym_css_named_color_token134] = ACTIONS(33),
+    [aux_sym_css_named_color_token135] = ACTIONS(33),
+    [aux_sym_css_named_color_token136] = ACTIONS(33),
+    [aux_sym_css_named_color_token137] = ACTIONS(33),
+    [aux_sym_css_named_color_token138] = ACTIONS(33),
+    [aux_sym_css_named_color_token139] = ACTIONS(33),
+    [aux_sym_css_named_color_token140] = ACTIONS(33),
+    [aux_sym_css_named_color_token141] = ACTIONS(33),
+    [aux_sym_css_named_color_token142] = ACTIONS(33),
+    [aux_sym_css_named_color_token143] = ACTIONS(33),
+    [aux_sym_css_named_color_token144] = ACTIONS(33),
+    [aux_sym_css_named_color_token145] = ACTIONS(35),
+    [aux_sym_css_named_color_token146] = ACTIONS(33),
+    [aux_sym_css_named_color_token147] = ACTIONS(35),
+    [aux_sym_css_named_color_token148] = ACTIONS(33),
   },
 };
 
 static const uint16_t ts_small_parse_table[] = {
   [0] = 1,
-    ACTIONS(23), 1,
+    ACTIONS(37), 1,
       ts_builtin_sym_end,
 };
 
 static const uint32_t ts_small_parse_table_map[] = {
-  [SMALL_STATE(5)] = 0,
+  [SMALL_STATE(6)] = 0,
 };
 
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
   [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0, 0, 0),
-  [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
-  [7] = {.entry = {.count = 1, .reusable = false}}, SHIFT(4),
-  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1, 0, 0),
-  [11] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0),
-  [13] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(4),
-  [16] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(4),
-  [19] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_css_named_color, 1, 0, 0),
-  [21] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_css_named_color, 1, 0, 0),
-  [23] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
+  [5] = {.entry = {.count = 1, .reusable = false}}, SHIFT(4),
+  [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
+  [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
+  [11] = {.entry = {.count = 1, .reusable = false}}, SHIFT(5),
+  [13] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1, 0, 0),
+  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0),
+  [17] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(4),
+  [20] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(4),
+  [23] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(5),
+  [26] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(5),
+  [29] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_css_hex_color, 1, 0, 0),
+  [31] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_css_hex_color, 1, 0, 0),
+  [33] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_css_named_color, 1, 0, 0),
+  [35] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_css_named_color, 1, 0, 0),
+  [37] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
 };
 
 #ifdef __cplusplus

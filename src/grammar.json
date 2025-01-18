@@ -9,10 +9,55 @@
         "members": [
           {
             "type": "SYMBOL",
+            "name": "css_hex_color"
+          },
+          {
+            "type": "SYMBOL",
             "name": "css_named_color"
           }
         ]
       }
+    },
+    "css_hex_color": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "css_hex_color_6_digits"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_hex_color_8_digits"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_hex_color_3_digits"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_hex_color_4_digits"
+        }
+      ]
+    },
+    "css_hex_color_6_digits": {
+      "type": "PATTERN",
+      "value": "#[0-9a-f]{6}",
+      "flags": "i"
+    },
+    "css_hex_color_8_digits": {
+      "type": "PATTERN",
+      "value": "#[0-9a-f]{8}",
+      "flags": "i"
+    },
+    "css_hex_color_3_digits": {
+      "type": "PATTERN",
+      "value": "#[0-9a-f]{3}",
+      "flags": "i"
+    },
+    "css_hex_color_4_digits": {
+      "type": "PATTERN",
+      "value": "#[0-9a-f]{4}",
+      "flags": "i"
     },
     "css_named_color": {
       "type": "CHOICE",
