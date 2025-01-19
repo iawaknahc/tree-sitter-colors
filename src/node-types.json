@@ -887,6 +887,10 @@
         {
           "type": "css_named_color",
           "named": true
+        },
+        {
+          "type": "u32_argb",
+          "named": true
         }
       ]
     }
@@ -913,6 +917,10 @@
   },
   {
     "type": "css_keyword_transparent",
+    "named": true
+  },
+  {
+    "type": "u32_argb",
     "named": true
   }
 ]

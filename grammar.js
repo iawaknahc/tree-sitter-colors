@@ -200,6 +200,11 @@ module.exports = grammar({
           $.css_function_lch,
           $.css_function_oklch,
           $.css_function_color,
+
+          // https://developer.android.com/reference/android/graphics/Color#encoding
+          // https://api.flutter.dev/flutter/dart-ui/Color-class.html
+          $.u32_argb,
+
           $._symbol,
           $._text,
         ),
@@ -478,6 +483,9 @@ module.exports = grammar({
 
     // https://www.w3.org/TR/css-color-4/#missing
     css_keyword_none: (_) => css_keyword("none"),
+
+    u32_argb: (_) =>
+      /0[xX][0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]/,
 
     _symbol: (_) => symbol,
     _text: (_) => text,

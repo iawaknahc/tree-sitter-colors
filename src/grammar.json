@@ -61,6 +61,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "u32_argb"
+          },
+          {
+            "type": "SYMBOL",
             "name": "_symbol"
           },
           {
@@ -2724,6 +2728,10 @@
       "type": "PATTERN",
       "value": "none",
       "flags": "i"
+    },
+    "u32_argb": {
+      "type": "PATTERN",
+      "value": "0[xX][0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]"
     },
     "_symbol": {
       "type": "PATTERN",
