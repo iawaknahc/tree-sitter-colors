@@ -65,40 +65,43 @@ local yellow = "#f1fa8c"
   (css_hex_color))
 
 ===
-Something that look like colors
+rgb(1)
 ===
 
-rgb(1) rgb(1, 2)
-rgb(1 2 3)
-
-// Some comment containing #123123
-
-A URL with fragment https://example.com/path?hello#hello
-
-A URL with color fragment https://example.com/path?hello#ff00aa
-
-var go_string = `
-<html>
-  <a style="color: red; background-color: rgb(1 2 3);"></a>
-</html>
-`
+rgb(1)
 
 ---
 
 (source_file
   (ERROR
-    (css_number))
+    (css_number)))
+
+===
+rgb(1) rgb(1 2)
+===
+
+rgb(1) rgb(1 2)
+
+---
+
+(source_file
   (css_function_rgb
+    (ERROR
+      (css_number))
     r: (css_number)
     g: (css_number)
-    b: (css_number))
-  (css_hex_color)
-  (ERROR)
-  (css_hex_color)
-  (ERROR)
-  (css_named_color)
-  (ERROR)
-  (css_function_rgb
-    r: (css_number)
-    g: (css_number)
-    b: (css_number)))
+    b: (css_number
+      (MISSING _css_number))))
+
+===
+#define is not a color
+===
+
+#d
+#define A 1
+
+some_color_
+
+---
+
+(source_file)

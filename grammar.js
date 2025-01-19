@@ -7,7 +7,7 @@
 // @ts-check
 
 // The printable symbols in ASCII.
-const STOP_CHARS = [
+const SYMBOLS = [
   "!", // 0x21
   '"', // 0x22
   "#", // 0x23
@@ -35,7 +35,6 @@ const STOP_CHARS = [
   "\\", // 0x5c
   "]", // 0x5d
   "^", // 0x5e
-  "_", // 0x5f
   "`", // 0x60
 
   "{", // 0x7b
@@ -43,8 +42,10 @@ const STOP_CHARS = [
   "}", // 0x7d
   "~", // 0x7e
 
-  // This must be last, so that it isn't interpreted as a range.
-  "-", // 0x2d
+  // These two symbols are not included because they are identifier characters
+  // in many languages.
+  // "_", // 0x5f
+  // "-", // 0x2d
 ];
 
 /**
@@ -174,31 +175,9 @@ function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-// Taken from https://github.com/stsewd/tree-sitter-comment/blob/3555706cef8b98d3e4c7379d7260548ff03ad363/grammar.js#L104
-/**
- * @param chars {string[]}
- * @returns {RegExp}
- */
-function notmatching(chars) {
-  const joined = escapeRegExp(chars.join(""));
-  return new RegExp(`[^\\s${joined}]+`);
-}
-
-// Inspired by notmatching.
-// Note that this match 1 character only.
-// If this lexical rule matches more than 1 character, then tree-sitter will flavor this rule even this rule
-// has lower precedence.
-/**
- * @param chars {string[]}
- * @returns {RegExp}
- */
-function matching(chars) {
-  const joined = escapeRegExp(chars.join(""));
-  return new RegExp(`[${joined}]`);
-}
-
-const stop_char = matching(STOP_CHARS);
-const non_stop_chars = notmatching(STOP_CHARS);
+const SYMBOLS_STRING = escapeRegExp(SYMBOLS.join(""));
+const symbol = new RegExp(`[${SYMBOLS_STRING}]`);
+const text = new RegExp(`[^\\s${SYMBOLS_STRING}]+`);
 
 module.exports = grammar({
   name: "colors",
@@ -208,7 +187,7 @@ module.exports = grammar({
       repeat(
         choice(
           // https://drafts.csswg.org/css-color/#color-syntax
-          $.css_hex_color,
+          $._css_hex_color,
           $.css_named_color,
           $.css_keyword_transparent,
           $.css_function_rgb,
@@ -221,9 +200,8 @@ module.exports = grammar({
           $.css_function_lch,
           $.css_function_oklch,
           $.css_function_color,
-          // Make these rules for matching text have lower precedence to resolve lexical conflicts.
-          token(prec(-1, stop_char)),
-          token(prec(-1, non_stop_chars)),
+          $._symbol,
+          $._text,
         ),
       ),
 
@@ -327,17 +305,19 @@ module.exports = grammar({
       ),
 
     // https://drafts.csswg.org/css-color/#typedef-hex-color
+    _css_hex_color: ($) => choice($.css_hex_color, $._css_hex_color_invalid),
     css_hex_color: ($) =>
       choice(
-        $._css_hex_color_6_digits,
         $._css_hex_color_8_digits,
-        $._css_hex_color_3_digits,
+        $._css_hex_color_6_digits,
         $._css_hex_color_4_digits,
+        $._css_hex_color_3_digits,
       ),
-    _css_hex_color_6_digits: (_) => /#[0-9a-f]{6}/i,
-    _css_hex_color_8_digits: (_) => /#[0-9a-f]{8}/i,
-    _css_hex_color_3_digits: (_) => /#[0-9a-f]{3}/i,
-    _css_hex_color_4_digits: (_) => /#[0-9a-f]{4}/i,
+    _css_hex_color_8_digits: (_) => /#[0-9a-fA-F]{8}/,
+    _css_hex_color_6_digits: (_) => /#[0-9a-fA-F]{6}/,
+    _css_hex_color_4_digits: (_) => /#[0-9a-fA-F]{4}/,
+    _css_hex_color_3_digits: (_) => /#[0-9a-fA-F]{3}/,
+    _css_hex_color_invalid: (_) => /#[0-9a-zA-Z]+/,
 
     // https://drafts.csswg.org/css-color/#typedef-named-color
     css_named_color: (_) =>
@@ -497,5 +477,8 @@ module.exports = grammar({
 
     // https://drafts.csswg.org/css-color/#valdef-color-none
     css_keyword_none: (_) => css_keyword("none"),
+
+    _symbol: (_) => symbol,
+    _text: (_) => text,
   },
 });

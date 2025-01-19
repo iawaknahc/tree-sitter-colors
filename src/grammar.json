@@ -9,7 +9,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "css_hex_color"
+            "name": "_css_hex_color"
           },
           {
             "type": "SYMBOL",
@@ -60,26 +60,12 @@
             "name": "css_function_color"
           },
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "PREC",
-              "value": -1,
-              "content": {
-                "type": "PATTERN",
-                "value": "[!\"#\\$%&'\\(\\)\\*\\+,\\./:;<=>\\?@\\[\\\\\\]\\^_`\\{\\|\\}~-]"
-              }
-            }
+            "type": "SYMBOL",
+            "name": "_symbol"
           },
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "PREC",
-              "value": -1,
-              "content": {
-                "type": "PATTERN",
-                "value": "[^\\s!\"#\\$%&'\\(\\)\\*\\+,\\./:;<=>\\?@\\[\\\\\\]\\^_`\\{\\|\\}~-]+"
-              }
-            }
+            "type": "SYMBOL",
+            "name": "_text"
           }
         ]
       }
@@ -1930,46 +1916,59 @@
         }
       ]
     },
-    "css_hex_color": {
+    "_css_hex_color": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_css_hex_color_6_digits"
+          "name": "css_hex_color"
         },
+        {
+          "type": "SYMBOL",
+          "name": "_css_hex_color_invalid"
+        }
+      ]
+    },
+    "css_hex_color": {
+      "type": "CHOICE",
+      "members": [
         {
           "type": "SYMBOL",
           "name": "_css_hex_color_8_digits"
         },
         {
           "type": "SYMBOL",
-          "name": "_css_hex_color_3_digits"
+          "name": "_css_hex_color_6_digits"
         },
         {
           "type": "SYMBOL",
           "name": "_css_hex_color_4_digits"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_css_hex_color_3_digits"
         }
       ]
     },
-    "_css_hex_color_6_digits": {
-      "type": "PATTERN",
-      "value": "#[0-9a-f]{6}",
-      "flags": "i"
-    },
     "_css_hex_color_8_digits": {
       "type": "PATTERN",
-      "value": "#[0-9a-f]{8}",
-      "flags": "i"
+      "value": "#[0-9a-fA-F]{8}"
     },
-    "_css_hex_color_3_digits": {
+    "_css_hex_color_6_digits": {
       "type": "PATTERN",
-      "value": "#[0-9a-f]{3}",
-      "flags": "i"
+      "value": "#[0-9a-fA-F]{6}"
     },
     "_css_hex_color_4_digits": {
       "type": "PATTERN",
-      "value": "#[0-9a-f]{4}",
-      "flags": "i"
+      "value": "#[0-9a-fA-F]{4}"
+    },
+    "_css_hex_color_3_digits": {
+      "type": "PATTERN",
+      "value": "#[0-9a-fA-F]{3}"
+    },
+    "_css_hex_color_invalid": {
+      "type": "PATTERN",
+      "value": "#[0-9a-zA-Z]+"
     },
     "css_named_color": {
       "type": "CHOICE",
@@ -2725,6 +2724,14 @@
       "type": "PATTERN",
       "value": "none",
       "flags": "i"
+    },
+    "_symbol": {
+      "type": "PATTERN",
+      "value": "[!\"#\\$%&'\\(\\)\\*\\+,\\./:;<=>\\?@\\[\\\\\\]\\^`\\{\\|\\}~]"
+    },
+    "_text": {
+      "type": "PATTERN",
+      "value": "[^\\s!\"#\\$%&'\\(\\)\\*\\+,\\./:;<=>\\?@\\[\\\\\\]\\^`\\{\\|\\}~]+"
     }
   },
   "extras": [
