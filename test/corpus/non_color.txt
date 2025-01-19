@@ -97,7 +97,11 @@ rgb(1) rgb(1 2)
 #define is not a color
 ===
 
-#d
+#1
+#12
+#12345
+#1234567
+#123456789
 #define A 1
 
 some_color_
