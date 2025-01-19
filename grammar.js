@@ -6,6 +6,47 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
+// The printable symbols in ASCII.
+const STOP_CHARS = [
+  "!", // 0x21
+  '"', // 0x22
+  "#", // 0x23
+  "$", // 0x24
+  "%", // 0x25
+  "&", // 0x26
+  "'", // 0x27
+  "(", // 0x28
+  ")", // 0x29
+  "*", // 0x2a
+  "+", // 0x2b
+  ",", // 0x2c
+  ".", // 0x2e
+  "/", // 0x2f
+
+  ":", // 0x3a
+  ";", // 0x3b
+  "<", // 0x3c
+  "=", // 0x3d
+  ">", // 0x3e
+  "?", // 0x3f
+  "@", // 0x40
+
+  "[", // 0x5b
+  "\\", // 0x5c
+  "]", // 0x5d
+  "^", // 0x5e
+  "_", // 0x5f
+  "`", // 0x60
+
+  "{", // 0x7b
+  "|", // 0x7c
+  "}", // 0x7d
+  "~", // 0x7e
+
+  // This must be last, so that it isn't interpreted as a range.
+  "-", // 0x2d
+];
+
 /**
  * @param literal {string}
  * @returns {RegExp}
@@ -124,6 +165,41 @@ function concat_regexp(a, b, flags) {
   return new RegExp("(?:" + a.source + ")" + "(?:" + b.source + ")", flags);
 }
 
+// Taken from https://github.com/stsewd/tree-sitter-comment/blob/3555706cef8b98d3e4c7379d7260548ff03ad363/grammar.js#L114
+/**
+ * @param string {string}
+ * @returns {string}
+ */
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Taken from https://github.com/stsewd/tree-sitter-comment/blob/3555706cef8b98d3e4c7379d7260548ff03ad363/grammar.js#L104
+/**
+ * @param chars {string[]}
+ * @returns {RegExp}
+ */
+function notmatching(chars) {
+  const joined = escapeRegExp(chars.join(""));
+  return new RegExp(`[^\\s${joined}]+`);
+}
+
+// Inspired by notmatching.
+// Note that this match 1 character only.
+// If this lexical rule matches more than 1 character, then tree-sitter will flavor this rule even this rule
+// has lower precedence.
+/**
+ * @param chars {string[]}
+ * @returns {RegExp}
+ */
+function matching(chars) {
+  const joined = escapeRegExp(chars.join(""));
+  return new RegExp(`[${joined}]`);
+}
+
+const stop_char = matching(STOP_CHARS);
+const non_stop_chars = notmatching(STOP_CHARS);
+
 module.exports = grammar({
   name: "colors",
 
@@ -145,6 +221,9 @@ module.exports = grammar({
           $.css_function_lch,
           $.css_function_oklch,
           $.css_function_color,
+          // Make these rules for matching text have lower precedence to resolve lexical conflicts.
+          token(prec(-1, stop_char)),
+          token(prec(-1, non_stop_chars)),
         ),
       ),
 

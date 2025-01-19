@@ -58,6 +58,28 @@
           {
             "type": "SYMBOL",
             "name": "css_function_color"
+          },
+          {
+            "type": "TOKEN",
+            "content": {
+              "type": "PREC",
+              "value": -1,
+              "content": {
+                "type": "PATTERN",
+                "value": "[!\"#\\$%&'\\(\\)\\*\\+,\\./:;<=>\\?@\\[\\\\\\]\\^_`\\{\\|\\}~-]"
+              }
+            }
+          },
+          {
+            "type": "TOKEN",
+            "content": {
+              "type": "PREC",
+              "value": -1,
+              "content": {
+                "type": "PATTERN",
+                "value": "[^\\s!\"#\\$%&'\\(\\)\\*\\+,\\./:;<=>\\?@\\[\\\\\\]\\^_`\\{\\|\\}~-]+"
+              }
+            }
           }
         ]
       }

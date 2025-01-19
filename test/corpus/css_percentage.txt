@@ -19,5 +19,4 @@ rgb(0 0 0 / 100 %)
     g: (css_number)
     b: (css_number)
     alpha: (css_alpha_value)
-    (ERROR
-      (UNEXPECTED '%'))))
+    (ERROR)))
