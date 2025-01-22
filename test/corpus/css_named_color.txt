@@ -7,5 +7,7 @@ AliceBlue AntiqueWhite
 ---
 
 (source_file
-  (css_named_color)
-  (css_named_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_named_color)))

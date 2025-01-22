@@ -7,6 +7,9 @@ transparent Transparent TRANSPARENT
 ---
 
 (source_file
-  (css_keyword_transparent)
-  (css_keyword_transparent)
-  (css_keyword_transparent))
+  (css_color
+    (css_keyword_transparent))
+  (css_color
+    (css_keyword_transparent))
+  (css_color
+    (css_keyword_transparent)))

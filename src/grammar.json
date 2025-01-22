@@ -9,55 +9,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "_css_hex_color"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_named_color"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_keyword_transparent"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_rgb"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_rgba"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_hsl"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_hsla"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_hwb"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_lab"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_oklab"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_lch"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_oklch"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "css_function_color"
+            "name": "css_color"
           },
           {
             "type": "SYMBOL",
@@ -70,9 +22,70 @@
           {
             "type": "SYMBOL",
             "name": "_text"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_css_hex_color_invalid"
           }
         ]
       }
+    },
+    "css_color": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "css_hex_color"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_named_color"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_keyword_transparent"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_rgb"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_rgba"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_hsl"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_hsla"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_hwb"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_lab"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_oklab"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_lch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_oklch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "css_function_color"
+        }
+      ]
     },
     "_css_number": {
       "type": "PATTERN",
@@ -2064,19 +2077,6 @@
           "type": "PATTERN",
           "value": "xyz-d65",
           "flags": "i"
-        }
-      ]
-    },
-    "_css_hex_color": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "css_hex_color"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_css_hex_color_invalid"
         }
       ]
     },

@@ -187,19 +187,7 @@ module.exports = grammar({
       repeat(
         choice(
           // https://www.w3.org/TR/css-color-4/#color-syntax
-          $._css_hex_color,
-          $.css_named_color,
-          $.css_keyword_transparent,
-          $.css_function_rgb,
-          $.css_function_rgba,
-          $.css_function_hsl,
-          $.css_function_hsla,
-          $.css_function_hwb,
-          $.css_function_lab,
-          $.css_function_oklab,
-          $.css_function_lch,
-          $.css_function_oklch,
-          $.css_function_color,
+          $.css_color,
 
           // https://developer.android.com/reference/android/graphics/Color#encoding
           // https://api.flutter.dev/flutter/dart-ui/Color-class.html
@@ -207,7 +195,26 @@ module.exports = grammar({
 
           $._symbol,
           $._text,
+          $._css_hex_color_invalid,
         ),
+      ),
+
+    // In preparation for CSS Color Level 5, where CSS color becomes recursive.
+    css_color: ($) =>
+      choice(
+        $.css_hex_color,
+        $.css_named_color,
+        $.css_keyword_transparent,
+        $.css_function_rgb,
+        $.css_function_rgba,
+        $.css_function_hsl,
+        $.css_function_hsla,
+        $.css_function_hwb,
+        $.css_function_lab,
+        $.css_function_oklab,
+        $.css_function_lch,
+        $.css_function_oklch,
+        $.css_function_color,
       ),
 
     // https://www.w3.org/TR/css-syntax-3/#number-token-diagram
@@ -335,7 +342,6 @@ module.exports = grammar({
       ),
 
     // https://www.w3.org/TR/css-color-4/#hex-notation
-    _css_hex_color: ($) => choice($.css_hex_color, $._css_hex_color_invalid),
     css_hex_color: ($) =>
       choice(
         $._css_hex_color_8_digits,

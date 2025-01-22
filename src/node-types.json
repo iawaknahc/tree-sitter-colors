@@ -5,6 +5,69 @@
     "fields": {}
   },
   {
+    "type": "css_color",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "css_function_color",
+          "named": true
+        },
+        {
+          "type": "css_function_hsl",
+          "named": true
+        },
+        {
+          "type": "css_function_hsla",
+          "named": true
+        },
+        {
+          "type": "css_function_hwb",
+          "named": true
+        },
+        {
+          "type": "css_function_lab",
+          "named": true
+        },
+        {
+          "type": "css_function_lch",
+          "named": true
+        },
+        {
+          "type": "css_function_oklab",
+          "named": true
+        },
+        {
+          "type": "css_function_oklch",
+          "named": true
+        },
+        {
+          "type": "css_function_rgb",
+          "named": true
+        },
+        {
+          "type": "css_function_rgba",
+          "named": true
+        },
+        {
+          "type": "css_hex_color",
+          "named": true
+        },
+        {
+          "type": "css_keyword_transparent",
+          "named": true
+        },
+        {
+          "type": "css_named_color",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "css_function_color",
     "named": true,
     "fields": {},
@@ -992,55 +1055,7 @@
       "required": false,
       "types": [
         {
-          "type": "css_function_color",
-          "named": true
-        },
-        {
-          "type": "css_function_hsl",
-          "named": true
-        },
-        {
-          "type": "css_function_hsla",
-          "named": true
-        },
-        {
-          "type": "css_function_hwb",
-          "named": true
-        },
-        {
-          "type": "css_function_lab",
-          "named": true
-        },
-        {
-          "type": "css_function_lch",
-          "named": true
-        },
-        {
-          "type": "css_function_oklab",
-          "named": true
-        },
-        {
-          "type": "css_function_oklch",
-          "named": true
-        },
-        {
-          "type": "css_function_rgb",
-          "named": true
-        },
-        {
-          "type": "css_function_rgba",
-          "named": true
-        },
-        {
-          "type": "css_hex_color",
-          "named": true
-        },
-        {
-          "type": "css_keyword_transparent",
-          "named": true
-        },
-        {
-          "type": "css_named_color",
+          "type": "css_color",
           "named": true
         },
         {

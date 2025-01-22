@@ -7,12 +7,14 @@ There is some text containing rgb(0 0 0) and #aabbcc.
 ---
 
 (source_file
-  (css_function_rgb
-    function_name: (css_function_name_rgb)
-    r: (css_number)
-    g: (css_number)
-    b: (css_number))
-  (css_hex_color))
+  (css_color
+    (css_function_rgb
+      function_name: (css_function_name_rgb)
+      r: (css_number)
+      g: (css_number)
+      b: (css_number)))
+  (css_color
+    (css_hex_color)))
 
 ==================================
 Some source file containing colors
@@ -41,29 +43,52 @@ local yellow = "#f1fa8c"
 ---
 
 (source_file
-  (css_hex_color)
-  (css_hex_color)
-  (css_hex_color)
-  (css_hex_color)
-  (css_hex_color)
-  (css_hex_color)
-  (css_hex_color)
-  (css_hex_color)
-  (css_hex_color)
-  (css_named_color)
-  (css_hex_color)
-  (css_named_color)
-  (css_hex_color)
-  (css_named_color)
-  (css_hex_color)
-  (css_named_color)
-  (css_hex_color)
-  (css_named_color)
-  (css_hex_color)
-  (css_named_color)
-  (css_hex_color)
-  (css_named_color)
-  (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_hex_color))
+  (css_color
+    (css_named_color))
+  (css_color
+    (css_hex_color)))
 
 ===
 rgb(1)
@@ -87,15 +112,16 @@ rgb(1) rgb(1 2)
 ---
 
 (source_file
-  (css_function_rgb
-    function_name: (css_function_name_rgb)
-    (ERROR
-      (css_number)
-      (css_function_name_rgb))
-    r: (css_number)
-    g: (css_number)
-    b: (css_number
-      (MISSING _css_number))))
+  (css_color
+    (css_function_rgb
+      function_name: (css_function_name_rgb)
+      (ERROR
+        (css_number)
+        (css_function_name_rgb))
+      r: (css_number)
+      g: (css_number)
+      b: (css_number
+        (MISSING _css_number)))))
 
 ===
 #define is not a color
