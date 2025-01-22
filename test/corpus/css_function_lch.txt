@@ -18,39 +18,48 @@ lCh(none None NONE / none)
 
 (source_file
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_percentage)
     C: (css_percentage)
     h: (css_hue))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_percentage)
     C: (css_percentage)
     h: (css_hue)
     alpha: (css_alpha_value))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_percentage)
     C: (css_percentage)
     h: (css_hue))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_percentage)
     C: (css_percentage)
     h: (css_hue))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_percentage)
     C: (css_percentage)
     h: (css_hue))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_percentage)
     C: (css_percentage)
     h: (css_hue))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_percentage)
     C: (css_percentage)
     h: (css_hue))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_keyword_none)
     C: (css_keyword_none)
     h: (css_keyword_none))
   (css_function_lch
+    function_name: (css_function_name_lch)
     L: (css_keyword_none)
     C: (css_keyword_none)
     h: (css_keyword_none)

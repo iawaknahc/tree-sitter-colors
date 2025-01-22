@@ -17,37 +17,45 @@ lab(none None NONE / none)
 
 (source_file
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_number)
     a: (css_percentage)
     b: (css_percentage))
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_percentage)
     a: (css_number)
     b: (css_percentage))
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_percentage)
     a: (css_percentage)
     b: (css_number))
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_number)
     a: (css_percentage)
     b: (css_percentage)
     alpha: (css_alpha_value))
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_percentage)
     a: (css_number)
     b: (css_percentage)
     alpha: (css_alpha_value))
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_percentage)
     a: (css_percentage)
     b: (css_number)
     alpha: (css_alpha_value))
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_keyword_none)
     a: (css_keyword_none)
     b: (css_keyword_none))
   (css_function_lab
+    function_name: (css_function_name_lab)
     L: (css_keyword_none)
     a: (css_keyword_none)
     b: (css_keyword_none)

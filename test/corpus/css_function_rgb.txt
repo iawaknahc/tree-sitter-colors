@@ -18,33 +18,40 @@ rGb(none None NONE / none)
 
 (source_file
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_number)
     g: (css_number)
     b: (css_number))
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_number)
     g: (css_number)
     b: (css_number)
     alpha: (css_alpha_value))
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_number)
     g: (css_number)
     b: (css_number))
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_number)
     g: (css_number)
     b: (css_number)
     alpha: (css_alpha_value))
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_number)
     g: (css_percentage)
     b: (css_percentage)
     alpha: (css_alpha_value))
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_keyword_none)
     g: (css_keyword_none)
     b: (css_keyword_none))
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_keyword_none)
     g: (css_keyword_none)
     b: (css_keyword_none)

@@ -58,7 +58,7 @@ function css_keyword(literal) {
 
 function rgb_legacy_percentage($, functionName) {
   return seq(
-    css_keyword(functionName),
+    field("function_name", functionName),
     "(",
     field("r", $.css_percentage),
     ",",
@@ -72,7 +72,7 @@ function rgb_legacy_percentage($, functionName) {
 
 function rgb_legacy_number($, functionName) {
   return seq(
-    css_keyword(functionName),
+    field("function_name", functionName),
     "(",
     field("r", $.css_number),
     ",",
@@ -86,7 +86,7 @@ function rgb_legacy_number($, functionName) {
 
 function rgb_modern($, functionName) {
   return seq(
-    css_keyword(functionName),
+    field("function_name", functionName),
     "(",
     field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
@@ -100,7 +100,7 @@ function rgb_modern($, functionName) {
 
 function hsl_legacy($, functionName) {
   return seq(
-    css_keyword(functionName),
+    field("function_name", functionName),
     "(",
     field("h", $.css_hue),
     ",",
@@ -114,7 +114,7 @@ function hsl_legacy($, functionName) {
 
 function h_modern($, functionName, fieldA, fieldB) {
   return seq(
-    css_keyword(functionName),
+    field("function_name", functionName),
     "(",
     field("h", choice($.css_hue, $.css_keyword_none)),
     field(fieldA, choice($.css_percentage, $.css_number, $.css_keyword_none)),
@@ -128,7 +128,7 @@ function h_modern($, functionName, fieldA, fieldB) {
 
 function lab($, functionName) {
   return seq(
-    css_keyword(functionName),
+    field("function_name", functionName),
     "(",
     field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("a", choice($.css_percentage, $.css_number, $.css_keyword_none)),
@@ -142,7 +142,7 @@ function lab($, functionName) {
 
 function lch($, functionName) {
   return seq(
-    css_keyword(functionName),
+    field("function_name", functionName),
     "(",
     field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("C", choice($.css_percentage, $.css_number, $.css_keyword_none)),
@@ -229,47 +229,71 @@ module.exports = grammar({
     // https://www.w3.org/TR/css-color-4/#typedef-hue
     css_hue: ($) => choice($._css_number, $._css_angle),
 
+    css_function_name_rgb: (_) => css_keyword("rgb"),
+    css_function_name_rgba: (_) => css_keyword("rgba"),
+    css_function_name_hsl: (_) => css_keyword("hsl"),
+    css_function_name_hsla: (_) => css_keyword("hsla"),
+    css_function_name_hwb: (_) => css_keyword("hwb"),
+    css_function_name_lab: (_) => css_keyword("lab"),
+    css_function_name_oklab: (_) => css_keyword("oklab"),
+    css_function_name_lch: (_) => css_keyword("lch"),
+    css_function_name_oklch: (_) => css_keyword("oklch"),
+    css_function_name_color: (_) => css_keyword("color"),
+
     // https://www.w3.org/TR/css-color-4/#rgb-functions
     css_function_rgb: ($) =>
       choice($._css_function_rgb_legacy, $._css_function_rgb_modern),
     css_function_rgba: ($) =>
       choice($._css_function_rgba_legacy, $._css_function_rgba_modern),
     _css_function_rgb_legacy: ($) =>
-      choice(rgb_legacy_percentage($, "rgb"), rgb_legacy_number($, "rgb")),
+      choice(
+        rgb_legacy_percentage($, $.css_function_name_rgb),
+        rgb_legacy_number($, $.css_function_name_rgb),
+      ),
     _css_function_rgba_legacy: ($) =>
-      choice(rgb_legacy_percentage($, "rgba"), rgb_legacy_number($, "rgba")),
-    _css_function_rgb_modern: ($) => rgb_modern($, "rgb"),
-    _css_function_rgba_modern: ($) => rgb_modern($, "rgba"),
+      choice(
+        rgb_legacy_percentage($, $.css_function_name_rgba),
+        rgb_legacy_number($, $.css_function_name_rgba),
+      ),
+    _css_function_rgb_modern: ($) => rgb_modern($, $.css_function_name_rgb),
+    _css_function_rgba_modern: ($) => rgb_modern($, $.css_function_name_rgba),
 
     // https://www.w3.org/TR/css-color-4/#the-hsl-notation
     css_function_hsl: ($) =>
       choice($._css_function_hsl_legacy, $._css_function_hsl_modern),
-    _css_function_hsl_legacy: ($) => hsl_legacy($, "hsl"),
-    _css_function_hsl_modern: ($) => h_modern($, "hsl", "s", "l"),
+    _css_function_hsl_legacy: ($) => hsl_legacy($, $.css_function_name_hsl),
+    _css_function_hsl_modern: ($) =>
+      h_modern($, $.css_function_name_hsl, "s", "l"),
     css_function_hsla: ($) =>
       choice($._css_function_hsla_legacy, $._css_function_hsla_modern),
-    _css_function_hsla_legacy: ($) => hsl_legacy($, "hsla"),
-    _css_function_hsla_modern: ($) => h_modern($, "hsla", "s", "l"),
+    _css_function_hsla_legacy: ($) => hsl_legacy($, $.css_function_name_hsla),
+    _css_function_hsla_modern: ($) =>
+      h_modern($, $.css_function_name_hsla, "s", "l"),
 
     // https://www.w3.org/TR/css-color-4/#the-hwb-notation
-    css_function_hwb: ($) => h_modern($, "hwb", "w", "b"),
+    css_function_hwb: ($) => h_modern($, $.css_function_name_hwb, "w", "b"),
 
     // https://www.w3.org/TR/css-color-4/#specifying-lab-lch
-    css_function_lab: ($) => lab($, "lab"),
+    css_function_lab: ($) => lab($, $.css_function_name_lab),
     // https://www.w3.org/TR/css-color-4/#specifying-oklab-oklch
-    css_function_oklab: ($) => lab($, "oklab"),
+    css_function_oklab: ($) => lab($, $.css_function_name_oklab),
 
     // https://www.w3.org/TR/css-color-4/#specifying-lab-lch
-    css_function_lch: ($) => lch($, "lch"),
+    css_function_lch: ($) => lch($, $.css_function_name_lch),
     // https://www.w3.org/TR/css-color-4/#specifying-oklab-oklch
-    css_function_oklch: ($) => lch($, "oklch"),
+    css_function_oklch: ($) => lch($, $.css_function_name_oklch),
 
     // https://www.w3.org/TR/css-color-4/#color-function
     css_function_color: ($) =>
+      choice($.css_function_color_rgb, $.css_function_color_xyz),
+    css_function_color_rgb: ($) =>
       seq(
-        css_keyword("color"),
+        field("function_name", $.css_function_name_color),
         "(",
-        $._css_colorspace_params,
+        field("color_space", $.css_predefined_rgb),
+        field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+        field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+        field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
         optional(
           seq(
             "/",
@@ -277,15 +301,6 @@ module.exports = grammar({
           ),
         ),
         ")",
-      ),
-    _css_colorspace_params: ($) =>
-      choice($._css_predefined_rgb_params, $._css_xyz_params),
-    _css_predefined_rgb_params: ($) =>
-      seq(
-        $.css_predefined_rgb,
-        field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
-        field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
-        field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
       ),
     css_predefined_rgb: (_) =>
       choice(
@@ -296,12 +311,21 @@ module.exports = grammar({
         css_keyword("prophoto-rgb"),
         css_keyword("rec2020"),
       ),
-    _css_xyz_params: ($) =>
+    css_function_color_xyz: ($) =>
       seq(
-        $.css_xyz_space,
+        field("function_name", $.css_function_name_color),
+        "(",
+        field("color_space", $.css_xyz_space),
         field("x", choice($.css_number, $.css_percentage, $.css_keyword_none)),
         field("y", choice($.css_number, $.css_percentage, $.css_keyword_none)),
         field("z", choice($.css_number, $.css_percentage, $.css_keyword_none)),
+        optional(
+          seq(
+            "/",
+            field("alpha", choice($.css_alpha_value, $.css_keyword_none)),
+          ),
+        ),
+        ")",
       ),
     css_xyz_space: (_) =>
       choice(

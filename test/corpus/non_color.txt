@@ -8,6 +8,7 @@ There is some text containing rgb(0 0 0) and #aabbcc.
 
 (source_file
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     r: (css_number)
     g: (css_number)
     b: (css_number))
@@ -74,6 +75,7 @@ rgb(1)
 
 (source_file
   (ERROR
+    (css_function_name_rgb)
     (css_number)))
 
 ===
@@ -86,8 +88,10 @@ rgb(1) rgb(1 2)
 
 (source_file
   (css_function_rgb
+    function_name: (css_function_name_rgb)
     (ERROR
-      (css_number))
+      (css_number)
+      (css_function_name_rgb))
     r: (css_number)
     g: (css_number)
     b: (css_number
