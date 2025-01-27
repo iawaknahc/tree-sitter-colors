@@ -184,7 +184,7 @@ const css_angle = concat_regexp(css_number, /deg|grad|rad|turn/, "i");
 const tailwindcss_color_name = /[_a-zA-Z0-9][-_a-zA-Z0-9]*/;
 
 const tailwindcss_color_utility =
-  /bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke/;
+  /bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke|from|via|to/;
 
 module.exports = grammar({
   name: "colors",

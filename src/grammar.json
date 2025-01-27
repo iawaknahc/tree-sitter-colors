@@ -2990,7 +2990,7 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke"
+            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke|from|via|to"
           },
           {
             "type": "STRING",
@@ -3010,7 +3010,7 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke"
+            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke|from|via|to"
           },
           {
             "type": "STRING",
@@ -3038,7 +3038,7 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke"
+            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke|from|via|to"
           },
           {
             "type": "STRING",
