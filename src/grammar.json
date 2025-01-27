@@ -17,6 +17,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "tailwindcss_color"
+          },
+          {
+            "type": "SYMBOL",
             "name": "_symbol"
           },
           {
@@ -2879,6 +2883,198 @@
     "u32_argb": {
       "type": "PATTERN",
       "value": "0[xX][0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]"
+    },
+    "tailwindcss_color": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "tailwindcss_color_classname_without_alpha"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tailwindcss_color_classname_with_alpha_percentage"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tailwindcss_color_classname_with_alpha_arbitrary_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tailwindcss_color_css_variable_without_alpha"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tailwindcss_color_css_variable_with_alpha"
+        }
+      ]
+    },
+    "tailwindcss_color_css_variable_without_alpha": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "--color-"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[_a-zA-Z0-9][-_a-zA-Z0-9]*"
+          }
+        ]
+      }
+    },
+    "tailwindcss_color_css_variable_with_alpha": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "--alpha"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "STRING",
+          "value": "var"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "css_variable",
+          "content": {
+            "type": "SYMBOL",
+            "name": "tailwindcss_color_css_variable_without_alpha"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "STRING",
+          "value": "/"
+        },
+        {
+          "type": "FIELD",
+          "name": "alpha",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "css_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "css_percentage"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "tailwindcss_color_classname_without_alpha": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke"
+          },
+          {
+            "type": "STRING",
+            "value": "-"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[_a-zA-Z0-9][-_a-zA-Z0-9]*"
+          }
+        ]
+      }
+    },
+    "tailwindcss_color_classname_with_alpha_percentage": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke"
+          },
+          {
+            "type": "STRING",
+            "value": "-"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[_a-zA-Z0-9][-_a-zA-Z0-9]*"
+          },
+          {
+            "type": "STRING",
+            "value": "/"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[-+]?(?:\\d+\\.\\d+|\\d+|\\.\\d+)(?:[eE][-+]?\\d+)?"
+          }
+        ]
+      }
+    },
+    "tailwindcss_color_classname_with_alpha_arbitrary_value": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke"
+          },
+          {
+            "type": "STRING",
+            "value": "-"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[_a-zA-Z0-9][-_a-zA-Z0-9]*"
+          },
+          {
+            "type": "STRING",
+            "value": "/"
+          },
+          {
+            "type": "STRING",
+            "value": "["
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[-+]?(?:\\d+\\.\\d+|\\d+|\\.\\d+)(?:[eE][-+]?\\d+)?"
+              },
+              {
+                "type": "PATTERN",
+                "value": "(?:[-+]?(?:\\d+\\.\\d+|\\d+|\\.\\d+)(?:[eE][-+]?\\d+)?)(?:%)"
+              }
+            ]
+          },
+          {
+            "type": "STRING",
+            "value": "]"
+          }
+        ]
+      }
     },
     "_symbol": {
       "type": "PATTERN",

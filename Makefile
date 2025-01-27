@@ -91,4 +91,7 @@ clean:
 test:
 	$(TS) test --show-fields
 
+update-test:
+	$(TS) test --show-fields --update
+
 .PHONY: all install uninstall clean test

@@ -154,8 +154,6 @@ function lch($, functionName) {
   );
 }
 
-const regexp_number = /[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?/;
-
 /**
  * @param a {RegExp}
  * @param b {RegExp}
@@ -179,6 +177,15 @@ const SYMBOLS_STRING = escapeRegExp(SYMBOLS.join(""));
 const symbol = new RegExp(`[${SYMBOLS_STRING}]`);
 const text = new RegExp(`[^\\s${SYMBOLS_STRING}]+`);
 
+const css_number = /[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?/;
+const css_percentage = concat_regexp(css_number, /%/);
+const css_angle = concat_regexp(css_number, /deg|grad|rad|turn/, "i");
+
+const tailwindcss_color_name = /[_a-zA-Z0-9][-_a-zA-Z0-9]*/;
+
+const tailwindcss_color_utility =
+  /bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke/;
+
 module.exports = grammar({
   name: "colors",
 
@@ -192,6 +199,8 @@ module.exports = grammar({
           // https://developer.android.com/reference/android/graphics/Color#encoding
           // https://api.flutter.dev/flutter/dart-ui/Color-class.html
           $.u32_argb,
+
+          $.tailwindcss_color,
 
           $._symbol,
           $._text,
@@ -218,11 +227,11 @@ module.exports = grammar({
       ),
 
     // https://www.w3.org/TR/css-syntax-3/#number-token-diagram
-    _css_number: (_) => regexp_number,
+    _css_number: (_) => css_number,
     css_number: ($) => $._css_number,
 
     // https://www.w3.org/TR/css-syntax-3/#percentage-token-diagram
-    _css_percentage: (_) => concat_regexp(regexp_number, /%/),
+    _css_percentage: (_) => css_percentage,
     css_percentage: ($) => $._css_percentage,
 
     // https://www.w3.org/TR/css-color-4/#alpha-syntax
@@ -230,7 +239,7 @@ module.exports = grammar({
 
     // https://www.w3.org/TR/css-values-4/#angle-value
     // https://www.w3.org/TR/css-values-4/#typedef-dimension
-    _css_angle: (_) => concat_regexp(regexp_number, /deg|grad|rad|turn/, "i"),
+    _css_angle: (_) => css_angle,
     css_angle: ($) => $._css_angle,
 
     // https://www.w3.org/TR/css-color-4/#typedef-hue
@@ -516,6 +525,67 @@ module.exports = grammar({
 
     u32_argb: (_) =>
       /0[xX][0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]_?[0-9a-fA-F]/,
+
+    tailwindcss_color: ($) =>
+      choice(
+        // https://tailwindcss.com/docs/colors#using-color-utilities
+        $.tailwindcss_color_classname_without_alpha,
+
+        // https://tailwindcss.com/docs/colors#adjusting-opacity
+        $.tailwindcss_color_classname_with_alpha_percentage,
+
+        // https://tailwindcss.com/docs/colors#adjusting-opacity
+        $.tailwindcss_color_classname_with_alpha_arbitrary_value,
+
+        // https://tailwindcss.com/docs/colors#referencing-in-css
+        $.tailwindcss_color_css_variable_without_alpha,
+
+        // https://tailwindcss.com/docs/colors#referencing-in-css
+        $.tailwindcss_color_css_variable_with_alpha,
+      ),
+
+    tailwindcss_color_css_variable_without_alpha: (_) =>
+      token(seq("--color-", tailwindcss_color_name)),
+
+    tailwindcss_color_css_variable_with_alpha: ($) =>
+      seq(
+        "--alpha",
+        "(",
+        "var",
+        "(",
+        field("css_variable", $.tailwindcss_color_css_variable_without_alpha),
+        ")",
+        "/",
+        field("alpha", choice($.css_number, $.css_percentage)),
+        ")",
+      ),
+
+    tailwindcss_color_classname_without_alpha: (_) =>
+      token(seq(tailwindcss_color_utility, "-", tailwindcss_color_name)),
+
+    tailwindcss_color_classname_with_alpha_percentage: (_) =>
+      token(
+        seq(
+          tailwindcss_color_utility,
+          "-",
+          tailwindcss_color_name,
+          "/",
+          css_number,
+        ),
+      ),
+
+    tailwindcss_color_classname_with_alpha_arbitrary_value: (_) =>
+      token(
+        seq(
+          tailwindcss_color_utility,
+          "-",
+          tailwindcss_color_name,
+          "/",
+          "[",
+          choice(css_number, css_percentage),
+          "]",
+        ),
+      ),
 
     _symbol: (_) => symbol,
     _text: (_) => text,
