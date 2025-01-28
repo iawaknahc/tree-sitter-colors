@@ -139,3 +139,15 @@ some_color_
 ---
 
 (source_file)
+
+===
+rgb (0 0 0) is not a color
+===
+
+rgb (0 0 0)
+
+---
+
+(source_file
+  (ERROR
+    (css_function_name_rgb)))

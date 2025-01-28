@@ -59,7 +59,7 @@ function css_keyword(literal) {
 function rgb_legacy_percentage($, functionName) {
   return seq(
     field("function_name", functionName),
-    "(",
+    token.immediate("("),
     field("r", $.css_percentage),
     ",",
     field("g", $.css_percentage),
@@ -73,7 +73,7 @@ function rgb_legacy_percentage($, functionName) {
 function rgb_legacy_number($, functionName) {
   return seq(
     field("function_name", functionName),
-    "(",
+    token.immediate("("),
     field("r", $.css_number),
     ",",
     field("g", $.css_number),
@@ -87,7 +87,7 @@ function rgb_legacy_number($, functionName) {
 function rgb_modern($, functionName) {
   return seq(
     field("function_name", functionName),
-    "(",
+    token.immediate("("),
     field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
@@ -101,7 +101,7 @@ function rgb_modern($, functionName) {
 function hsl_legacy($, functionName) {
   return seq(
     field("function_name", functionName),
-    "(",
+    token.immediate("("),
     field("h", $.css_hue),
     ",",
     field("s", $.css_percentage),
@@ -115,7 +115,7 @@ function hsl_legacy($, functionName) {
 function h_modern($, functionName, fieldA, fieldB) {
   return seq(
     field("function_name", functionName),
-    "(",
+    token.immediate("("),
     field("h", choice($.css_hue, $.css_keyword_none)),
     field(fieldA, choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field(fieldB, choice($.css_percentage, $.css_number, $.css_keyword_none)),
@@ -129,7 +129,7 @@ function h_modern($, functionName, fieldA, fieldB) {
 function lab($, functionName) {
   return seq(
     field("function_name", functionName),
-    "(",
+    token.immediate("("),
     field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("a", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("b", choice($.css_percentage, $.css_number, $.css_keyword_none)),
@@ -143,7 +143,7 @@ function lab($, functionName) {
 function lch($, functionName) {
   return seq(
     field("function_name", functionName),
-    "(",
+    token.immediate("("),
     field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("C", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("h", choice($.css_hue, $.css_keyword_none)),
@@ -305,7 +305,7 @@ module.exports = grammar({
     css_function_color_rgb: ($) =>
       seq(
         field("function_name", $.css_function_name_color),
-        "(",
+        token.immediate("("),
         field("color_space", $.css_predefined_rgb),
         field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
         field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
@@ -330,7 +330,7 @@ module.exports = grammar({
     css_function_color_xyz: ($) =>
       seq(
         field("function_name", $.css_function_name_color),
-        "(",
+        token.immediate("("),
         field("color_space", $.css_xyz_space),
         field("x", choice($.css_number, $.css_percentage, $.css_keyword_none)),
         field("y", choice($.css_number, $.css_percentage, $.css_keyword_none)),
@@ -549,10 +549,8 @@ module.exports = grammar({
 
     tailwindcss_color_css_variable_with_alpha: ($) =>
       seq(
-        "--alpha",
-        "(",
-        "var",
-        "(",
+        "--alpha(",
+        "var(",
         field("css_variable", $.tailwindcss_color_css_variable_without_alpha),
         ")",
         "/",
