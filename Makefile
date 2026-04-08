@@ -89,9 +89,9 @@ clean:
 	$(RM) $(OBJS) $(LANGUAGE_NAME).pc lib$(LANGUAGE_NAME).a lib$(LANGUAGE_NAME).$(SOEXT)
 
 test:
-	$(TS) test --show-fields
+	$(TS) test --show-fields --stat=all
 
 update-test:
-	$(TS) test --show-fields --update
+	$(TS) test --show-fields --stat=all --update
 
 .PHONY: all install uninstall clean test
