@@ -175,7 +175,8 @@ function escapeRegExp(string) {
 
 const SYMBOLS_STRING = escapeRegExp(SYMBOLS.join(""));
 const symbol = new RegExp(`[${SYMBOLS_STRING}]`);
-const text = new RegExp(`[^\\s${SYMBOLS_STRING}]+`);
+const non_symbol = new RegExp(`[^ \\t\\n\\r${SYMBOLS_STRING}]+`);
+const non_whitespace = new RegExp(`[^ \\t\\n\\r]`);
 
 const css_number = /[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?/;
 const css_percentage = concat_regexp(css_number, /%/);
@@ -188,6 +189,8 @@ const tailwindcss_color_utility =
 
 module.exports = grammar({
   name: "colors",
+
+  word: ($) => $.non_whitespace,
 
   rules: {
     source_file: ($) =>
@@ -202,9 +205,9 @@ module.exports = grammar({
 
           $.tailwindcss_color,
 
-          $._symbol,
-          $._text,
           $._css_hex_color_invalid,
+          $._non_symbol,
+          $._symbol,
         ),
       ),
 
@@ -586,6 +589,7 @@ module.exports = grammar({
       ),
 
     _symbol: (_) => symbol,
-    _text: (_) => text,
+    _non_symbol: (_) => non_symbol,
+    non_whitespace: (_) => non_whitespace,
   },
 });
