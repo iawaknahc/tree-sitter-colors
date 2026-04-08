@@ -59,7 +59,6 @@ function css_keyword(literal) {
 function rgb_legacy_percentage($, functionName) {
   return seq(
     field("function_name", functionName),
-    token.immediate("("),
     field("r", $.css_percentage),
     ",",
     field("g", $.css_percentage),
@@ -73,7 +72,6 @@ function rgb_legacy_percentage($, functionName) {
 function rgb_legacy_number($, functionName) {
   return seq(
     field("function_name", functionName),
-    token.immediate("("),
     field("r", $.css_number),
     ",",
     field("g", $.css_number),
@@ -87,7 +85,6 @@ function rgb_legacy_number($, functionName) {
 function rgb_modern($, functionName) {
   return seq(
     field("function_name", functionName),
-    token.immediate("("),
     field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
     field("b", choice($.css_number, $.css_percentage, $.css_keyword_none)),
@@ -101,7 +98,6 @@ function rgb_modern($, functionName) {
 function hsl_legacy($, functionName) {
   return seq(
     field("function_name", functionName),
-    token.immediate("("),
     field("h", $.css_hue),
     ",",
     field("s", $.css_percentage),
@@ -115,7 +111,6 @@ function hsl_legacy($, functionName) {
 function h_modern($, functionName, fieldA, fieldB) {
   return seq(
     field("function_name", functionName),
-    token.immediate("("),
     field("h", choice($.css_hue, $.css_keyword_none)),
     field(fieldA, choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field(fieldB, choice($.css_percentage, $.css_number, $.css_keyword_none)),
@@ -129,7 +124,6 @@ function h_modern($, functionName, fieldA, fieldB) {
 function lab($, functionName) {
   return seq(
     field("function_name", functionName),
-    token.immediate("("),
     field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("a", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("b", choice($.css_percentage, $.css_number, $.css_keyword_none)),
@@ -143,7 +137,6 @@ function lab($, functionName) {
 function lch($, functionName) {
   return seq(
     field("function_name", functionName),
-    token.immediate("("),
     field("L", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("C", choice($.css_percentage, $.css_number, $.css_keyword_none)),
     field("h", choice($.css_hue, $.css_keyword_none)),
@@ -248,16 +241,41 @@ module.exports = grammar({
     // https://www.w3.org/TR/css-color-4/#typedef-hue
     css_hue: ($) => choice($._css_number, $._css_angle),
 
-    css_function_name_rgb: (_) => css_keyword("rgb"),
-    css_function_name_rgba: (_) => css_keyword("rgba"),
-    css_function_name_hsl: (_) => css_keyword("hsl"),
-    css_function_name_hsla: (_) => css_keyword("hsla"),
-    css_function_name_hwb: (_) => css_keyword("hwb"),
-    css_function_name_lab: (_) => css_keyword("lab"),
-    css_function_name_oklab: (_) => css_keyword("oklab"),
-    css_function_name_lch: (_) => css_keyword("lch"),
-    css_function_name_oklch: (_) => css_keyword("oklch"),
-    css_function_name_color: (_) => css_keyword("color"),
+    // According to CSS grammar, there is no spaces between the function name and the opening parenthesis.
+    // This can be done with token.immediate() alone.
+    // We additionally wrap the sequence with token() because
+    // we want to reduce parse errors when the text looks like `color: `
+    // Without token(), `color: ` will be tokenized as `color` and `:`.
+    // tree-sitter considers `:` as parse error because `color` is not
+    // immediately followed by `(`.
+    // With token(), the color function rule will be considered only when
+    // `color(` is tokenized.
+    // This can reduce parse error, and hence make parsing faster.
+    // The caveat is that the field "function_name" now includes
+    // the opening parenthesis at the end.
+    // I cannot figure out how to work around that.
+    // But this is a very minor issue comparing to the degraded parsing
+    // performance in a CSS file containing a lot of occurrences of `color: `
+    css_function_name_rgb: (_) =>
+      token(seq(css_keyword("rgb"), token.immediate("("))),
+    css_function_name_rgba: (_) =>
+      token(seq(css_keyword("rgba"), token.immediate("("))),
+    css_function_name_hsl: (_) =>
+      token(seq(css_keyword("hsl"), token.immediate("("))),
+    css_function_name_hsla: (_) =>
+      token(seq(css_keyword("hsla"), token.immediate("("))),
+    css_function_name_hwb: (_) =>
+      token(seq(css_keyword("hwb"), token.immediate("("))),
+    css_function_name_lab: (_) =>
+      token(seq(css_keyword("lab"), token.immediate("("))),
+    css_function_name_oklab: (_) =>
+      token(seq(css_keyword("oklab"), token.immediate("("))),
+    css_function_name_lch: (_) =>
+      token(seq(css_keyword("lch"), token.immediate("("))),
+    css_function_name_oklch: (_) =>
+      token(seq(css_keyword("oklch"), token.immediate("("))),
+    css_function_name_color: (_) =>
+      token(seq(css_keyword("color"), token.immediate("("))),
 
     // https://www.w3.org/TR/css-color-4/#rgb-functions
     css_function_rgb: ($) =>
@@ -308,7 +326,6 @@ module.exports = grammar({
     css_function_color_rgb: ($) =>
       seq(
         field("function_name", $.css_function_name_color),
-        token.immediate("("),
         field("color_space", $.css_predefined_rgb),
         field("r", choice($.css_number, $.css_percentage, $.css_keyword_none)),
         field("g", choice($.css_number, $.css_percentage, $.css_keyword_none)),
@@ -333,7 +350,6 @@ module.exports = grammar({
     css_function_color_xyz: ($) =>
       seq(
         field("function_name", $.css_function_name_color),
-        token.immediate("("),
         field("color_space", $.css_xyz_space),
         field("x", choice($.css_number, $.css_percentage, $.css_keyword_none)),
         field("y", choice($.css_number, $.css_percentage, $.css_keyword_none)),

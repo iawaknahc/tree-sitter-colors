@@ -222,12 +222,8 @@ Example 1 in https://tailwindcss.com/docs/colors#referencing-in-css
 ---
 
 (source_file
-  (ERROR
-    (css_function_name_color))
   (tailwindcss_color
     (tailwindcss_color_css_variable_without_alpha))
-  (ERROR
-    (css_function_name_color))
   (tailwindcss_color
     (tailwindcss_color_css_variable_without_alpha))
   (tailwindcss_color
