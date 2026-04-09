@@ -181,7 +181,8 @@ const tailwindcss_color_utility =
   /bg|text|decoration|border|outline|shadow|inset-shadow|ring|inset-ring|accent|caret|fill|stroke|from|via|to/;
 
 module.exports = grammar({
-  name: "colors",
+  // This name is important, it defines the exported C function name.
+  name: "nvimcolors",
 
   word: ($) => $.non_whitespace,
 
